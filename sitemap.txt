@@ -1,5 +1,5 @@
-http://example.com/2022/12/09/hello-world/
-http://example.com/archives/index.html
-http://example.com/categories/index.html
-http://example.com/tags/index.html
-http://example.com/
+https://simonczy.github.io/2022/12/09/hello-world/
+https://simonczy.github.io/archives/index.html
+https://simonczy.github.io/categories/index.html
+https://simonczy.github.io/tags/index.html
+https://simonczy.github.io/
