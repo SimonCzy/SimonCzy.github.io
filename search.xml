@@ -4,6 +4,8 @@
     <title>Hello World</title>
     <url>/2022/12/09/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -17,5 +19,88 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Pip Command</title>
+    <url>/2023/03/07/Pip-Command/</url>
+    <content><![CDATA[<p>Frequently used pip commands</p>
+<span id="more"></span>
+
+<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
+<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker Command</title>
+    <url>/2023/02/15/Docker-Command/</url>
+    <content><![CDATA[<p>Frequently used docker commands</p>
+<span id="more"></span>
+
+<h2 id="Docker-Quick-Start"><a href="#Docker-Quick-Start" class="headerlink" title="Docker Quick Start"></a>Docker Quick Start</h2><h3 id="Create-docker-image-from-Dockerfile"><a href="#Create-docker-image-from-Dockerfile" class="headerlink" title="Create docker image from Dockerfile"></a>Create docker image from Dockerfile</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run the command in the folder which contains Dockerfile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># user@computer odoo_test % ls  -la</span></span><br><span class="line"><span class="comment"># total 8</span></span><br><span class="line"><span class="comment"># drwxr-xr-x@  3 user  staff    96 Mar  6 09:42 .</span></span><br><span class="line"><span class="comment"># drwx------@ 20 user  staff   640 Mar  7 01:42 ..</span></span><br><span class="line"><span class="comment"># -rw-r--r--@  1 user  staff  1546 Mar  6 09:42 Dockerfile</span></span><br><span class="line"></span><br><span class="line">docker build -t salarymaster/odoo:odoo_12 .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Download-docker-image"><a href="#Download-docker-image" class="headerlink" title="Download docker image"></a>Download docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># download from Docker Hub</span></span><br><span class="line">docker pull salarymaster/odoo:H_12.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Upload-docker-image"><a href="#Upload-docker-image" class="headerlink" title="Upload docker image"></a>Upload docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># upload to Docker Hub</span></span><br><span class="line">docker push salarymaster/odoo:odoo_12</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;salarymaster&quot; is the name of organization/user</span></span><br><span class="line"><span class="comment"># &quot;odoo&quot; is the repository name created by &quot;salarymaster&quot;</span></span><br><span class="line"><span class="comment"># &quot;odoo_12&quot; is the tag in &quot;odoo&quot; repository to distinguish different version of docker images</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-docker-image"><a href="#Run-docker-image" class="headerlink" title="Run docker image"></a>Run docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
+
+<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The First Thing You Should Know</title>
+    <url>/2023/02/15/User-Manual/</url>
+    <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
+<p>📑 As the first post on my personal website, it can show you the way my thought hidden behind all my posts. Please take your time and enjoy your trip! </p>
+<span id="more"></span>
+
+<h2 id="My-Game"><a href="#My-Game" class="headerlink" title="My Game"></a>My Game</h2><h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p>Sort by alphabetical order.</p>
+<ul>
+<li>Related to specific fields<ul>
+<li><strong><u>DevOps</u></strong></li>
+<li><strong><u>Python</u></strong></li>
+</ul>
+</li>
+<li>Related to the purpose of posts<ul>
+<li><strong><u>Env&#x2F;Config</u></strong>: To set up a new environment or make it easier to use.</li>
+<li><u><strong>Introduction</strong></u>: The first thing you need to know about the new field or new shit (such as this post🤔).</li>
+<li><strong><u>Quick Check</u></strong>: Mainly consists of commands, scripts, or code with a simple or no explanation.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
+<ul>
+<li><input disabled="" type="checkbox"> Odoo Environment</li>
+<li><input disabled="" type="checkbox"> Odoo Basics</li>
+<li><input disabled="" type="checkbox"> Odoo Tricks</li>
+<li><input disabled="" type="checkbox"> Personal Server</li>
+<li><input disabled="" type="checkbox"> …</li>
+</ul>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
+<li>All blog content may be modified at some point in the future for some reason. (I will try to keep my change log, but human beings are lazy).</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Introduction</tag>
+      </tags>
   </entry>
 </search>
