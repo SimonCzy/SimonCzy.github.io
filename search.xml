@@ -34,6 +34,60 @@
       </tags>
   </entry>
   <entry>
+    <title>Dockerfile Command</title>
+    <url>/2023/03/07/Dockerfile-Command/</url>
+    <content><![CDATA[<p>Frequently used dockerfile commands</p>
+<span id="more"></span>
+
+<h2 id="Dockerfile-Quick-Start"><a href="#Dockerfile-Quick-Start" class="headerlink" title="Dockerfile Quick Start"></a>Dockerfile Quick Start</h2><h3 id="Change-user"><a href="#Change-user" class="headerlink" title="Change user"></a>Change user</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-bash-command"><a href="#Run-bash-command" class="headerlink" title="Run bash command"></a>Run bash command</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mv</span> /a/b/c.txt /aa/bb/cc.txt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-raw-docker-image"><a href="#Get-raw-docker-image" class="headerlink" title="Get raw docker image"></a>Get raw docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> salarymaster/odoo:office_odoo12</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-local-file-into-docker-image"><a href="#Copy-local-file-into-docker-image" class="headerlink" title="Copy local file into docker image"></a>Copy local file into docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./requirements.txt /</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux Command</title>
+    <url>/2023/03/07/Linux-Command/</url>
+    <content><![CDATA[<p>Frequently used linux commands</p>
+<span id="more"></span>
+
+<h2 id="Linux-Quick-Start"><a href="#Linux-Quick-Start" class="headerlink" title="Linux Quick Start"></a>Linux Quick Start</h2><h3 id="grep-file-ignoring-case"><a href="#grep-file-ignoring-case" class="headerlink" title="grep file ignoring case"></a>grep file ignoring case</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la | grep -i <span class="string">&quot;pypdf2&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pip Command</title>
+    <url>/2023/03/07/Pip-Command/</url>
+    <content><![CDATA[<p>Frequently used pip commands</p>
+<span id="more"></span>
+
+<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
+<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-specific-version-packages"><a href="#Install-specific-version-packages" class="headerlink" title="Install specific version packages"></a>Install specific version packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install lxml=4.9.2</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The First Thing You Should Know</title>
     <url>/2023/02/15/User-Manual/</url>
     <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
@@ -44,6 +98,7 @@
 <ul>
 <li>Related to specific fields<ul>
 <li><strong><u>DevOps</u></strong></li>
+<li><strong><u>Linux</u></strong></li>
 <li><strong><u>Python</u></strong></li>
 </ul>
 </li>
@@ -89,25 +144,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Pip Command</title>
-    <url>/2023/03/07/Pip-Command/</url>
-    <content><![CDATA[<p>Frequently used pip commands</p>
-<span id="more"></span>
-
-<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
-<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
-
-<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
-
-<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Quick Check</tag>
-        <tag>Python</tag>
-      </tags>
   </entry>
 </search>
