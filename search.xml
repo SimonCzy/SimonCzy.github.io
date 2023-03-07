@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/12/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Pip Command</title>
-    <url>/2023/03/07/Pip-Command/</url>
-    <content><![CDATA[<p>Frequently used pip commands</p>
-<span id="more"></span>
-
-<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
-<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
-
-<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
-
-<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>Quick Check</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker Command</title>
     <url>/2023/02/15/Docker-Command/</url>
     <content><![CDATA[<p>Frequently used docker commands</p>
@@ -55,15 +14,23 @@
 
 <h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Run-docker-image"><a href="#Run-docker-image" class="headerlink" title="Run docker image"></a>Run docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
 
 <h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
 
-<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
@@ -101,6 +68,46 @@
 ]]></content>
       <tags>
         <tag>Introduction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/12/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Pip Command</title>
+    <url>/2023/03/07/Pip-Command/</url>
+    <content><![CDATA[<p>Frequently used pip commands</p>
+<span id="more"></span>
+
+<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
+<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>

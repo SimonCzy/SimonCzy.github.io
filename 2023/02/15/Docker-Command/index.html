@@ -29,10 +29,10 @@
 <meta property="og:description" content="Frequently used docker commands">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-15T08:32:01.000Z">
-<meta property="article:modified_time" content="2023-03-06T14:48:59.238Z">
+<meta property="article:modified_time" content="2023-03-07T00:52:38.571Z">
 <meta property="article:author" content="Simon Chen">
-<meta property="article:tag" content="Quick Check">
 <meta property="article:tag" content="DevOps">
+<meta property="article:tag" content="Quick Check">
 <meta name="twitter:card" content="summary">
 
 
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Docker Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-docker-image-from-Dockerfile"><span class="nav-number">1.1.</span> <span class="nav-text">Create docker image from Dockerfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Download-docker-image"><span class="nav-number">1.2.</span> <span class="nav-text">Download docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Upload-docker-image"><span class="nav-number">1.3.</span> <span class="nav-text">Upload docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List-docker-image"><span class="nav-number">1.4.</span> <span class="nav-text">List docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-docker-image"><span class="nav-number">1.5.</span> <span class="nav-text">Run docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-docker-image"><span class="nav-number">1.6.</span> <span class="nav-text">Tag docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-docker-image"><span class="nav-number">1.7.</span> <span class="nav-text">Remove docker image</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Docker Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-docker-image-from-Dockerfile"><span class="nav-number">1.1.</span> <span class="nav-text">Create docker image from Dockerfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Download-docker-image"><span class="nav-number">1.2.</span> <span class="nav-text">Download docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Upload-docker-image"><span class="nav-number">1.3.</span> <span class="nav-text">Upload docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List-docker-image"><span class="nav-number">1.4.</span> <span class="nav-text">List docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-docker-image-x2F-Create-image-instance-container"><span class="nav-number">1.5.</span> <span class="nav-text">Run docker image &#x2F; Create image instance (container)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-docker-image"><span class="nav-number">1.6.</span> <span class="nav-text">Tag docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-docker-image"><span class="nav-number">1.7.</span> <span class="nav-text">Remove docker image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List-docker-container"><span class="nav-number">1.8.</span> <span class="nav-text">List docker container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-x2F-Stop-x2F-Restart-docker-container"><span class="nav-number">1.9.</span> <span class="nav-text">Start&#x2F;Stop&#x2F;Restart docker container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Copy-file-using-docker-container"><span class="nav-number">1.10.</span> <span class="nav-text">Copy file using docker container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enter-container"><span class="nav-number">1.11.</span> <span class="nav-text">Enter container</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -237,7 +237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-07 01:48:59" itemprop="dateModified" datetime="2023-03-07T01:48:59+11:00">2023-03-07</time>
+      <time title="Modified: 2023-03-07 11:52:38" itemprop="dateModified" datetime="2023-03-07T11:52:38+11:00">2023-03-07</time>
     </span>
 
   
@@ -254,7 +254,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>195</span>
+      <span>287</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -283,11 +283,19 @@
 
 <h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Run-docker-image"><a href="#Run-docker-image" class="headerlink" title="Run docker image"></a>Run docker image</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
 
 <h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
 
-<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -314,8 +322,8 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Quick-Check/" rel="tag"># Quick Check</a>
               <a href="/tags/DevOps/" rel="tag"># DevOps</a>
+              <a href="/tags/Quick-Check/" rel="tag"># Quick Check</a>
           </div>
 
         
