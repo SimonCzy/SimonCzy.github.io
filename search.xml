@@ -53,6 +53,43 @@
       </tags>
   </entry>
   <entry>
+    <title>Install Odoo12 On Ubuntu20.04</title>
+    <url>/2023/03/08/Install-Odoo12-On-Ubuntu20-04/</url>
+    <content><![CDATA[<p>💡 This post is very insightful for the following scenarios.</p>
+<ul>
+<li>Odoo Installation</li>
+<li>Non-Interactive Timezone Configuration</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To avoid Odoo corrupting my noble macOS 🤫, I’ve decided to install Odoo on Ubuntu.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1-Preparation"><a href="#1-Preparation" class="headerlink" title="1. Preparation"></a>1. Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> and it need to be able to connect the Internet.</p>
+<p>And I will use X86 (amd64) in this post because I am not a masochist.</p>
+<h3 id="2-Install-Git"><a href="#2-Install-Git" class="headerlink" title="2. Install Git"></a>2. Install Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you may need to add &quot;sudo&quot; in front of the sentence if you don&#x27;t have the permission</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y git</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Timezone-Configuration-Optional"><a href="#3-Timezone-Configuration-Optional" class="headerlink" title="3.  Timezone Configuration (Optional)"></a>3.  Timezone Configuration (Optional)</h3><p>Who can Skip this step</p>
+<ul>
+<li>Already configure the timezone information (like GUI version)</li>
+<li>Can configure timezone infomation manually (which will appear in Step 4)</li>
+</ul>
+<p>Who cannoy skip this step (or you will be stuck in the interactive interface in Step 4)</p>
+<ul>
+<li>Automated management</li>
+<li>Create a docker</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># use default setting firstly</span></span><br><span class="line"><span class="built_in">export</span> DEBIAN_FRONTEND=noninteractive</span><br><span class="line">apt-get install tzdata</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set local time to Australia/Sydney time</span></span><br><span class="line"><span class="built_in">ln</span> -fs /usr/share/zoneinfo/Australia/Sydney /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="comment"># activate the new time configuration</span></span><br><span class="line">dpkg-reconfigure -f noninteractive tzdata</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Install-PostgreSQL"><a href="#4-Install-PostgreSQL" class="headerlink" title="4. Install PostgreSQL"></a>4. Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">apt-get install -y postgresql</span><br></pre></td></tr></table></figure>
+
+<p><u><em>not finished yet</em></u></p>
+]]></content>
+      <tags>
+        <tag>Odoo</tag>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux Command</title>
     <url>/2023/03/07/Linux-Command/</url>
     <content><![CDATA[<p>Frequently used linux commands</p>
@@ -63,6 +100,31 @@
       <tags>
         <tag>Quick Check</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac SSH Amazon Using Pem</title>
+    <url>/2023/03/09/Mac-SSH-Amazon-Using-Pem/</url>
+    <content><![CDATA[<p>💡 This post is very insightful for the following scenarios.</p>
+<ul>
+<li>Use .pem file to ssh</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The title has said enough</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1-Put-pem-file-in-folder-XXX"><a href="#1-Put-pem-file-in-folder-XXX" class="headerlink" title="1. Put .pem file in folder XXX"></a>1. Put .pem file in folder XXX</h3><h3 id="2-Open-terminal-in-folder-XXX"><a href="#2-Open-terminal-in-folder-XXX" class="headerlink" title="2. Open terminal in folder XXX"></a>2. Open terminal in folder XXX</h3><h3 id="3-Run-SSH-command-to-connect"><a href="#3-Run-SSH-command-to-connect" class="headerlink" title="3. Run SSH command to connect"></a>3. Run SSH command to connect</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i <span class="string">&quot;key.pem&quot;</span> username@ipaddress</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Permission-error-probably"><a href="#4-Permission-error-probably" class="headerlink" title="4. Permission error (probably)"></a>4. Permission error (probably)</h3><p>![permission error](.&#x2F;Mac-SSH-Amazon-Using-Pem&#x2F;permission error.png)</p>
+<p>What you need to do is to set up a suitable file permission (0600).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0600 key.pem</span><br></pre></td></tr></table></figure>
+
+<p>Then run the command given in step 3. And this time there is no error message.</p>
+<h3 id="5-If-you-want-to-add-pem-file-into-your-system…"><a href="#5-If-you-want-to-add-pem-file-into-your-system…" class="headerlink" title="5. If you want to add .pem file into your system…"></a>5. If you want to add .pem file into your system…</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add -K key.pem</span><br><span class="line">ssh username@ipaddress</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Env/Config</tag>
+        <tag>MacOS</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
@@ -88,6 +150,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Upgrade Official Odoo12 Image From py3.5 To py3.8</title>
+    <url>/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
+    <content><![CDATA[<p>💡 This post is very insightful for the following scenarios.</p>
+<ul>
+<li>Python Upgrade</li>
+<li>Docker Creation</li>
+<li>Odoo Dependencies</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Due to the updated project requirements, we need to use new third-party libraries that require a newer version of Python. However, the Python version provided in the Odoo Docker image is too outdated, so we need to upgrade the Python version from 3.5 to 3.8.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p><u><em>not finished yet</em></u></p>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Odoo</tag>
+        <tag>Env/Config</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The First Thing You Should Know</title>
     <url>/2023/02/15/User-Manual/</url>
     <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
@@ -100,6 +183,9 @@
 <li><strong><u>DevOps</u></strong></li>
 <li><strong><u>Linux</u></strong></li>
 <li><strong><u>Python</u></strong></li>
+<li><strong><u>Odoo</u></strong></li>
+<li><strong><u>MacOS</u></strong></li>
+<li><strong><u>SSH</u></strong></li>
 </ul>
 </li>
 <li>Related to the purpose of posts<ul>
