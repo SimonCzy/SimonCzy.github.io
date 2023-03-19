@@ -29,7 +29,7 @@
 <meta property="og:description" content="💡 This post is insightful for the following scenarios.  Odoo Installation Non-Interactive Timezone Configuration">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-07T14:55:49.000Z">
-<meta property="article:modified_time" content="2023-03-18T11:56:02.113Z">
+<meta property="article:modified_time" content="2023-03-19T14:27:46.065Z">
 <meta property="article:author" content="Simon Chen">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Env&#x2F;Config">
@@ -146,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step"><span class="nav-number">2.</span> <span class="nav-text">Step</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Preparation"><span class="nav-number">2.1.</span> <span class="nav-text">1. Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Install-Git"><span class="nav-number">2.2.</span> <span class="nav-text">2. Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Timezone-Configuration-Optional"><span class="nav-number">2.3.</span> <span class="nav-text">3.  Timezone Configuration (Optional)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Install-PostgreSQL"><span class="nav-number">2.4.</span> <span class="nav-text">4. Install PostgreSQL</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step"><span class="nav-number">2.</span> <span class="nav-text">Step</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Preparation"><span class="nav-number">2.1.</span> <span class="nav-text">Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Git"><span class="nav-number">2.2.</span> <span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Timezone-Configuration-Optional"><span class="nav-number">2.3.</span> <span class="nav-text">Timezone Configuration (Optional)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-PostgreSQL"><span class="nav-number">2.4.</span> <span class="nav-text">Install PostgreSQL</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-18 22:56:02" itemprop="dateModified" datetime="2023-03-18T22:56:02+11:00">2023-03-18</time>
+      <time title="Modified: 2023-03-20 01:27:46" itemprop="dateModified" datetime="2023-03-20T01:27:46+11:00">2023-03-20</time>
     </span>
 
   
@@ -255,7 +255,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>210</span>
+      <span>206</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -281,11 +281,11 @@
 <span id="more"></span>
 
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To avoid Odoo corrupting my noble macOS 🤫, I’ve decided to install Odoo on Ubuntu.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1-Preparation"><a href="#1-Preparation" class="headerlink" title="1. Preparation"></a>1. Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> and it need to be able to connect the Internet.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> and it need to be able to connect the Internet.</p>
 <p>And I will use X86 (amd64) in this post because I am not a masochist.</p>
-<h3 id="2-Install-Git"><a href="#2-Install-Git" class="headerlink" title="2. Install Git"></a>2. Install Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># you may need to add &quot;sudo&quot; in front of the sentence if you don&#x27;t have the permission</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y git</span><br></pre></td></tr></table></figure>
+<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># you may need to add &quot;sudo&quot; in front of the sentence if you don&#x27;t have the permission</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y git</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-Timezone-Configuration-Optional"><a href="#3-Timezone-Configuration-Optional" class="headerlink" title="3.  Timezone Configuration (Optional)"></a>3.  Timezone Configuration (Optional)</h3><p>Who can Skip this step</p>
+<h3 id="Timezone-Configuration-Optional"><a href="#Timezone-Configuration-Optional" class="headerlink" title="Timezone Configuration (Optional)"></a>Timezone Configuration (Optional)</h3><p>Who can Skip this step</p>
 <ul>
 <li>Already configure the timezone information (like GUI version)</li>
 <li>Can configure timezone infomation manually (which will appear in Step 4)</li>
@@ -297,9 +297,9 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># use default setting firstly</span></span><br><span class="line"><span class="built_in">export</span> DEBIAN_FRONTEND=noninteractive</span><br><span class="line">apt-get install tzdata</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set local time to Australia/Sydney time</span></span><br><span class="line"><span class="built_in">ln</span> -fs /usr/share/zoneinfo/Australia/Sydney /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="comment"># activate the new time configuration</span></span><br><span class="line">dpkg-reconfigure -f noninteractive tzdata</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-Install-PostgreSQL"><a href="#4-Install-PostgreSQL" class="headerlink" title="4. Install PostgreSQL"></a>4. Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">apt-get install -y postgresql</span><br></pre></td></tr></table></figure>
+<h3 id="Install-PostgreSQL"><a href="#Install-PostgreSQL" class="headerlink" title="Install PostgreSQL"></a>Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">apt-get install -y postgresql</span><br></pre></td></tr></table></figure>
 
-<p><font color='red'><u><em>not finished yet</em></u></font></p>
+<p><font color="red"><u><em>not finished yet</em></u></font></p>
 
     </div>
 
