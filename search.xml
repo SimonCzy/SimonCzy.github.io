@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker Command</title>
+    <url>/2023/02/15/Docker-Command/</url>
+    <content><![CDATA[<p>Frequently used docker commands</p>
+<span id="more"></span>
+
+<h2 id="Docker-Quick-Start"><a href="#Docker-Quick-Start" class="headerlink" title="Docker Quick Start"></a>Docker Quick Start</h2><h3 id="Create-docker-image-from-Dockerfile"><a href="#Create-docker-image-from-Dockerfile" class="headerlink" title="Create docker image from Dockerfile"></a>Create docker image from Dockerfile</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run the command in the folder which contains Dockerfile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># user@computer odoo_test % ls  -la</span></span><br><span class="line"><span class="comment"># total 8</span></span><br><span class="line"><span class="comment"># drwxr-xr-x@  3 user  staff    96 Mar  6 09:42 .</span></span><br><span class="line"><span class="comment"># drwx------@ 20 user  staff   640 Mar  7 01:42 ..</span></span><br><span class="line"><span class="comment"># -rw-r--r--@  1 user  staff  1546 Mar  6 09:42 Dockerfile</span></span><br><span class="line"></span><br><span class="line">docker build -t salarymaster/odoo:odoo_12 .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Download-docker-image"><a href="#Download-docker-image" class="headerlink" title="Download docker image"></a>Download docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># download from Docker Hub</span></span><br><span class="line">docker pull salarymaster/odoo:H_12.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Upload-docker-image"><a href="#Upload-docker-image" class="headerlink" title="Upload docker image"></a>Upload docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># upload to Docker Hub</span></span><br><span class="line">docker push salarymaster/odoo:odoo_12</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;salarymaster&quot; is the name of organization/user</span></span><br><span class="line"><span class="comment"># &quot;odoo&quot; is the repository name created by &quot;salarymaster&quot;</span></span><br><span class="line"><span class="comment"># &quot;odoo_12&quot; is the tag in &quot;odoo&quot; repository to distinguish different version of docker images</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
+
+<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h2 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h2><h3 id="Inspect-container"><a href="#Inspect-container" class="headerlink" title="Inspect container"></a>Inspect container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check the container detail</span></span><br><span class="line">docker inspect ContainerID</span><br><span class="line"><span class="comment"># or use this command to check docker log</span></span><br><span class="line">docker inspect ContainerID | grep -i <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Debug-dead-container"><a href="#Debug-dead-container" class="headerlink" title="Debug dead container"></a>Debug dead container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/./Docker-Command/image-20230319020733223.png" alt="image-20230319020733223"></p>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Web 502 Error Caused By A Docker Upgrade</title>
     <url>/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -81,67 +120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker Command</title>
-    <url>/2023/02/15/Docker-Command/</url>
-    <content><![CDATA[<p>Frequently used docker commands</p>
-<span id="more"></span>
-
-<h2 id="Docker-Quick-Start"><a href="#Docker-Quick-Start" class="headerlink" title="Docker Quick Start"></a>Docker Quick Start</h2><h3 id="Create-docker-image-from-Dockerfile"><a href="#Create-docker-image-from-Dockerfile" class="headerlink" title="Create docker image from Dockerfile"></a>Create docker image from Dockerfile</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run the command in the folder which contains Dockerfile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># user@computer odoo_test % ls  -la</span></span><br><span class="line"><span class="comment"># total 8</span></span><br><span class="line"><span class="comment"># drwxr-xr-x@  3 user  staff    96 Mar  6 09:42 .</span></span><br><span class="line"><span class="comment"># drwx------@ 20 user  staff   640 Mar  7 01:42 ..</span></span><br><span class="line"><span class="comment"># -rw-r--r--@  1 user  staff  1546 Mar  6 09:42 Dockerfile</span></span><br><span class="line"></span><br><span class="line">docker build -t salarymaster/odoo:odoo_12 .</span><br></pre></td></tr></table></figure>
-
-<h3 id="Download-docker-image"><a href="#Download-docker-image" class="headerlink" title="Download docker image"></a>Download docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># download from Docker Hub</span></span><br><span class="line">docker pull salarymaster/odoo:H_12.0</span><br></pre></td></tr></table></figure>
-
-<h3 id="Upload-docker-image"><a href="#Upload-docker-image" class="headerlink" title="Upload docker image"></a>Upload docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># upload to Docker Hub</span></span><br><span class="line">docker push salarymaster/odoo:odoo_12</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;salarymaster&quot; is the name of organization/user</span></span><br><span class="line"><span class="comment"># &quot;odoo&quot; is the repository name created by &quot;salarymaster&quot;</span></span><br><span class="line"><span class="comment"># &quot;odoo_12&quot; is the tag in &quot;odoo&quot; repository to distinguish different version of docker images</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
-
-<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
-
-<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
-
-<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h2 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h2><h3 id="Inspect-container"><a href="#Inspect-container" class="headerlink" title="Inspect container"></a>Inspect container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check the container detail</span></span><br><span class="line">docker inspect ContainerID</span><br><span class="line"><span class="comment"># or use this command to check docker log</span></span><br><span class="line">docker inspect ContainerID | grep -i <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Debug-dead-container"><a href="#Debug-dead-container" class="headerlink" title="Debug dead container"></a>Debug dead container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br></pre></td></tr></table></figure>
-
-<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/./Docker-Command/image-20230319020733223.png" alt="image-20230319020733223"></p>
-]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Quick Check</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Dockerfile Command</title>
-    <url>/2023/03/07/Dockerfile-Command/</url>
-    <content><![CDATA[<p>Frequently used dockerfile commands</p>
-<span id="more"></span>
-
-<h2 id="Dockerfile-Quick-Start"><a href="#Dockerfile-Quick-Start" class="headerlink" title="Dockerfile Quick Start"></a>Dockerfile Quick Start</h2><h3 id="Change-user"><a href="#Change-user" class="headerlink" title="Change user"></a>Change user</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br></pre></td></tr></table></figure>
-
-<h3 id="Run-bash-command"><a href="#Run-bash-command" class="headerlink" title="Run bash command"></a>Run bash command</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mv</span> /a/b/c.txt /aa/bb/cc.txt</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Get-raw-docker-image"><a href="#Get-raw-docker-image" class="headerlink" title="Get raw docker image"></a>Get raw docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> salarymaster/odoo:office_odoo12</span><br></pre></td></tr></table></figure>
-
-<h3 id="Copy-local-file-into-docker-image"><a href="#Copy-local-file-into-docker-image" class="headerlink" title="Copy local file into docker image"></a>Copy local file into docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./requirements.txt /</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Set-some-environment-varible"><a href="#Set-some-environment-varible" class="headerlink" title="Set some environment varible"></a>Set some environment varible</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PYENV_ROOT=/var/local/pyenv</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Quick Check</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Install Linux By BIOS On Window Machine</title>
     <url>/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -198,6 +176,28 @@
         <tag>Linux</tag>
         <tag>BIOS</tag>
         <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dockerfile Command</title>
+    <url>/2023/03/07/Dockerfile-Command/</url>
+    <content><![CDATA[<p>Frequently used dockerfile commands</p>
+<span id="more"></span>
+
+<h2 id="Dockerfile-Quick-Start"><a href="#Dockerfile-Quick-Start" class="headerlink" title="Dockerfile Quick Start"></a>Dockerfile Quick Start</h2><h3 id="Change-user"><a href="#Change-user" class="headerlink" title="Change user"></a>Change user</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-bash-command"><a href="#Run-bash-command" class="headerlink" title="Run bash command"></a>Run bash command</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mv</span> /a/b/c.txt /aa/bb/cc.txt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-raw-docker-image"><a href="#Get-raw-docker-image" class="headerlink" title="Get raw docker image"></a>Get raw docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> salarymaster/odoo:office_odoo12</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-local-file-into-docker-image"><a href="#Copy-local-file-into-docker-image" class="headerlink" title="Copy local file into docker image"></a>Copy local file into docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./requirements.txt /</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Set-some-environment-varible"><a href="#Set-some-environment-varible" class="headerlink" title="Set some environment varible"></a>Set some environment varible</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PYENV_ROOT=/var/local/pyenv</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
