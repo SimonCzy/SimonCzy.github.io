@@ -28,22 +28,22 @@
 <meta property="og:site_name" content="Mind Game">
 <meta property="og:description" content="💡 This post is insightful for the following scenarios.  Handle Docker or DevOps Error Server Down Rookie DevOps">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png">
-<meta property="og:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png">
 <meta property="article:published_time" content="2023-03-15T15:38:11.000Z">
-<meta property="article:modified_time" content="2023-03-19T14:29:22.672Z">
+<meta property="article:modified_time" content="2023-03-20T00:06:10.675Z">
 <meta property="article:author" content="Simon Chen">
 <meta property="article:tag" content="DevOps">
 <meta property="article:tag" content="Troubleshoot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://simonczy.github.io/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png">
+<meta name="twitter:image" content="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png">
 
 
 <link rel="canonical" href="https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/">
@@ -247,7 +247,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-20 01:29:22" itemprop="dateModified" datetime="2023-03-20T01:29:22+11:00">2023-03-20</time>
+      <time title="Modified: 2023-03-20 11:06:10" itemprop="dateModified" datetime="2023-03-20T11:06:10+11:00">2023-03-20</time>
     </span>
 
   
@@ -298,14 +298,14 @@
 </ul>
 <h2 id="Operation-amp-Problem"><a href="#Operation-amp-Problem" class="headerlink" title="Operation &amp; Problem"></a>Operation &amp; Problem</h2><h3 id="Upgrade-the-docker-image"><a href="#Upgrade-the-docker-image" class="headerlink" title="Upgrade the docker image"></a>Upgrade the docker image</h3><p>Update the template in EC2 instance. Deploy a new environment by GitLab.</p>
 <h3 id="502-Error"><a href="#502-Error" class="headerlink" title="502 Error"></a>502 Error</h3><p>Yeah…it causes 502 error obviously.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png" alt="1"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png" alt="1"></p>
 <h3 id="Check-the-docker-container"><a href="#Check-the-docker-container" class="headerlink" title="Check the docker container"></a>Check the docker container</h3><p>In fact, it took quite a bit of time to jump from the previous step to this one. </p>
 <p>At first, I mistakenly thought it was due to a network configuration error, so I kept checking the template and also the configuration file. But in fact, the 502 error can be interpreted as a service provisioning failure, and therefore incoming requests cannot be accessed.</p>
 <p>So the first step of troubleshooting should be to check whether the service is started properly, and then start the rest of the troubleshooting later.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># check all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
 <p>As we can see from the following picture, the containers started and exited many times in about 3min. It means there are some error when waking up the image</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png" alt="1"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png" alt="1"></p>
 <h3 id="Track-error-information-exitcode-126"><a href="#Track-error-information-exitcode-126" class="headerlink" title="Track error information - exitcode 126"></a>Track error information - exitcode 126</h3><p>Get the basic information from container.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect ContainerID</span><br></pre></td></tr></table></figure>
 
@@ -314,10 +314,10 @@
 <li>ExitCode: The reason why a container exit. You can check <a target="_blank" rel="noopener" href="https://komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/">this page</a> for more specific exitcode. It is always a error summary. For 126,  it means that a command used in the container specification could not be invoked.</li>
 <li>LogPath: The location where docker containers save their log</li>
 </ul>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png" alt="image-20230316031409045"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png" alt="image-20230316031409045"></p>
 <p>Print out the log shown on the inspect, which is excatly a great example for <strong>exitcode-126</strong>.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png" alt="image-20230316032028422"></p>
-<h3 id="Upgrade-docker-image-use-user-“odoo”-to-install-pyenv"><a href="#Upgrade-docker-image-use-user-“odoo”-to-install-pyenv" class="headerlink" title="Upgrade docker image - use user “odoo” to install pyenv"></a>Upgrade docker image - use user “odoo” to install pyenv</h3><p>As you can see from the <font color="red">previous post</font>, the error is introduced at that time.</p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png" alt="image-20230316032028422"></p>
+<h3 id="Upgrade-docker-image-use-user-“odoo”-to-install-pyenv"><a href="#Upgrade-docker-image-use-user-“odoo”-to-install-pyenv" class="headerlink" title="Upgrade docker image - use user “odoo” to install pyenv"></a>Upgrade docker image - use user “odoo” to install pyenv</h3><p>As you can see from the <font color='red'>previous post</font>, the error is introduced at that time.</p>
 <p>The following dockerfile sentence will install pyenv into &#x2F;root&#x2F;, which results in that user “odoo” can not call python3.8.</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash &amp;&amp; <span class="built_in">printf</span> <span class="string">&quot;export PATH=\&quot;/root/.pyenv/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n\nexport LC_ALL=C.UTF-8\nexport LANG=C.UTF-8&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
 
@@ -325,7 +325,7 @@
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># use user &quot;odoo&quot; install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">USER</span> odoo</span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">printf</span> <span class="string">&quot;export PYENV_ROOT=\&quot;\$HOME/.pyenv\&quot;\ncommand -v pyenv &gt;/dev/null || export PATH=\&quot;\$PYENV_ROOT/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Upload-docker-image-to-docker-hub"><a href="#Upload-docker-image-to-docker-hub" class="headerlink" title="Upload docker image to docker hub"></a>Upload docker image to docker hub</h3><p>After downloading lots of third-party libraries, the size of image increased to almost 10GB.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png" alt="image-20230317112956700"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png" alt="image-20230317112956700"></p>
 <p>There’s not much more to say. In the future, I will only recommend using the command line for uploading docker images that are too large, which took me 5 hours to learn this lesson.</p>
 <h3 id="502-Error-1"><a href="#502-Error-1" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️ Take it easy.</p>
 <h3 id="Fail-to-download-docker-image-in-server"><a href="#Fail-to-download-docker-image-in-server" class="headerlink" title="Fail to download docker image in server"></a>Fail to download docker image in server</h3><p>Though I click the “Run” button in the pipeline, I still can not find any containers on the server.</p>
@@ -339,15 +339,15 @@
 </ul>
 <h3 id="502-Error-2"><a href="#502-Error-2" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️</p>
 <h3 id="Track-error-information-exitcode-127"><a href="#Track-error-information-exitcode-127" class="headerlink" title="Track error information - exitcode 127"></a>Track error information - exitcode 127</h3><p>Here is the log</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png" alt="image-20230319230931264"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png" alt="image-20230319230931264"></p>
 <p>Here is some python feature. Some .py files will put “#!&#x2F;usr&#x2F;bin&#x2F;env python3” in their first line. Therefore, the file can be run by system python3 parser.</p>
 <p>According to the log, there seems to be no python in this image, which is completely different from my local environment.</p>
 <p>As the docker is run by the command “&#x2F;entrypoint.sh odoo”, I need to debug by putting some output in the entrypoint.sh to see what is going on.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png" alt="image-20230319231749335"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png" alt="image-20230319231749335"></p>
 <p>Here comes the result.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png" alt="image-20230319232203595"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png" alt="image-20230319232203595"></p>
 <p>Fxck, it takes me about 4 hours. And the reason is that the .yaml file of this image change the folder.</p>
-<p><img data-src="/./A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png" alt="image-20230319233445111"></p>
+<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png" alt="image-20230319233445111"></p>
 <p>Then just need to update the docker to change the pyenv location.</p>
 <p>After reading the pyenv-installer script, I set up the env variable $PYENV_ROOT by dockerfile. And finally, everything works well!</p>
 <h3 id="Winner-Winner-Chicken-Dinner"><a href="#Winner-Winner-Chicken-Dinner" class="headerlink" title="Winner Winner Chicken Dinner"></a>Winner Winner Chicken Dinner</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>

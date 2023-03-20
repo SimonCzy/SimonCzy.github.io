@@ -28,18 +28,18 @@
 <meta property="og:site_name" content="Mind Game">
 <meta property="og:description" content="💡 This post is insightful for the following scenarios.  Python Upgrade Docker Creation Odoo Dependencies">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://simonczy.github.io/source/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png">
-<meta property="og:image" content="https://simonczy.github.io/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png">
-<meta property="og:image" content="https://simonczy.github.io/3.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png">
+<meta property="og:image" content="https://simonczy.github.io/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/3.png">
 <meta property="article:published_time" content="2023-03-07T14:33:28.000Z">
-<meta property="article:modified_time" content="2023-03-19T15:42:16.340Z">
+<meta property="article:modified_time" content="2023-03-20T00:01:18.717Z">
 <meta property="article:author" content="Simon Chen">
 <meta property="article:tag" content="DevOps">
 <meta property="article:tag" content="Env&#x2F;Config">
 <meta property="article:tag" content="Odoo">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://simonczy.github.io/source/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png">
+<meta name="twitter:image" content="https://simonczy.github.io/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png">
 
 
 <link rel="canonical" href="https://simonczy.github.io/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/">
@@ -243,7 +243,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-03-20 02:42:16" itemprop="dateModified" datetime="2023-03-20T02:42:16+11:00">2023-03-20</time>
+      <time title="Modified: 2023-03-20 11:01:18" itemprop="dateModified" datetime="2023-03-20T11:01:18+11:00">2023-03-20</time>
     </span>
 
   
@@ -296,16 +296,16 @@
 
 <h3 id="Install-python-3-8-by-pyenv"><a href="#Install-python-3-8-by-pyenv" class="headerlink" title="Install python 3.8 by pyenv"></a>Install python 3.8 by pyenv</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install python 3.8</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> /var/local/pyenv/bin/pyenv install 3.8.15 &amp;&amp; /var/local/pyenv/bin/pyenv global 3.8.15</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Change-python-3-5-gt-python-3-8-for-odoo-binary-file"><a href="#Change-python-3-5-gt-python-3-8-for-odoo-binary-file" class="headerlink" title="Change python 3.5 -&gt; python 3.8 for odoo binary file"></a>Change python 3.5 -&gt; python 3.8 for odoo binary file</h3><p>The way to test if the odoo can run in odoo offcial docker image, is to input “odoo” and click “enter” button.<br><img data-src="/./source/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png"></p>
+<h3 id="Change-python-3-5-gt-python-3-8-for-odoo-binary-file"><a href="#Change-python-3-5-gt-python-3-8-for-odoo-binary-file" class="headerlink" title="Change python 3.5 -&gt; python 3.8 for odoo binary file"></a>Change python 3.5 -&gt; python 3.8 for odoo binary file</h3><p>The way to test if the odoo can run in odoo offcial docker image, is to input “odoo” and click “enter” button.<br><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png"></p>
 <p>How do you know which python it is using? Let try!</p>
-<p><img data-src="/./Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png"></p>
+<p><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png"></p>
 <p>Well. Now is easy. Just create a soft link to current python3.</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">rm</span> /usr/bin/python3 &amp;&amp; <span class="built_in">ln</span> -s /var/local/pyenv/shims/python3 /usr/bin/python3</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="List-all-the-python-3-5-package-and-try-to-install-them-into-python-3-8-package"><a href="#List-all-the-python-3-5-package-and-try-to-install-them-into-python-3-8-package" class="headerlink" title="List all the python 3.5 package and try to install them into python 3.8 package"></a>List all the python 3.5 package and try to install them into python 3.8 package</h3><p>Use this command to see current package.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># check current package</span></span><br><span class="line">pip3 list</span><br><span class="line"></span><br><span class="line"><span class="comment"># output current package as requirements.txt</span></span><br><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/3.png"></p>
+<p><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/3.png"></p>
 <p>Here comes some principle that I follow:</p>
 <ul>
 <li>For some packages you can not download it by pip, like odoo,  you should completely move it from 3.5 package to 3.8 package, including package itself and its information (.egg-info file)</li>
@@ -318,8 +318,8 @@
 
 <h3 id="Build-the-docker-image"><a href="#Build-the-docker-image" class="headerlink" title="Build the docker image"></a>Build the docker image</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t UserName/RepName:TagName .</span><br></pre></td></tr></table></figure>
 
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="./Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Dockerfile">Dockerfile download link</a></p>
-<p><a href="./Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Dockerfile">Dockerfile download link</a></p>
+<p><a href="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
 
     </div>
 
