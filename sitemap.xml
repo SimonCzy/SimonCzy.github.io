@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://simonczy.github.io/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/21/Recommended-Software-On-MacOS/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/07/Linux-Command/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/21/Recommended-Software-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/2023/02/15/User-Manual/</loc>
     
     <lastmod>2023-03-20</lastmod>
@@ -12,15 +66,6 @@
   
   <url>
     <loc>https://simonczy.github.io/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</loc>
-    
-    <lastmod>2023-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/</loc>
     
     <lastmod>2023-03-20</lastmod>
     
@@ -74,15 +119,6 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/2023/03/07/Linux-Command/</loc>
-    
-    <lastmod>2023-03-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://simonczy.github.io/2023/03/07/Pip-Command/</loc>
     
     <lastmod>2023-03-07</lastmod>
@@ -130,7 +166,7 @@
 
   <url>
     <loc>https://simonczy.github.io/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,77 +174,77 @@
   
   <url>
     <loc>https://simonczy.github.io/tags/DevOps/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Quick-Check/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Troubleshoot/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Linux/</loc>
-    <lastmod>2023-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/BIOS/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Env-Config/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/BIOS/</loc>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Odoo/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/MacOS/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/SSH/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Python/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://simonczy.github.io/tags/Introduction/</loc>
-    <lastmod>2023-03-20</lastmod>
+    <lastmod>2023-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
