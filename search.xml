@@ -1,6 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>The First Thing You Should Know</title>
+    <url>/2023/02/15/User-Manual/</url>
+    <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
+<p>📑 As the first post on my personal website, it can show you the way my thought hidden behind all my posts. Please take your time and enjoy your trip! </p>
+<span id="more"></span>
+
+<h2 id="My-Game"><a href="#My-Game" class="headerlink" title="My Game"></a>My Game</h2><h3 id="Title-Name"><a href="#Title-Name" class="headerlink" title="Title Name"></a>Title Name</h3><p>Those articles’ title followed by “(*)” means they are just drafts.</p>
+<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p>Sort by alphabetical order.</p>
+<ul>
+<li>Related to specific fields<ul>
+<li><strong><u>DevOps</u></strong></li>
+<li><strong><u>Linux</u></strong></li>
+<li><strong><u>Python</u></strong></li>
+<li><strong><u>Odoo</u></strong></li>
+<li><strong><u>MacOS</u></strong></li>
+<li><strong><u>SSH</u></strong></li>
+<li><strong><u>BIOS</u></strong></li>
+</ul>
+</li>
+<li>Related to the purpose of posts<ul>
+<li><strong><u>Env&#x2F;Config</u></strong>: To set up a new environment or make it easier to use.</li>
+<li><u><strong>Introduction</strong></u>: The first thing you need to know about the new field or new shit (such as this post🤔).</li>
+<li><strong><u>Quick Check</u></strong>: Mainly consists of commands, scripts, or code with a simple or no explanation.</li>
+<li><strong><u>Troubleshoot</u></strong>: The way to deal with unseen mistakes. It does more focus on the way I thought 💭 than the technology I used.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
+<ul>
+<li><input disabled="" type="checkbox"> Odoo Environment</li>
+<li><input disabled="" type="checkbox"> Odoo Basics</li>
+<li><input disabled="" type="checkbox"> Odoo Tricks</li>
+<li><input disabled="" type="checkbox"> Personal Server</li>
+<li><input disabled="" type="checkbox"> …</li>
+</ul>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
+<li>All blog content may be modified at some point in the future for some reason. (I will try to keep my change log, but human beings are lazy).</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Introduction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image(*)</title>
+    <url>/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Odoo Installation</li>
+<li>Non-Interactive Timezone Configuration</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To avoid Odoo corrupting my noble macOS 🤫, I’ve decided to install Odoo on Ubuntu.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> and it need to be able to connect the Internet.</p>
+<p>And I will use X86 (amd64) in this post because I am not a masochist.</p>
+<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you may need to add &quot;sudo&quot; in front of the sentence if you don&#x27;t have the permission</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y git</span><br></pre></td></tr></table></figure>
+
+<h3 id="Timezone-Configuration-Optional"><a href="#Timezone-Configuration-Optional" class="headerlink" title="Timezone Configuration (Optional)"></a>Timezone Configuration (Optional)</h3><p>Who can Skip this step</p>
+<ul>
+<li>Already configure the timezone information (like GUI version)</li>
+<li>Can configure timezone infomation manually (which will appear in Step 4)</li>
+</ul>
+<p>Who cannoy skip this step (or you will be stuck in the interactive interface in Step 4)</p>
+<ul>
+<li>Automated management</li>
+<li>Create a docker image</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># use default setting firstly</span></span><br><span class="line"><span class="built_in">export</span> DEBIAN_FRONTEND=noninteractive</span><br><span class="line">apt-get install tzdata</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set local time to Australia/Sydney time</span></span><br><span class="line"><span class="built_in">ln</span> -fs /usr/share/zoneinfo/Australia/Sydney /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="comment"># activate the new time configuration</span></span><br><span class="line">dpkg-reconfigure -f noninteractive tzdata</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-PostgreSQL"><a href="#Install-PostgreSQL" class="headerlink" title="Install PostgreSQL"></a>Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">apt-get install -y postgresql</span><br></pre></td></tr></table></figure>
+
+<p><font color='red'><u><em>not finished yet</em></u></font></p>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+        <tag>Odoo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Install FTP Service On Ubuntu 20.04</title>
+    <url>/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>FTP</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To set up a local FTP server.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Install-FTP"><a href="#Install-FTP" class="headerlink" title="Install FTP"></a>Install FTP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="Configure-FTP"><a href="#Configure-FTP" class="headerlink" title="Configure FTP"></a>Configure FTP</h3><p>Keep a good habit: backup every file that you may destory</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> /etc/vsftpd.conf /etc/vsftpd.conf.bak</span><br></pre></td></tr></table></figure>
+
+<p>Edit FTP configuration</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
+
+<p>Here is my configuration</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example config file /etc/vsftpd.conf</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The default compiled in settings are fairly paranoid. This sample file</span></span><br><span class="line"><span class="comment"># loosens things up a bit, to make the ftp daemon more usable.</span></span><br><span class="line"><span class="comment"># Please see vsftpd.conf.5 for all compiled in defaults.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># READ THIS: This example file is NOT an exhaustive list of vsftpd options.</span></span><br><span class="line"><span class="comment"># Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd&#x27;s</span></span><br><span class="line"><span class="comment"># capabilities.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Run standalone?  vsftpd can run either from an inetd or as a standalone</span></span><br><span class="line"><span class="comment"># daemon started from an initscript.</span></span><br><span class="line">listen=NO</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This directive enables listening on IPv6 sockets. By default, listening</span></span><br><span class="line"><span class="comment"># on the IPv6 &quot;any&quot; address (::) will accept connections from both IPv6</span></span><br><span class="line"><span class="comment"># and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6</span></span><br><span class="line"><span class="comment"># sockets. If you want that (perhaps because you want to listen on specific</span></span><br><span class="line"><span class="comment"># addresses) then you must run two copies of vsftpd with two configuration</span></span><br><span class="line"><span class="comment"># files.</span></span><br><span class="line">listen_ipv6=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Allow anonymous FTP? (Disabled by default).</span></span><br><span class="line">anonymous_enable=NO</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to allow local users to log in.</span></span><br><span class="line">local_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to enable any form of FTP write command.</span></span><br><span class="line">write_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Default umask for local users is 077. You may wish to change this to 022,</span></span><br><span class="line"><span class="comment"># if your users expect that (022 is used by most other ftpd&#x27;s)</span></span><br><span class="line">local_umask=022</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to allow the anonymous FTP user to upload files. This only</span></span><br><span class="line"><span class="comment"># has an effect if the above global write enable is activated. Also, you will</span></span><br><span class="line"><span class="comment"># obviously need to create a directory writable by the FTP user.</span></span><br><span class="line"><span class="comment">#anon_upload_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this if you want the anonymous FTP user to be able to create</span></span><br><span class="line"><span class="comment"># new directories.</span></span><br><span class="line"><span class="comment">#anon_mkdir_write_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Activate directory messages - messages given to remote users when they</span></span><br><span class="line"><span class="comment"># go into a certain directory.</span></span><br><span class="line">dirmessage_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If enabled, vsftpd will display directory listings with the time</span></span><br><span class="line"><span class="comment"># in  your  local  time  zone.  The default is to display GMT. The</span></span><br><span class="line"><span class="comment"># times returned by the MDTM FTP command are also affected by this</span></span><br><span class="line"><span class="comment"># option.</span></span><br><span class="line">use_localtime=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Activate logging of uploads/downloads.</span></span><br><span class="line">xferlog_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Make sure PORT transfer connections originate from port 20 (ftp-data).</span></span><br><span class="line">connect_from_port_20=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you want, you can arrange for uploaded anonymous files to be owned by</span></span><br><span class="line"><span class="comment"># a different user. Note! Using &quot;root&quot; for uploaded files is not</span></span><br><span class="line"><span class="comment"># recommended!</span></span><br><span class="line"><span class="comment">#chown_uploads=YES</span></span><br><span class="line"><span class="comment">#chown_username=whoever</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may override where the log file goes if you like. The default is shown</span></span><br><span class="line"><span class="comment"># below.</span></span><br><span class="line">xferlog_file=/var/log/vsftpd.log</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you want, you can have your log file in standard ftpd xferlog format.</span></span><br><span class="line"><span class="comment"># Note that the default log file location is /var/log/xferlog in this case.</span></span><br><span class="line">xferlog_std_format=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may change the default value for timing out an idle session.</span></span><br><span class="line"><span class="comment">#idle_session_timeout=600</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may change the default value for timing out a data connection.</span></span><br><span class="line"><span class="comment">#data_connection_timeout=120</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># It is recommended that you define on your system a unique user which the</span></span><br><span class="line"><span class="comment"># ftp server can use as a totally isolated and unprivileged user.</span></span><br><span class="line"><span class="comment">#nopriv_user=ftpsecure</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Enable this and the server will recognise asynchronous ABOR requests. Not</span></span><br><span class="line"><span class="comment"># recommended for security (the code is non-trivial). Not enabling it,</span></span><br><span class="line"><span class="comment"># however, may confuse older FTP clients.</span></span><br><span class="line"><span class="comment">#async_abor_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default the server will pretend to allow ASCII mode but in fact ignore</span></span><br><span class="line"><span class="comment"># the request. Turn on the below options to have the server actually do ASCII</span></span><br><span class="line"><span class="comment"># mangling on files when in ASCII mode.</span></span><br><span class="line"><span class="comment"># Beware that on some FTP servers, ASCII support allows a denial of service</span></span><br><span class="line"><span class="comment"># attack (DoS) via the command &quot;SIZE /big/file&quot; in ASCII mode. vsftpd</span></span><br><span class="line"><span class="comment"># predicted this attack and has always been safe, reporting the size of the</span></span><br><span class="line"><span class="comment"># raw file.</span></span><br><span class="line"><span class="comment"># ASCII mangling is a horrible feature of the protocol.</span></span><br><span class="line"><span class="comment">#ascii_upload_enable=YES</span></span><br><span class="line"><span class="comment">#ascii_download_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may fully customise the login banner string:</span></span><br><span class="line">ftpd_banner=Welcome to Simon Ubuntu FTP service.</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may specify a file of disallowed anonymous e-mail addresses. Apparently</span></span><br><span class="line"><span class="comment"># useful for combatting certain DoS attacks.</span></span><br><span class="line"><span class="comment">#deny_email_enable=YES</span></span><br><span class="line"><span class="comment"># (default follows)</span></span><br><span class="line"><span class="comment">#banned_email_file=/etc/vsftpd.banned_emails</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may restrict local users to their home directories.  See the FAQ for</span></span><br><span class="line"><span class="comment"># the possible risks in this before using chroot_local_user or</span></span><br><span class="line"><span class="comment"># chroot_list_enable below.</span></span><br><span class="line"><span class="comment">#chroot_local_user=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may specify an explicit list of local users to chroot() to their home</span></span><br><span class="line"><span class="comment"># directory. If chroot_local_user is YES, then this list becomes a list of</span></span><br><span class="line"><span class="comment"># users to NOT chroot().</span></span><br><span class="line"><span class="comment"># (Warning! chroot&#x27;ing can be very dangerous. If using chroot, make sure that</span></span><br><span class="line"><span class="comment"># the user does not have write access to the top level directory within the</span></span><br><span class="line"><span class="comment"># chroot)</span></span><br><span class="line"><span class="comment"># chroot_local_user=YES</span></span><br><span class="line">chroot_list_enable=YES</span><br><span class="line"><span class="comment"># (default follows)</span></span><br><span class="line">chroot_list_file=/etc/vsftpd.chroot_list</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may activate the &quot;-R&quot; option to the builtin ls. This is disabled by</span></span><br><span class="line"><span class="comment"># default to avoid remote users being able to cause excessive I/O on large</span></span><br><span class="line"><span class="comment"># sites. However, some broken FTP clients such as &quot;ncftp&quot; and &quot;mirror&quot; assume</span></span><br><span class="line"><span class="comment"># the presence of the &quot;-R&quot; option, so there is a strong case for enabling it.</span></span><br><span class="line"><span class="comment">#ls_recurse_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Customization</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Some of vsftpd&#x27;s settings don&#x27;t fit the filesystem layout by</span></span><br><span class="line"><span class="comment"># default.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This option should be the name of a directory which is empty.  Also, the</span></span><br><span class="line"><span class="comment"># directory should not be writable by the ftp user. This directory is used</span></span><br><span class="line"><span class="comment"># as a secure chroot() jail at times vsftpd does not require filesystem</span></span><br><span class="line"><span class="comment"># access.</span></span><br><span class="line">secure_chroot_dir=/var/run/vsftpd/empty</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This string is the name of the PAM service vsftpd will use.</span></span><br><span class="line">pam_service_name=ftp</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This option specifies the location of the RSA certificate to use for SSL</span></span><br><span class="line"><span class="comment"># encrypted connections.</span></span><br><span class="line">rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem</span><br><span class="line">rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key</span><br><span class="line">ssl_enable=NO</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to indicate that vsftpd use a utf8 filesystem.</span></span><br><span class="line">utf8_filesystem=YES</span><br><span class="line">userlist_enable=YES</span><br><span class="line">userlist_deny=NO</span><br><span class="line">userlist_file=/etc/vsftpd.user_list</span><br><span class="line">allow_writeable_chroot=YES</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-FTP-login-user"><a href="#Add-FTP-login-user" class="headerlink" title="Add FTP login user"></a>Add FTP login user</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># add ftp folder</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> /home/ftpdir</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftp user (to bind user folder and login way)</span></span><br><span class="line">sudo useradd -d /home/ftpdir -s /bin/bash ftpuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># set user password</span></span><br><span class="line">sudo passwd ftpuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp folder user group</span></span><br><span class="line">sudo <span class="built_in">chown</span> ftpuser:ftpuser /home/ftpdir</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftpuser into user list</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ftpuser&quot;</span> &gt;&gt; /etc/vsftpd.user_list</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftpuser into chroot list</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ftpuser&quot;</span> &gt;&gt; /etc/vsftpd.chroot_list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Restart-FTP-server"><a href="#Restart-FTP-server" class="headerlink" title="Restart FTP server"></a>Restart FTP server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service vsftpd restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="Test-if-FTP-service-available"><a href="#Test-if-FTP-service-available" class="headerlink" title="Test if FTP service available"></a>Test if FTP service available</h3><h4 id="Local-machine"><a href="#Local-machine" class="headerlink" title="Local machine"></a>Local machine</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp localhost</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/1.png"></p>
+<h4 id="Local-network"><a href="#Local-network" class="headerlink" title="Local network"></a>Local network</h4><p><img data-src="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/2.png"></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/vsftpd.conf">vsftpd.conf download link</a></p>
+<p>Thanks to the following articles guidance:</p>
+<ul>
+<li><a href="https://blog.csdn.net/soslinken/article/details/79304076">Ubuntu FTP Server</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
+    <url>/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Network Error</li>
+<li>Ubuntu Error</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Recommended Software On MacOS</title>
+    <url>/2023/03/21/Recommended-Software-On-MacOS/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>MacOS Software Recommendation</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://www.snipaste.com/">Snipaste</a> 🌟🌟🌟🌟🌟</p>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><p>ForkLift 🌟🌟🌟🌟🌟</p>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
+      <tags>
+        <tag>Env/Config</tag>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Recommended Software On Ubuntu 20.04</title>
+    <url>/2023/03/21/Recommended-Software-On-Ubuntu-20-04/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Linux Software Recommendation</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://github.com/flameshot-org/flameshot">Flameshot</a> ❓</p>
+<h3 id="Cloud-Storage"><a href="#Cloud-Storage" class="headerlink" title="Cloud Storage"></a>Cloud Storage</h3><p><a href="https://www.jianguoyun.com/">Nutstore</a></p>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Web 502 Error Caused By A Docker Upgrade</title>
     <url>/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -81,107 +254,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker Command</title>
-    <url>/2023/02/15/Docker-Command/</url>
-    <content><![CDATA[<p>Frequently used docker commands</p>
-<span id="more"></span>
-
-<h2 id="Docker-Quick-Start"><a href="#Docker-Quick-Start" class="headerlink" title="Docker Quick Start"></a>Docker Quick Start</h2><h3 id="Create-docker-image-from-Dockerfile"><a href="#Create-docker-image-from-Dockerfile" class="headerlink" title="Create docker image from Dockerfile"></a>Create docker image from Dockerfile</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run the command in the folder which contains Dockerfile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># user@computer odoo_test % ls  -la</span></span><br><span class="line"><span class="comment"># total 8</span></span><br><span class="line"><span class="comment"># drwxr-xr-x@  3 user  staff    96 Mar  6 09:42 .</span></span><br><span class="line"><span class="comment"># drwx------@ 20 user  staff   640 Mar  7 01:42 ..</span></span><br><span class="line"><span class="comment"># -rw-r--r--@  1 user  staff  1546 Mar  6 09:42 Dockerfile</span></span><br><span class="line"></span><br><span class="line">docker build -t salarymaster/odoo:odoo_12 .</span><br></pre></td></tr></table></figure>
-
-<h3 id="Download-docker-image"><a href="#Download-docker-image" class="headerlink" title="Download docker image"></a>Download docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># download from Docker Hub</span></span><br><span class="line">docker pull salarymaster/odoo:H_12.0</span><br></pre></td></tr></table></figure>
-
-<h3 id="Upload-docker-image"><a href="#Upload-docker-image" class="headerlink" title="Upload docker image"></a>Upload docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># upload to Docker Hub</span></span><br><span class="line">docker push salarymaster/odoo:odoo_12</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;salarymaster&quot; is the name of organization/user</span></span><br><span class="line"><span class="comment"># &quot;odoo&quot; is the repository name created by &quot;salarymaster&quot;</span></span><br><span class="line"><span class="comment"># &quot;odoo_12&quot; is the tag in &quot;odoo&quot; repository to distinguish different version of docker images</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
-
-<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
-
-<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
-
-<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h2 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h2><h3 id="Inspect-container"><a href="#Inspect-container" class="headerlink" title="Inspect container"></a>Inspect container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check the container detail</span></span><br><span class="line">docker inspect ContainerID</span><br><span class="line"><span class="comment"># or use this command to check docker log</span></span><br><span class="line">docker inspect ContainerID | grep -i <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Debug-dead-container"><a href="#Debug-dead-container" class="headerlink" title="Debug dead container"></a>Debug dead container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br></pre></td></tr></table></figure>
-
-<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/2023/02/15/Docker-Command/image-20230319020733223.png" alt="image-20230319020733223"></p>
-]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Quick Check</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Dockerfile Command</title>
-    <url>/2023/03/07/Dockerfile-Command/</url>
-    <content><![CDATA[<p>Frequently used dockerfile commands</p>
-<span id="more"></span>
-
-<h2 id="Dockerfile-Quick-Start"><a href="#Dockerfile-Quick-Start" class="headerlink" title="Dockerfile Quick Start"></a>Dockerfile Quick Start</h2><h3 id="Change-user"><a href="#Change-user" class="headerlink" title="Change user"></a>Change user</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br></pre></td></tr></table></figure>
-
-<h3 id="Run-bash-command"><a href="#Run-bash-command" class="headerlink" title="Run bash command"></a>Run bash command</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mv</span> /a/b/c.txt /aa/bb/cc.txt</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Get-raw-docker-image"><a href="#Get-raw-docker-image" class="headerlink" title="Get raw docker image"></a>Get raw docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> salarymaster/odoo:office_odoo12</span><br></pre></td></tr></table></figure>
-
-<h3 id="Copy-local-file-into-docker-image"><a href="#Copy-local-file-into-docker-image" class="headerlink" title="Copy local file into docker image"></a>Copy local file into docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./requirements.txt /</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Set-some-environment-varible"><a href="#Set-some-environment-varible" class="headerlink" title="Set some environment varible"></a>Set some environment varible</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PYENV_ROOT=/var/local/pyenv</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Quick Check</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Install FTP Service On Ubuntu 20.04</title>
-    <url>/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>FTP</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To set up a local FTP server.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Install-FTP"><a href="#Install-FTP" class="headerlink" title="Install FTP"></a>Install FTP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br></pre></td></tr></table></figure>
-
-<h3 id="Configure-FTP"><a href="#Configure-FTP" class="headerlink" title="Configure FTP"></a>Configure FTP</h3><p>Keep a good habit: backup every file that you may destory</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> /etc/vsftpd.conf /etc/vsftpd.conf.bak</span><br></pre></td></tr></table></figure>
-
-<p>Edit FTP configuration</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
-
-<p>Here is my configuration</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example config file /etc/vsftpd.conf</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The default compiled in settings are fairly paranoid. This sample file</span></span><br><span class="line"><span class="comment"># loosens things up a bit, to make the ftp daemon more usable.</span></span><br><span class="line"><span class="comment"># Please see vsftpd.conf.5 for all compiled in defaults.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># READ THIS: This example file is NOT an exhaustive list of vsftpd options.</span></span><br><span class="line"><span class="comment"># Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd&#x27;s</span></span><br><span class="line"><span class="comment"># capabilities.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Run standalone?  vsftpd can run either from an inetd or as a standalone</span></span><br><span class="line"><span class="comment"># daemon started from an initscript.</span></span><br><span class="line">listen=NO</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This directive enables listening on IPv6 sockets. By default, listening</span></span><br><span class="line"><span class="comment"># on the IPv6 &quot;any&quot; address (::) will accept connections from both IPv6</span></span><br><span class="line"><span class="comment"># and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6</span></span><br><span class="line"><span class="comment"># sockets. If you want that (perhaps because you want to listen on specific</span></span><br><span class="line"><span class="comment"># addresses) then you must run two copies of vsftpd with two configuration</span></span><br><span class="line"><span class="comment"># files.</span></span><br><span class="line">listen_ipv6=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Allow anonymous FTP? (Disabled by default).</span></span><br><span class="line">anonymous_enable=NO</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to allow local users to log in.</span></span><br><span class="line">local_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to enable any form of FTP write command.</span></span><br><span class="line">write_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Default umask for local users is 077. You may wish to change this to 022,</span></span><br><span class="line"><span class="comment"># if your users expect that (022 is used by most other ftpd&#x27;s)</span></span><br><span class="line">local_umask=022</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to allow the anonymous FTP user to upload files. This only</span></span><br><span class="line"><span class="comment"># has an effect if the above global write enable is activated. Also, you will</span></span><br><span class="line"><span class="comment"># obviously need to create a directory writable by the FTP user.</span></span><br><span class="line"><span class="comment">#anon_upload_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this if you want the anonymous FTP user to be able to create</span></span><br><span class="line"><span class="comment"># new directories.</span></span><br><span class="line"><span class="comment">#anon_mkdir_write_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Activate directory messages - messages given to remote users when they</span></span><br><span class="line"><span class="comment"># go into a certain directory.</span></span><br><span class="line">dirmessage_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If enabled, vsftpd will display directory listings with the time</span></span><br><span class="line"><span class="comment"># in  your  local  time  zone.  The default is to display GMT. The</span></span><br><span class="line"><span class="comment"># times returned by the MDTM FTP command are also affected by this</span></span><br><span class="line"><span class="comment"># option.</span></span><br><span class="line">use_localtime=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Activate logging of uploads/downloads.</span></span><br><span class="line">xferlog_enable=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Make sure PORT transfer connections originate from port 20 (ftp-data).</span></span><br><span class="line">connect_from_port_20=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you want, you can arrange for uploaded anonymous files to be owned by</span></span><br><span class="line"><span class="comment"># a different user. Note! Using &quot;root&quot; for uploaded files is not</span></span><br><span class="line"><span class="comment"># recommended!</span></span><br><span class="line"><span class="comment">#chown_uploads=YES</span></span><br><span class="line"><span class="comment">#chown_username=whoever</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may override where the log file goes if you like. The default is shown</span></span><br><span class="line"><span class="comment"># below.</span></span><br><span class="line">xferlog_file=/var/log/vsftpd.log</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you want, you can have your log file in standard ftpd xferlog format.</span></span><br><span class="line"><span class="comment"># Note that the default log file location is /var/log/xferlog in this case.</span></span><br><span class="line">xferlog_std_format=YES</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may change the default value for timing out an idle session.</span></span><br><span class="line"><span class="comment">#idle_session_timeout=600</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may change the default value for timing out a data connection.</span></span><br><span class="line"><span class="comment">#data_connection_timeout=120</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># It is recommended that you define on your system a unique user which the</span></span><br><span class="line"><span class="comment"># ftp server can use as a totally isolated and unprivileged user.</span></span><br><span class="line"><span class="comment">#nopriv_user=ftpsecure</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Enable this and the server will recognise asynchronous ABOR requests. Not</span></span><br><span class="line"><span class="comment"># recommended for security (the code is non-trivial). Not enabling it,</span></span><br><span class="line"><span class="comment"># however, may confuse older FTP clients.</span></span><br><span class="line"><span class="comment">#async_abor_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default the server will pretend to allow ASCII mode but in fact ignore</span></span><br><span class="line"><span class="comment"># the request. Turn on the below options to have the server actually do ASCII</span></span><br><span class="line"><span class="comment"># mangling on files when in ASCII mode.</span></span><br><span class="line"><span class="comment"># Beware that on some FTP servers, ASCII support allows a denial of service</span></span><br><span class="line"><span class="comment"># attack (DoS) via the command &quot;SIZE /big/file&quot; in ASCII mode. vsftpd</span></span><br><span class="line"><span class="comment"># predicted this attack and has always been safe, reporting the size of the</span></span><br><span class="line"><span class="comment"># raw file.</span></span><br><span class="line"><span class="comment"># ASCII mangling is a horrible feature of the protocol.</span></span><br><span class="line"><span class="comment">#ascii_upload_enable=YES</span></span><br><span class="line"><span class="comment">#ascii_download_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may fully customise the login banner string:</span></span><br><span class="line">ftpd_banner=Welcome to Simon Ubuntu FTP service.</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may specify a file of disallowed anonymous e-mail addresses. Apparently</span></span><br><span class="line"><span class="comment"># useful for combatting certain DoS attacks.</span></span><br><span class="line"><span class="comment">#deny_email_enable=YES</span></span><br><span class="line"><span class="comment"># (default follows)</span></span><br><span class="line"><span class="comment">#banned_email_file=/etc/vsftpd.banned_emails</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may restrict local users to their home directories.  See the FAQ for</span></span><br><span class="line"><span class="comment"># the possible risks in this before using chroot_local_user or</span></span><br><span class="line"><span class="comment"># chroot_list_enable below.</span></span><br><span class="line"><span class="comment">#chroot_local_user=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may specify an explicit list of local users to chroot() to their home</span></span><br><span class="line"><span class="comment"># directory. If chroot_local_user is YES, then this list becomes a list of</span></span><br><span class="line"><span class="comment"># users to NOT chroot().</span></span><br><span class="line"><span class="comment"># (Warning! chroot&#x27;ing can be very dangerous. If using chroot, make sure that</span></span><br><span class="line"><span class="comment"># the user does not have write access to the top level directory within the</span></span><br><span class="line"><span class="comment"># chroot)</span></span><br><span class="line"><span class="comment"># chroot_local_user=YES</span></span><br><span class="line">chroot_list_enable=YES</span><br><span class="line"><span class="comment"># (default follows)</span></span><br><span class="line">chroot_list_file=/etc/vsftpd.chroot_list</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># You may activate the &quot;-R&quot; option to the builtin ls. This is disabled by</span></span><br><span class="line"><span class="comment"># default to avoid remote users being able to cause excessive I/O on large</span></span><br><span class="line"><span class="comment"># sites. However, some broken FTP clients such as &quot;ncftp&quot; and &quot;mirror&quot; assume</span></span><br><span class="line"><span class="comment"># the presence of the &quot;-R&quot; option, so there is a strong case for enabling it.</span></span><br><span class="line"><span class="comment">#ls_recurse_enable=YES</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Customization</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Some of vsftpd&#x27;s settings don&#x27;t fit the filesystem layout by</span></span><br><span class="line"><span class="comment"># default.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This option should be the name of a directory which is empty.  Also, the</span></span><br><span class="line"><span class="comment"># directory should not be writable by the ftp user. This directory is used</span></span><br><span class="line"><span class="comment"># as a secure chroot() jail at times vsftpd does not require filesystem</span></span><br><span class="line"><span class="comment"># access.</span></span><br><span class="line">secure_chroot_dir=/var/run/vsftpd/empty</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This string is the name of the PAM service vsftpd will use.</span></span><br><span class="line">pam_service_name=ftp</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This option specifies the location of the RSA certificate to use for SSL</span></span><br><span class="line"><span class="comment"># encrypted connections.</span></span><br><span class="line">rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem</span><br><span class="line">rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key</span><br><span class="line">ssl_enable=NO</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Uncomment this to indicate that vsftpd use a utf8 filesystem.</span></span><br><span class="line">utf8_filesystem=YES</span><br><span class="line">userlist_enable=YES</span><br><span class="line">userlist_deny=NO</span><br><span class="line">userlist_file=/etc/vsftpd.user_list</span><br><span class="line">allow_writeable_chroot=YES</span><br></pre></td></tr></table></figure>
-
-<h3 id="Add-FTP-login-user"><a href="#Add-FTP-login-user" class="headerlink" title="Add FTP login user"></a>Add FTP login user</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># add ftp folder</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> /home/ftpdir</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftp user (to bind user folder and login way)</span></span><br><span class="line">sudo useradd -d /home/ftpdir -s /bin/bash ftpuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># set user password</span></span><br><span class="line">sudo passwd ftpuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp folder user group</span></span><br><span class="line">sudo <span class="built_in">chown</span> ftpuser:ftpuser /home/ftpdir</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftpuser into user list</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ftpuser&quot;</span> &gt;&gt; /etc/vsftpd.user_list</span><br><span class="line"></span><br><span class="line"><span class="comment"># add ftpuser into chroot list</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ftpuser&quot;</span> &gt;&gt; /etc/vsftpd.chroot_list</span><br></pre></td></tr></table></figure>
-
-<h3 id="Restart-FTP-server"><a href="#Restart-FTP-server" class="headerlink" title="Restart FTP server"></a>Restart FTP server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service vsftpd restart</span><br></pre></td></tr></table></figure>
-
-<h3 id="Test-if-FTP-service-available"><a href="#Test-if-FTP-service-available" class="headerlink" title="Test if FTP service available"></a>Test if FTP service available</h3><h4 id="Local-machine"><a href="#Local-machine" class="headerlink" title="Local machine"></a>Local machine</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ftp localhost</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/1.png"></p>
-<h4 id="Local-network"><a href="#Local-network" class="headerlink" title="Local network"></a>Local network</h4><p><img data-src="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/2.png"></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/vsftpd.conf">vsftpd.conf download link</a></p>
-<p>Thanks to the following articles guidance:</p>
-<ul>
-<li><a href="https://blog.csdn.net/soslinken/article/details/79304076">Ubuntu FTP Server</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Install Linux By BIOS On Window Machine</title>
     <url>/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -236,8 +308,33 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-        <tag>Env/Config</tag>
         <tag>BIOS</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac SSH Amazon Using Pem</title>
+    <url>/2023/03/09/Mac-SSH-Amazon-Using-Pem/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Use .pem file to ssh</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The title has said enough</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Put-pem-file-in-folder-XXX"><a href="#Put-pem-file-in-folder-XXX" class="headerlink" title="Put .pem file in folder XXX"></a>Put .pem file in folder XXX</h3><h3 id="Open-terminal-in-folder-XXX"><a href="#Open-terminal-in-folder-XXX" class="headerlink" title="Open terminal in folder XXX"></a>Open terminal in folder XXX</h3><h3 id="Run-SSH-command-to-connect"><a href="#Run-SSH-command-to-connect" class="headerlink" title="Run SSH command to connect"></a>Run SSH command to connect</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i <span class="string">&quot;key.pem&quot;</span> username@ipaddress</span><br></pre></td></tr></table></figure>
+
+<h3 id="Permission-error-probably"><a href="#Permission-error-probably" class="headerlink" title="Permission error (probably)"></a>Permission error (probably)</h3><p>![permission error](.&#x2F;Mac-SSH-Amazon-Using-Pem&#x2F;permission error.png)</p>
+<p>What you need to do is to set up a suitable file permission (0600).</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0600 key.pem</span><br></pre></td></tr></table></figure>
+
+<p>Then run the command given in step 3. And this time there is no error message.</p>
+<h3 id="If-you-want-to-add-pem-file-into-your-system…"><a href="#If-you-want-to-add-pem-file-into-your-system…" class="headerlink" title="If you want to add .pem file into your system…"></a>If you want to add .pem file into your system…</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add -K key.pem</span><br><span class="line">ssh username@ipaddress</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Env/Config</tag>
+        <tag>MacOS</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
@@ -348,158 +445,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux Command</title>
-    <url>/2023/03/07/Linux-Command/</url>
-    <content><![CDATA[<p>Frequently used linux commands</p>
-<span id="more"></span>
-
-<h2 id="Linux-Quick-Start"><a href="#Linux-Quick-Start" class="headerlink" title="Linux Quick Start"></a>Linux Quick Start</h2><h3 id="grep-file-ignoring-case"><a href="#grep-file-ignoring-case" class="headerlink" title="grep file ignoring case"></a>grep file ignoring case</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la | grep -i <span class="string">&quot;pypdf2&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="change-user-password"><a href="#change-user-password" class="headerlink" title="change user password"></a>change user password</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Quick Check</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac SSH Amazon Using Pem</title>
-    <url>/2023/03/09/Mac-SSH-Amazon-Using-Pem/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Use .pem file to ssh</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The title has said enough</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Put-pem-file-in-folder-XXX"><a href="#Put-pem-file-in-folder-XXX" class="headerlink" title="Put .pem file in folder XXX"></a>Put .pem file in folder XXX</h3><h3 id="Open-terminal-in-folder-XXX"><a href="#Open-terminal-in-folder-XXX" class="headerlink" title="Open terminal in folder XXX"></a>Open terminal in folder XXX</h3><h3 id="Run-SSH-command-to-connect"><a href="#Run-SSH-command-to-connect" class="headerlink" title="Run SSH command to connect"></a>Run SSH command to connect</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i <span class="string">&quot;key.pem&quot;</span> username@ipaddress</span><br></pre></td></tr></table></figure>
-
-<h3 id="Permission-error-probably"><a href="#Permission-error-probably" class="headerlink" title="Permission error (probably)"></a>Permission error (probably)</h3><p>![permission error](.&#x2F;Mac-SSH-Amazon-Using-Pem&#x2F;permission error.png)</p>
-<p>What you need to do is to set up a suitable file permission (0600).</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0600 key.pem</span><br></pre></td></tr></table></figure>
-
-<p>Then run the command given in step 3. And this time there is no error message.</p>
-<h3 id="If-you-want-to-add-pem-file-into-your-system…"><a href="#If-you-want-to-add-pem-file-into-your-system…" class="headerlink" title="If you want to add .pem file into your system…"></a>If you want to add .pem file into your system…</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add -K key.pem</span><br><span class="line">ssh username@ipaddress</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Env/Config</tag>
-        <tag>MacOS</tag>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
-    <url>/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Network Error</li>
-<li>Ubuntu Error</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pip Command</title>
-    <url>/2023/03/07/Pip-Command/</url>
-    <content><![CDATA[<p>Frequently used pip commands</p>
-<span id="more"></span>
-
-<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
-<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
-
-<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
-
-<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="Install-specific-version-packages"><a href="#Install-specific-version-packages" class="headerlink" title="Install specific version packages"></a>Install specific version packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install lxml=4.9.2</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Quick Check</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Recommended Software On MacOS</title>
-    <url>/2023/03/21/Recommended-Software-On-MacOS/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>MacOS Software Recommendation</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://www.snipaste.com/">Snipaste</a> 🌟🌟🌟🌟🌟</p>
-<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><p>ForkLift 🌟🌟🌟🌟🌟</p>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
-      <tags>
-        <tag>Env/Config</tag>
-        <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Recommended Software On Ubuntu 20.04</title>
-    <url>/2023/03/21/Recommended-Software-On-Ubuntu-20-04/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Linux Software Recommendation</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://github.com/flameshot-org/flameshot">Flameshot</a> ❓</p>
-<h3 id="Cloud-Storage"><a href="#Cloud-Storage" class="headerlink" title="Cloud Storage"></a>Cloud Storage</h3><p><a href="https://www.jianguoyun.com/">Nutstore</a></p>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image(*)</title>
-    <url>/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Odoo Installation</li>
-<li>Non-Interactive Timezone Configuration</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To avoid Odoo corrupting my noble macOS 🤫, I’ve decided to install Odoo on Ubuntu.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> and it need to be able to connect the Internet.</p>
-<p>And I will use X86 (amd64) in this post because I am not a masochist.</p>
-<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you may need to add &quot;sudo&quot; in front of the sentence if you don&#x27;t have the permission</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y git</span><br></pre></td></tr></table></figure>
-
-<h3 id="Timezone-Configuration-Optional"><a href="#Timezone-Configuration-Optional" class="headerlink" title="Timezone Configuration (Optional)"></a>Timezone Configuration (Optional)</h3><p>Who can Skip this step</p>
-<ul>
-<li>Already configure the timezone information (like GUI version)</li>
-<li>Can configure timezone infomation manually (which will appear in Step 4)</li>
-</ul>
-<p>Who cannoy skip this step (or you will be stuck in the interactive interface in Step 4)</p>
-<ul>
-<li>Automated management</li>
-<li>Create a docker image</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># use default setting firstly</span></span><br><span class="line"><span class="built_in">export</span> DEBIAN_FRONTEND=noninteractive</span><br><span class="line">apt-get install tzdata</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set local time to Australia/Sydney time</span></span><br><span class="line"><span class="built_in">ln</span> -fs /usr/share/zoneinfo/Australia/Sydney /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="comment"># activate the new time configuration</span></span><br><span class="line">dpkg-reconfigure -f noninteractive tzdata</span><br></pre></td></tr></table></figure>
-
-<h3 id="Install-PostgreSQL"><a href="#Install-PostgreSQL" class="headerlink" title="Install PostgreSQL"></a>Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">apt-get install -y postgresql</span><br></pre></td></tr></table></figure>
-
-<p><font color='red'><u><em>not finished yet</em></u></font></p>
-]]></content>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
-        <tag>Odoo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Upgrade Official Odoo12 Image From py3.5 To py3.8</title>
     <url>/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -553,6 +498,105 @@
       </tags>
   </entry>
   <entry>
+    <title>Dockerfile Command</title>
+    <url>/2023/03/07/Dockerfile-Command/</url>
+    <content><![CDATA[<p>Frequently used dockerfile commands</p>
+<span id="more"></span>
+
+<h2 id="Dockerfile-Quick-Start"><a href="#Dockerfile-Quick-Start" class="headerlink" title="Dockerfile Quick Start"></a>Dockerfile Quick Start</h2><h3 id="Change-user"><a href="#Change-user" class="headerlink" title="Change user"></a>Change user</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-bash-command"><a href="#Run-bash-command" class="headerlink" title="Run bash command"></a>Run bash command</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mv</span> /a/b/c.txt /aa/bb/cc.txt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-raw-docker-image"><a href="#Get-raw-docker-image" class="headerlink" title="Get raw docker image"></a>Get raw docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> salarymaster/odoo:office_odoo12</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-local-file-into-docker-image"><a href="#Copy-local-file-into-docker-image" class="headerlink" title="Copy local file into docker image"></a>Copy local file into docker image</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> ./requirements.txt /</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Set-some-environment-varible"><a href="#Set-some-environment-varible" class="headerlink" title="Set some environment varible"></a>Set some environment varible</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PYENV_ROOT=/var/local/pyenv</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux Command</title>
+    <url>/2023/03/07/Linux-Command/</url>
+    <content><![CDATA[<p>Frequently used linux commands</p>
+<span id="more"></span>
+
+<h2 id="Linux-Quick-Start"><a href="#Linux-Quick-Start" class="headerlink" title="Linux Quick Start"></a>Linux Quick Start</h2><h3 id="grep-file-ignoring-case"><a href="#grep-file-ignoring-case" class="headerlink" title="grep file ignoring case"></a>grep file ignoring case</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la | grep -i <span class="string">&quot;pypdf2&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="change-user-password"><a href="#change-user-password" class="headerlink" title="change user password"></a>change user password</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pip Command</title>
+    <url>/2023/03/07/Pip-Command/</url>
+    <content><![CDATA[<p>Frequently used pip commands</p>
+<span id="more"></span>
+
+<h2 id="Pip-Quick-Start"><a href="#Pip-Quick-Start" class="headerlink" title="Pip Quick Start"></a>Pip Quick Start</h2><p>Take pip3 as an example.</p>
+<h3 id="List-installed-package"><a href="#List-installed-package" class="headerlink" title="List installed package"></a>List installed package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Display-the-details-of-a-specific-package"><a href="#Display-the-details-of-a-specific-package" class="headerlink" title="Display the details of a specific package"></a>Display the details of a specific package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Assume the package &quot;pdf2image&quot; has been installed</span></span><br><span class="line">pip3 show pdf2image</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-requirement-file-by-using-current-installed-packages"><a href="#Create-a-requirement-file-by-using-current-installed-packages" class="headerlink" title="Create a requirement file by using current installed packages"></a>Create a requirement file by using current installed packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-packages-by-using-the-requirement-file"><a href="#Install-packages-by-using-the-requirement-file" class="headerlink" title="Install packages by using the requirement file"></a>Install packages by using the requirement file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-specific-version-packages"><a href="#Install-specific-version-packages" class="headerlink" title="Install specific version packages"></a>Install specific version packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install lxml=4.9.2</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker Command</title>
+    <url>/2023/02/15/Docker-Command/</url>
+    <content><![CDATA[<p>Frequently used docker commands</p>
+<span id="more"></span>
+
+<h2 id="Docker-Quick-Start"><a href="#Docker-Quick-Start" class="headerlink" title="Docker Quick Start"></a>Docker Quick Start</h2><h3 id="Create-docker-image-from-Dockerfile"><a href="#Create-docker-image-from-Dockerfile" class="headerlink" title="Create docker image from Dockerfile"></a>Create docker image from Dockerfile</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run the command in the folder which contains Dockerfile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># user@computer odoo_test % ls  -la</span></span><br><span class="line"><span class="comment"># total 8</span></span><br><span class="line"><span class="comment"># drwxr-xr-x@  3 user  staff    96 Mar  6 09:42 .</span></span><br><span class="line"><span class="comment"># drwx------@ 20 user  staff   640 Mar  7 01:42 ..</span></span><br><span class="line"><span class="comment"># -rw-r--r--@  1 user  staff  1546 Mar  6 09:42 Dockerfile</span></span><br><span class="line"></span><br><span class="line">docker build -t salarymaster/odoo:odoo_12 .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Download-docker-image"><a href="#Download-docker-image" class="headerlink" title="Download docker image"></a>Download docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># download from Docker Hub</span></span><br><span class="line">docker pull salarymaster/odoo:H_12.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Upload-docker-image"><a href="#Upload-docker-image" class="headerlink" title="Upload docker image"></a>Upload docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># upload to Docker Hub</span></span><br><span class="line">docker push salarymaster/odoo:odoo_12</span><br><span class="line"></span><br><span class="line"><span class="comment"># &quot;salarymaster&quot; is the name of organization/user</span></span><br><span class="line"><span class="comment"># &quot;odoo&quot; is the repository name created by &quot;salarymaster&quot;</span></span><br><span class="line"><span class="comment"># &quot;odoo_12&quot; is the tag in &quot;odoo&quot; repository to distinguish different version of docker images</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-image"><a href="#List-docker-image" class="headerlink" title="List docker image"></a>List docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker image <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-docker-image-x2F-Create-image-instance-container"><a href="#Run-docker-image-x2F-Create-image-instance-container" class="headerlink" title="Run docker image &#x2F; Create image instance (container)"></a>Run docker image &#x2F; Create image instance (container)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this command will maintain the container even exiting</span></span><br><span class="line">docker run -itu root salarymaster/odoo:basic /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="Tag-docker-image"><a href="#Tag-docker-image" class="headerlink" title="Tag docker image"></a>Tag docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ImageID comes from &quot;docker image ls&quot; command</span></span><br><span class="line">docker tag ImageID salarymaster/odoo:new_tagname</span><br></pre></td></tr></table></figure>
+
+<h3 id="Remove-docker-image"><a href="#Remove-docker-image" class="headerlink" title="Remove docker image"></a>Remove docker image</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if ImageID is unique, use ImageID to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> ImageID</span><br><span class="line"></span><br><span class="line"><span class="comment"># if ImageID is not unique, use unique combination tag to remove</span></span><br><span class="line">docker image <span class="built_in">rm</span> OrgName/RepName:TagName</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-docker-container"><a href="#List-docker-container" class="headerlink" title="List docker container"></a>List docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># list using containers</span></span><br><span class="line">docker ps </span><br><span class="line"></span><br><span class="line"><span class="comment"># list all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<h3 id="Start-x2F-Stop-x2F-Restart-docker-container"><a href="#Start-x2F-Stop-x2F-Restart-docker-container" class="headerlink" title="Start&#x2F;Stop&#x2F;Restart docker container"></a>Start&#x2F;Stop&#x2F;Restart docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker start ContainerID</span><br><span class="line">docker stop ContainerID</span><br><span class="line">docker restart ContainerID</span><br></pre></td></tr></table></figure>
+
+<h3 id="Copy-file-using-docker-container"><a href="#Copy-file-using-docker-container" class="headerlink" title="Copy file using docker container"></a>Copy file using docker container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy file from local to container</span></span><br><span class="line">docker <span class="built_in">cp</span> /aa/bb/ ContainerID:/a/b/c.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enter-container"><a href="#Enter-container" class="headerlink" title="Enter container"></a>Enter container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -it use terminal to enter container</span></span><br><span class="line"><span class="comment"># -u use specific user to enter container</span></span><br><span class="line">docker <span class="built_in">exec</span> -itu root 1a9e7655efdc /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h2 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h2><h3 id="Inspect-container"><a href="#Inspect-container" class="headerlink" title="Inspect container"></a>Inspect container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check the container detail</span></span><br><span class="line">docker inspect ContainerID</span><br><span class="line"><span class="comment"># or use this command to check docker log</span></span><br><span class="line">docker inspect ContainerID | grep -i <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Debug-dead-container"><a href="#Debug-dead-container" class="headerlink" title="Debug dead container"></a>Debug dead container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/2023/02/15/Docker-Command/image-20230319020733223.png" alt="image-20230319020733223"></p>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/12/09/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -571,49 +615,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>The First Thing You Should Know</title>
-    <url>/2023/02/15/User-Manual/</url>
-    <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
-<p>📑 As the first post on my personal website, it can show you the way my thought hidden behind all my posts. Please take your time and enjoy your trip! </p>
-<span id="more"></span>
-
-<h2 id="My-Game"><a href="#My-Game" class="headerlink" title="My Game"></a>My Game</h2><h3 id="Title-Name"><a href="#Title-Name" class="headerlink" title="Title Name"></a>Title Name</h3><p>Those articles’ title followed by “(*)” means they are just drafts.</p>
-<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p>Sort by alphabetical order.</p>
-<ul>
-<li>Related to specific fields<ul>
-<li><strong><u>DevOps</u></strong></li>
-<li><strong><u>Linux</u></strong></li>
-<li><strong><u>Python</u></strong></li>
-<li><strong><u>Odoo</u></strong></li>
-<li><strong><u>MacOS</u></strong></li>
-<li><strong><u>SSH</u></strong></li>
-<li><strong><u>BIOS</u></strong></li>
-</ul>
-</li>
-<li>Related to the purpose of posts<ul>
-<li><strong><u>Env&#x2F;Config</u></strong>: To set up a new environment or make it easier to use.</li>
-<li><u><strong>Introduction</strong></u>: The first thing you need to know about the new field or new shit (such as this post🤔).</li>
-<li><strong><u>Quick Check</u></strong>: Mainly consists of commands, scripts, or code with a simple or no explanation.</li>
-<li><strong><u>Troubleshoot</u></strong>: The way to deal with unseen mistakes. It does more focus on the way I thought 💭 than the technology I used.</li>
-</ul>
-</li>
-</ul>
-<h3 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
-<ul>
-<li><input disabled="" type="checkbox"> Odoo Environment</li>
-<li><input disabled="" type="checkbox"> Odoo Basics</li>
-<li><input disabled="" type="checkbox"> Odoo Tricks</li>
-<li><input disabled="" type="checkbox"> Personal Server</li>
-<li><input disabled="" type="checkbox"> …</li>
-</ul>
-<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
-<li>All blog content may be modified at some point in the future for some reason. (I will try to keep my change log, but human beings are lazy).</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Introduction</tag>
-      </tags>
   </entry>
 </search>
