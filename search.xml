@@ -30,10 +30,9 @@
 </ul>
 <h3 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
 <ul>
-<li><input disabled="" type="checkbox"> Odoo Environment</li>
-<li><input disabled="" type="checkbox"> Odoo Basics</li>
-<li><input disabled="" type="checkbox"> Odoo Tricks</li>
-<li><input disabled="" type="checkbox"> Personal Server</li>
+<li><input disabled="" type="checkbox"> Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image</li>
+<li><input disabled="" type="checkbox"> Git Command</li>
+<li><input disabled="" type="checkbox"> Turn On SSL Service On Ubuntu</li>
 <li><input disabled="" type="checkbox"> …</li>
 </ul>
 <h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
@@ -45,7 +44,114 @@
       </tags>
   </entry>
   <entry>
-    <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image(*)</title>
+    <title>Git Command</title>
+    <url>/2023/03/28/Git-Command/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Develop Your Addon Based On Odoo 12</title>
+    <url>/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Odoo Addon Customization</li>
+<li>Develop Odoo Addon</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>I have already installed odoo 12 successfully on my Ubuntu  20.04, so the next step is to develop my personal addon module.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p><a href="https://simonczy.github.io/2023/03/08/Install-Odoo12-On-Ubuntu20-04/">Install-Odoo12-On-Ubuntu20-04</a></p>
+<h3 id="Clone-your-code-or-create-your-develop-folder"><a href="#Clone-your-code-or-create-your-develop-folder" class="headerlink" title="Clone your code or create your develop folder"></a>Clone your code or create your develop folder</h3><h3 id="Update-your-odoorc-file"><a href="#Update-your-odoorc-file" class="headerlink" title="Update your .odoorc file"></a>Update your .odoorc file</h3><p>Add your code folder into odoo configuration location and use “,” as separator.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/1.png"></p>
+<p>If you check the link from Preparation carefully, you will know where .odoorc is.</p>
+<p>If you decide to <strong>write your addon from scratch</strong>, you <strong>don’t need to</strong> follow the rest of this post. You can just write your code on the folder you just created.</p>
+<p>The rest of this post is for the people who want to <strong>use their previous code as foundation</strong>.</p>
+<h3 id="Add-your-database-Optional"><a href="#Add-your-database-Optional" class="headerlink" title="Add your database (Optional)"></a>Add your database (Optional)</h3><p>If you already developed your addon before and had your database, you should move it from your original computer to your new compute.</p>
+<h4 id="Go-to-the-odoo-database-manager"><a href="#Go-to-the-odoo-database-manager" class="headerlink" title="Go to the odoo database manager"></a>Go to the odoo database manager</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://localhost:8069/web/database/manager</span><br></pre></td></tr></table></figure>
+
+<h4 id="Export-your-database"><a href="#Export-your-database" class="headerlink" title="Export your database"></a>Export your database</h4><p>Backup your database and save the .zip file.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/2.png"></p>
+<h4 id="Import-your-database"><a href="#Import-your-database" class="headerlink" title="Import your database"></a>Import your database</h4><p>Restore your database from downloaded .zip file</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/3.png"></p>
+<p>Input the master password you set up before, chooes the .zip file and set up a new name.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/4.png"></p>
+<p>When it finishes, you may not find the database you just imported.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/6.png"></p>
+<p>Do not need to be panic, if you import again, it will show up this alert.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/5.png"></p>
+<h3 id="Update-your-odoorc-file-Optional"><a href="#Update-your-odoorc-file-Optional" class="headerlink" title="Update your .odoorc file (Optional)"></a>Update your .odoorc file (Optional)</h3><p>What you need to do is to update your database name in odoo configuration file.</p>
+<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/7.png"></p>
+<h3 id="Initialize-your-database-Optional"><a href="#Initialize-your-database-Optional" class="headerlink" title="Initialize your database (Optional)"></a>Initialize your database (Optional)</h3><p>In this time, when you run odoo, it may ask you to initial your database. You can run this command to initialize your database.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./odoo-bin -i base</span><br></pre></td></tr></table></figure>
+
+<h3 id="Update-all-the-addon-module-Optional"><a href="#Update-all-the-addon-module-Optional" class="headerlink" title="Update all the addon module (Optional)"></a>Update all the addon module (Optional)</h3><p>Run the following code to update all your addon module, it may take a while.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./odoo-bin -u all</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enjoy-your-addon"><a href="#Enjoy-your-addon" class="headerlink" title="Enjoy your addon"></a>Enjoy your addon</h3>]]></content>
+      <tags>
+        <tag>Odoo</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Turn On SSH Service On Ubuntu</title>
+    <url>/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Turn On Ubuntu SSL Service</li>
+<li>Connect Ubuntu From Public Network</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>I would like to control my server even I am not in my home. Let set target server is A, and the laptop is B.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Get-the-local-IP-of-A"><a href="#Get-the-local-IP-of-A" class="headerlink" title="Get the local IP of A"></a>Get the local IP of A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run on A</span></span><br><span class="line">ifconfig</span><br><span class="line"><span class="comment"># let assume this IP is 192.168.1.1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH-from-B-in-the-same-WI-FI-Fail"><a href="#SSH-from-B-in-the-same-WI-FI-Fail" class="headerlink" title="SSH from B in the same WI-FI  - Fail"></a>SSH from B in the same WI-FI  - Fail</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run on B</span></span><br><span class="line">ssh 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># ssh: connect to host 192.168.1.1 port 22: Connection refused</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-OpenSSH-in-A"><a href="#Install-OpenSSH-in-A" class="headerlink" title="Install OpenSSH  in A"></a>Install OpenSSH  in A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install -y openssh-server</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH-from-B-in-the-same-WI-FI-Success"><a href="#SSH-from-B-in-the-same-WI-FI-Success" class="headerlink" title="SSH from B in the same WI-FI - Success"></a>SSH from B in the same WI-FI - Success</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run on B</span></span><br><span class="line">ssh 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># connect successfully</span></span><br><span class="line"><span class="comment"># but not secure enough</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Generate-key-in-A"><a href="#Generate-key-in-A" class="headerlink" title="Generate key in A"></a>Generate key in A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># keep clicking enter</span></span><br><span class="line">ssh-keygen</span><br><span class="line"></span><br><span class="line"><span class="comment"># enter ssh folder to see public key and private key</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line"><span class="built_in">cat</span> id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line"></span><br><span class="line"><span class="comment"># copy the private key to B</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Change-SSH-configuration-in-A"><a href="#Change-SSH-configuration-in-A" class="headerlink" title="Change SSH configuration in A"></a>Change SSH configuration in A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># enable:</span></span><br><span class="line"><span class="comment"># use public key to login</span></span><br><span class="line"><span class="comment">#     &quot;PubkeyAuthentication yes&quot;</span></span><br><span class="line"><span class="comment"># people can not use password to login</span></span><br><span class="line"><span class="comment">#     &quot;PasswordAuthentication no&quot;</span></span><br><span class="line"><span class="comment"># change SSL port:</span></span><br><span class="line"><span class="comment">#     &quot;Port 33333&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Restart-SSH-service-in-A"><a href="#Restart-SSH-service-in-A" class="headerlink" title="Restart SSH service in A"></a>Restart SSH service in A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="B-Use-private-key-to-ssh-A"><a href="#B-Use-private-key-to-ssh-A" class="headerlink" title="B Use private key to ssh A"></a>B Use private key to ssh A</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh 192.168.1.1 -p 33333</span><br><span class="line"><span class="comment"># user@192.168.1.1: Permission denied (publickey).</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># enter the folder that contains private key</span></span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"><span class="comment"># id_rsa</span></span><br><span class="line"><span class="built_in">chmod</span> 0600 id_rsa</span><br><span class="line"></span><br><span class="line">ssh 192.168.1.1 -p 33333 -i id_rsa</span><br><span class="line"><span class="comment"># login successfully</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-private-into-system-in-B"><a href="#Add-private-into-system-in-B" class="headerlink" title="Add private into system in B"></a>Add private into system in B</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add -K id_rsa</span><br><span class="line"></span><br><span class="line">ssh 192.168.1.1 -p 33333</span><br><span class="line"><span class="comment"># login successfully now even without linking private key</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Connect-to-A-from-public-IP"><a href="#Connect-to-A-from-public-IP" class="headerlink" title="Connect to A from public IP"></a>Connect to A from public IP</h3><p>You need to enter your router to configure NAT Forwarding.</p>
+<p><img data-src="/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/1.png"></p>
+<p><img data-src="/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/2.png"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you can now ssh to your server in outside by public IP address just like you did in your local network</span></span><br><span class="line">ssh 142.251.165.100 -p 33333 -i id_rsa</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://simonczy.github.io/2023/03/09/Mac-SSH-Amazon-Using-Pem/">Mac SSH Amazon Using Pem</a></p>
+]]></content>
+      <tags>
+        <tag>Env/Config</tag>
+        <tag>Linux</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Common Code</title>
+    <url>/2023/03/26/Python-Common-Code/</url>
+    <content><![CDATA[<p>Frequently used python code</p>
+<span id="more"></span>
+
+<h2 id="Python-Quick-Start"><a href="#Python-Quick-Start" class="headerlink" title="Python Quick Start"></a>Python Quick Start</h2><h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><h4 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate integer from 1 to 20</span></span><br><span class="line"><span class="built_in">print</span> (random.randint(<span class="number">1</span>, <span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><h4 id="Sort-2D-list"><a href="#Sort-2D-list" class="headerlink" title="Sort 2D list"></a>Sort 2D list</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">employees = [[<span class="number">10</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">1997</span>], [<span class="number">3</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">1998</span>], [<span class="number">8</span>, <span class="string">&#x27;Smith&#x27;</span>, <span class="number">2001</span>]]</span><br><span class="line"></span><br><span class="line">sorted_e_a = <span class="built_in">sorted</span>(employees, key=(<span class="keyword">lambda</span> x:x[<span class="number">0</span>]))</span><br><span class="line">sorted_e_b = <span class="built_in">sorted</span>(employees, key=(<span class="keyword">lambda</span> x:[x[<span class="number">2</span>], x[<span class="number">1</span>]]), reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employees)</span><br><span class="line"><span class="built_in">print</span>(sorted_e_a)</span><br><span class="line"><span class="built_in">print</span>(sorted_e_b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># [[10, &#x27;Jack&#x27;, 1997], [3, &#x27;Jack&#x27;, 1998], [8, &#x27;Smith&#x27;, 2001]]</span></span><br><span class="line"><span class="comment"># [[3, &#x27;Jack&#x27;, 1998], [8, &#x27;Smith&#x27;, 2001], [10, &#x27;Jack&#x27;, 1997]]</span></span><br><span class="line"><span class="comment"># [[8, &#x27;Smith&#x27;, 2001], [3, &#x27;Jack&#x27;, 1998], [10, &#x27;Jack&#x27;, 1997]]</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image</title>
     <url>/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
@@ -76,10 +182,10 @@
 <p><font color='red'><u><em>not finished yet</em></u></font></p>
 ]]></content>
       <tags>
+        <tag>Odoo</tag>
+        <tag>Env/Config</tag>
         <tag>DevOps</tag>
         <tag>Linux</tag>
-        <tag>Env/Config</tag>
-        <tag>Odoo</tag>
       </tags>
   </entry>
   <entry>
@@ -118,8 +224,8 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -135,8 +241,8 @@
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
 <h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -150,7 +256,8 @@
 
 <h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://www.snipaste.com/">Snipaste</a> 🌟🌟🌟🌟🌟</p>
 <h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><p>ForkLift 🌟🌟🌟🌟🌟</p>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
+]]></content>
       <tags>
         <tag>Env/Config</tag>
         <tag>MacOS</tag>
@@ -167,10 +274,11 @@
 
 <h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://github.com/flameshot-org/flameshot">Flameshot</a> ❓</p>
 <h3 id="Cloud-Storage"><a href="#Cloud-Storage" class="headerlink" title="Cloud Storage"></a>Cloud Storage</h3><p><a href="https://www.jianguoyun.com/">Nutstore</a></p>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2>]]></content>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
+]]></content>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -307,9 +415,9 @@
 </ul>
 ]]></content>
       <tags>
+        <tag>Env/Config</tag>
         <tag>Linux</tag>
         <tag>BIOS</tag>
-        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -367,10 +475,10 @@
 
 <h3 id="Install-curl"><a href="#Install-curl" class="headerlink" title="Install curl"></a>Install curl</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install curl</span><br></pre></td></tr></table></figure>
 
-<h3 id="Install-node-js-and-less"><a href="#Install-node-js-and-less" class="headerlink" title="Install node.js and less"></a>Install node.js and less</h3><p>Install nodejs version manager</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L http://git.io/n-install | bash</span><br></pre></td></tr></table></figure>
+<h3 id="Install-node-js-and-less"><a href="#Install-node-js-and-less" class="headerlink" title="Install node.js and less"></a>Install node.js and less</h3><p>Install nodejs version manager </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L http://git.io/n-install | bash  </span><br></pre></td></tr></table></figure>
 
-<p><strong>Reopen</strong> your terminal and check current version</p>
+<p><strong>Reopen</strong> your terminal and check current version </p>
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/3.png"></p>
 <p>Install less</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure>
@@ -436,12 +544,13 @@
 
 <p>And this time everything is fine.</p>
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/13.png"></p>
-<h3 id="Enjoy-your-odoo-12"><a href="#Enjoy-your-odoo-12" class="headerlink" title="Enjoy your odoo 12"></a>Enjoy your odoo 12</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
+<h3 id="Enjoy-your-odoo-12"><a href="#Enjoy-your-odoo-12" class="headerlink" title="Enjoy your odoo 12"></a>Enjoy your odoo 12</h3><p>If you want to customize you odoo addon, maybe you can check this link.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
         <tag>Odoo</tag>
+        <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -491,9 +600,9 @@
 <p><a href="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
 ]]></content>
       <tags>
-        <tag>DevOps</tag>
-        <tag>Env/Config</tag>
         <tag>Odoo</tag>
+        <tag>Env/Config</tag>
+        <tag>DevOps</tag>
         <tag>Python</tag>
       </tags>
   </entry>
@@ -529,6 +638,10 @@
 
 <h3 id="change-user-password"><a href="#change-user-password" class="headerlink" title="change user password"></a>change user password</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
 
+<h3 id="ftp-common-command"><a href="#ftp-common-command" class="headerlink" title="ftp common command"></a>ftp common command</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check ftp service status</span></span><br><span class="line">service vsftpd status</span><br><span class="line"></span><br><span class="line"><span class="comment"># check ftp process</span></span><br><span class="line">ps ef | grep -i ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># display ftp auto-on process</span></span><br><span class="line">systemctl  list-unit-files | grep ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># start ftp service</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># stop ftp service</span></span><br><span class="line">systemctl stop vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on on</span></span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on off</span></span><br><span class="line">systemctl <span class="built_in">disable</span> vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://blog.csdn.net/qq_16736531/article/details/80663023">Common FTP Command</a></p>
+<p><a href="https://blog.csdn.net/qq_41985134/article/details/121182623">Ubuntu Auto-On Service</a></p>
 ]]></content>
       <tags>
         <tag>Quick Check</tag>
