@@ -22,10 +22,10 @@ https://simonczy.github.io/archives/index.html
 https://simonczy.github.io/categories/index.html
 https://simonczy.github.io/tags/index.html
 https://simonczy.github.io/
-https://simonczy.github.io/tags/Odoo/
-https://simonczy.github.io/tags/Env-Config/
 https://simonczy.github.io/tags/DevOps/
 https://simonczy.github.io/tags/Troubleshoot/
+https://simonczy.github.io/tags/Odoo/
+https://simonczy.github.io/tags/Env-Config/
 https://simonczy.github.io/tags/Quick-Check/
 https://simonczy.github.io/tags/Linux/
 https://simonczy.github.io/tags/BIOS/
