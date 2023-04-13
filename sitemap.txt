@@ -1,10 +1,11 @@
+https://simonczy.github.io/2023/04/07/Python-Virtual-Environment-On-Ubuntu/
+https://simonczy.github.io/2023/03/26/Python-Common-Code/
 https://simonczy.github.io/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/
 https://simonczy.github.io/2023/03/07/Linux-Command/
 https://simonczy.github.io/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/
 https://simonczy.github.io/2023/02/15/User-Manual/
 https://simonczy.github.io/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/
 https://simonczy.github.io/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/
-https://simonczy.github.io/2023/03/26/Python-Common-Code/
 https://simonczy.github.io/2023/03/08/Install-Odoo12-On-Ubuntu20-04/
 https://simonczy.github.io/2023/03/21/Recommended-Software-On-Ubuntu-20-04/
 https://simonczy.github.io/2023/03/21/Recommended-Software-On-MacOS/
@@ -24,9 +25,9 @@ https://simonczy.github.io/tags/index.html
 https://simonczy.github.io/
 https://simonczy.github.io/tags/DevOps/
 https://simonczy.github.io/tags/Troubleshoot/
+https://simonczy.github.io/tags/Quick-Check/
 https://simonczy.github.io/tags/Odoo/
 https://simonczy.github.io/tags/Env-Config/
-https://simonczy.github.io/tags/Quick-Check/
 https://simonczy.github.io/tags/Linux/
 https://simonczy.github.io/tags/BIOS/
 https://simonczy.github.io/tags/MacOS/
