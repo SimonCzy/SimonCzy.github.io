@@ -29,7 +29,7 @@
 <meta property="og:description" content="Frequently used linux commands">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-07T01:03:41.000Z">
-<meta property="article:modified_time" content="2023-04-13T14:35:32.457Z">
+<meta property="article:modified_time" content="2023-04-16T16:49:22.389Z">
 <meta property="article:author" content="Simon Chen">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Quick Check">
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-Quick-Start"><span class="nav-text">Linux Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#grep-file-ignoring-case"><span class="nav-text">grep file ignoring case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#change-user-password"><span class="nav-text">change user password</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftp-common-command"><span class="nav-text">ftp common command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-folder-size"><span class="nav-text">display folder size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-Quick-Start"><span class="nav-text">Linux Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#grep-file-ignoring-case"><span class="nav-text">grep file ignoring case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#change-user-password"><span class="nav-text">change user password</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-package"><span class="nav-text">remove package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ftp-common-command"><span class="nav-text">ftp common command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-folder-size"><span class="nav-text">display folder size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-04-14 00:35:32" itemprop="dateModified" datetime="2023-04-14T00:35:32+10:00">2023-04-14</time>
+      <time title="Modified: 2023-04-17 02:49:22" itemprop="dateModified" datetime="2023-04-17T02:49:22+10:00">2023-04-17</time>
     </span>
 
   
@@ -255,7 +255,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>96</span>
+      <span>144</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -279,6 +279,8 @@
 <h2 id="Linux-Quick-Start"><a href="#Linux-Quick-Start" class="headerlink" title="Linux Quick Start"></a>Linux Quick Start</h2><h3 id="grep-file-ignoring-case"><a href="#grep-file-ignoring-case" class="headerlink" title="grep file ignoring case"></a>grep file ignoring case</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la | grep -i <span class="string">&quot;pypdf2&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="change-user-password"><a href="#change-user-password" class="headerlink" title="change user password"></a>change user password</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
+
+<h3 id="remove-package"><a href="#remove-package" class="headerlink" title="remove package"></a>remove package</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge PackageName</span><br><span class="line"></span><br><span class="line"><span class="comment"># if your ubuntu have GUI, you can delete the gui by the following command, and reboot</span></span><br><span class="line">sudo apt-get purge lightdm</span><br><span class="line"></span><br><span class="line"><span class="comment"># if you want to recover your GUI, you can install it and reboot</span></span><br><span class="line">sudo apt-get install lightdm</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
 <h3 id="ftp-common-command"><a href="#ftp-common-command" class="headerlink" title="ftp common command"></a>ftp common command</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># check ftp service status</span></span><br><span class="line">service vsftpd status</span><br><span class="line"></span><br><span class="line"><span class="comment"># check ftp process</span></span><br><span class="line">ps ef | grep -i ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># display ftp auto-on process</span></span><br><span class="line">systemctl  list-unit-files | grep ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># start ftp service</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># stop ftp service</span></span><br><span class="line">systemctl stop vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on on</span></span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on off</span></span><br><span class="line">systemctl <span class="built_in">disable</span> vsftpd</span><br></pre></td></tr></table></figure>
 

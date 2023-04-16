@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>The First Thing You Should Know</title>
-    <url>/2023/02/15/Others/User-Manual/User-Manual/</url>
+    <url>/2023/02/15/Others/User-Manual/</url>
     <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
 <p>📑 As the first post on my personal website, it can show you the way my thought hidden behind all my posts. Please take your time and enjoy your trip! </p>
 <span id="more"></span>
@@ -11,10 +11,15 @@
 <h3 id="2-Categories"><a href="#2-Categories" class="headerlink" title="2. Categories:"></a>2. Categories:</h3><p>Sort by alphabetical order.</p>
 <ul>
 <li><strong><u>Make</u></strong>: Practical operation<ul>
-<li><strong>Bot</strong></li>
-<li><strong>Docker</strong></li>
-<li><strong>Linux</strong></li>
-<li><strong>Odoo</strong></li>
+<li><strong><u>Bot</u></strong><ul>
+<li><strong><u>Telegram</u></strong></li>
+<li><strong><u>Discord</u></strong></li>
+<li><strong><u>Rocket.Chat</u></strong></li>
+</ul>
+</li>
+<li><u><strong>Docker</strong></u></li>
+<li><u><strong>Linux</strong></u></li>
+<li><u><strong>Odoo</strong></u></li>
 </ul>
 </li>
 <li><strong><u>Mind</u></strong>: Personal interests and hobbies</li>
@@ -531,8 +536,8 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-        <tag>BIOS</tag>
         <tag>Env/Config</tag>
+        <tag>BIOS</tag>
       </tags>
   </entry>
   <entry>
@@ -752,6 +757,8 @@
 <h2 id="Linux-Quick-Start"><a href="#Linux-Quick-Start" class="headerlink" title="Linux Quick Start"></a>Linux Quick Start</h2><h3 id="grep-file-ignoring-case"><a href="#grep-file-ignoring-case" class="headerlink" title="grep file ignoring case"></a>grep file ignoring case</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la | grep -i <span class="string">&quot;pypdf2&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="change-user-password"><a href="#change-user-password" class="headerlink" title="change user password"></a>change user password</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
+
+<h3 id="remove-package"><a href="#remove-package" class="headerlink" title="remove package"></a>remove package</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get purge PackageName</span><br><span class="line"></span><br><span class="line"><span class="comment"># if your ubuntu have GUI, you can delete the gui by the following command, and reboot</span></span><br><span class="line">sudo apt-get purge lightdm</span><br><span class="line"></span><br><span class="line"><span class="comment"># if you want to recover your GUI, you can install it and reboot</span></span><br><span class="line">sudo apt-get install lightdm</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
 <h3 id="ftp-common-command"><a href="#ftp-common-command" class="headerlink" title="ftp common command"></a>ftp common command</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check ftp service status</span></span><br><span class="line">service vsftpd status</span><br><span class="line"></span><br><span class="line"><span class="comment"># check ftp process</span></span><br><span class="line">ps ef | grep -i ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># display ftp auto-on process</span></span><br><span class="line">systemctl  list-unit-files | grep ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># start ftp service</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># stop ftp service</span></span><br><span class="line">systemctl stop vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on on</span></span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on off</span></span><br><span class="line">systemctl <span class="built_in">disable</span> vsftpd</span><br></pre></td></tr></table></figure>
 
