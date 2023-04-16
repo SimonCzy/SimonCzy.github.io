@@ -305,13 +305,6 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/tags/MacOS/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://simonczy.github.io/tags/Introduction/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -320,6 +313,13 @@
   
   <url>
     <loc>https://simonczy.github.io/tags/Quick-Check/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/MacOS/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -356,7 +356,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/categories/Make/Bot/</loc>
+    <loc>https://simonczy.github.io/categories/Make/Docker/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -370,14 +370,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/categories/Make/Docker/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/categories/Make/Bot/Discord/</loc>
+    <loc>https://simonczy.github.io/categories/Make/Bot/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -385,6 +378,13 @@
   
   <url>
     <loc>https://simonczy.github.io/categories/Make/Odoo/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Bot/Discord/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
