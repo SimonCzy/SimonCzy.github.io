@@ -55,6 +55,9 @@
 <li>All blog content may be modified at some point in the future for some reason. (I will try to keep my change log, but human beings are lazy).</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Introduction</tag>
       </tags>
@@ -63,11 +66,19 @@
     <title>Set Up V2ray Environment On Oracle Free Tier</title>
     <url>/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
   </entry>
   <entry>
     <title>Create Your Own Discord Bot</title>
     <url>/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Bot</category>
+        <category>Discord</category>
+      </categories>
   </entry>
   <entry>
     <title>Docker Compose Command</title>
@@ -79,6 +90,10 @@
 
 <h3 id="End-compose"><a href="#End-compose" class="headerlink" title="End compose"></a>End compose</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose down</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Quick Check</tag>
@@ -101,6 +116,10 @@
 
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.rocket.chat/deploy/prepare-for-your-deployment/rapid-deployment-methods/docker-and-docker-compose">Docker &amp; Docker Compose</a></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Linux</tag>
@@ -125,6 +144,9 @@
 <h3 id="Deactivate-the-virtual-environment"><a href="#Deactivate-the-virtual-environment" class="headerlink" title="Deactivate the virtual environment"></a>Deactivate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -135,6 +157,10 @@
     <title>Git Command</title>
     <url>/2023/03/28/Quick-Check/Git-Command/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>Develop Your Addon Based On Odoo 12</title>
@@ -175,6 +201,10 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./odoo-bin -u all</span><br></pre></td></tr></table></figure>
 
 <h3 id="Enjoy-your-addon"><a href="#Enjoy-your-addon" class="headerlink" title="Enjoy your addon"></a>Enjoy your addon</h3>]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Odoo</category>
+      </categories>
       <tags>
         <tag>Env/Config</tag>
         <tag>Odoo</tag>
@@ -219,6 +249,10 @@
 
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://simonczy.github.io/2023/03/09/Mac-SSH-Amazon-Using-Pem/">Mac SSH Amazon Using Pem</a></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -265,6 +299,9 @@
 
 <p><img data-src="/Users/simon/Desktop/myblog/source/_posts/Python-Common-Code/2.png"></p>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Quick Check</tag>
         <tag>Python</tag>
@@ -301,6 +338,10 @@
 
 <p><font color='red'><u><em>not finished yet</em></u></font></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Odoo</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Linux</tag>
@@ -343,6 +384,10 @@
 <li><a href="https://blog.csdn.net/soslinken/article/details/79304076">Ubuntu FTP Server</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -360,6 +405,10 @@
 
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
 <h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -378,6 +427,9 @@
 <h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><p>ForkLift 🌟🌟🌟🌟🌟</p>
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Env/Config</tag>
         <tag>MacOS</tag>
@@ -396,6 +448,9 @@
 <h3 id="Cloud-Storage"><a href="#Cloud-Storage" class="headerlink" title="Cloud Storage"></a>Cloud Storage</h3><p><a href="https://www.jianguoyun.com/">Nutstore</a></p>
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -436,9 +491,9 @@
 <li>ExitCode: The reason why a container exit. You can check <a href="https://komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/">this page</a> for more specific exitcode. It is always a error summary. For 126,  it means that a command used in the container specification could not be invoked.</li>
 <li>LogPath: The location where docker containers save their log</li>
 </ul>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png" alt="image-20230316031409045"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png"></p>
 <p>Print out the log shown on the inspect, which is excatly a great example for <strong>exitcode-126</strong>.</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png" alt="image-20230316032028422"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png"></p>
 <h3 id="Upgrade-docker-image-use-user-“odoo”-to-install-pyenv"><a href="#Upgrade-docker-image-use-user-“odoo”-to-install-pyenv" class="headerlink" title="Upgrade docker image - use user “odoo” to install pyenv"></a>Upgrade docker image - use user “odoo” to install pyenv</h3><p>As you can see from the <font color='red'>previous post</font>, the error is introduced at that time.</p>
 <p>The following dockerfile sentence will install pyenv into &#x2F;root&#x2F;, which results in that user “odoo” can not call python3.8.</p>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash &amp;&amp; <span class="built_in">printf</span> <span class="string">&quot;export PATH=\&quot;/root/.pyenv/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n\nexport LC_ALL=C.UTF-8\nexport LANG=C.UTF-8&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
@@ -447,7 +502,7 @@
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># use user &quot;odoo&quot; install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">USER</span> odoo</span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">printf</span> <span class="string">&quot;export PYENV_ROOT=\&quot;\$HOME/.pyenv\&quot;\ncommand -v pyenv &gt;/dev/null || export PATH=\&quot;\$PYENV_ROOT/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Upload-docker-image-to-docker-hub"><a href="#Upload-docker-image-to-docker-hub" class="headerlink" title="Upload docker image to docker hub"></a>Upload docker image to docker hub</h3><p>After downloading lots of third-party libraries, the size of image increased to almost 10GB.</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png" alt="image-20230317112956700"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png"></p>
 <p>There’s not much more to say. In the future, I will only recommend using the command line for uploading docker images that are too large, which took me 5 hours to learn this lesson.</p>
 <h3 id="502-Error-1"><a href="#502-Error-1" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️ Take it easy.</p>
 <h3 id="Fail-to-download-docker-image-in-server"><a href="#Fail-to-download-docker-image-in-server" class="headerlink" title="Fail to download docker image in server"></a>Fail to download docker image in server</h3><p>Though I click the “Run” button in the pipeline, I still can not find any containers on the server.</p>
@@ -461,21 +516,25 @@
 </ul>
 <h3 id="502-Error-2"><a href="#502-Error-2" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️</p>
 <h3 id="Track-error-information-exitcode-127"><a href="#Track-error-information-exitcode-127" class="headerlink" title="Track error information - exitcode 127"></a>Track error information - exitcode 127</h3><p>Here is the log</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png" alt="image-20230319230931264"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png"></p>
 <p>Here is some python feature. Some .py files will put “#!&#x2F;usr&#x2F;bin&#x2F;env python3” in their first line. Therefore, the file can be run by system python3 parser.</p>
 <p>According to the log, there seems to be no python in this image, which is completely different from my local environment.</p>
 <p>As the docker is run by the command “&#x2F;entrypoint.sh odoo”, I need to debug by putting some output in the entrypoint.sh to see what is going on.</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png" alt="image-20230319231749335"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png"></p>
 <p>Here comes the result.</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png" alt="image-20230319232203595"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png"></p>
 <p>Fxck, it takes me about 4 hours. And the reason is that the .yaml file of this image change the folder.</p>
-<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png" alt="image-20230319233445111"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png"></p>
 <p>Then just need to update the docker to change the pyenv location.</p>
 <p>After reading the pyenv-installer script, I set up the env variable $PYENV_ROOT by dockerfile. And finally, everything works well!</p>
 <h3 id="Winner-Winner-Chicken-Dinner"><a href="#Winner-Winner-Chicken-Dinner" class="headerlink" title="Winner Winner Chicken Dinner"></a>Winner Winner Chicken Dinner</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li><a href="https://komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/">Exit Codes In Containers &amp; Kubernetes – The Complete Guide</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Troubleshoot</tag>
@@ -534,10 +593,14 @@
 <li><a href="https://bbs.huaweicloud.com/blogs/283088">Add Chinese into Ubuntu 20.04</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Env/Config</tag>
         <tag>BIOS</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -552,13 +615,17 @@
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>The title has said enough</p>
 <h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Put-pem-file-in-folder-XXX"><a href="#Put-pem-file-in-folder-XXX" class="headerlink" title="Put .pem file in folder XXX"></a>Put .pem file in folder XXX</h3><h3 id="Open-terminal-in-folder-XXX"><a href="#Open-terminal-in-folder-XXX" class="headerlink" title="Open terminal in folder XXX"></a>Open terminal in folder XXX</h3><h3 id="Run-SSH-command-to-connect"><a href="#Run-SSH-command-to-connect" class="headerlink" title="Run SSH command to connect"></a>Run SSH command to connect</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i <span class="string">&quot;key.pem&quot;</span> username@ipaddress</span><br></pre></td></tr></table></figure>
 
-<h3 id="Permission-error-probably"><a href="#Permission-error-probably" class="headerlink" title="Permission error (probably)"></a>Permission error (probably)</h3><p>![permission error](.&#x2F;Mac-SSH-Amazon-Using-Pem&#x2F;permission error.png)</p>
+<h3 id="Permission-error-probably"><a href="#Permission-error-probably" class="headerlink" title="Permission error (probably)"></a>Permission error (probably)</h3><p>![](.&#x2F;Mac-SSH-Amazon-Using-Pem&#x2F;permission error.png)</p>
 <p>What you need to do is to set up a suitable file permission (0600).</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 0600 key.pem</span><br></pre></td></tr></table></figure>
 
 <p>Then run the command given in step 3. And this time there is no error message.</p>
 <h3 id="If-you-want-to-add-pem-file-into-your-system…"><a href="#If-you-want-to-add-pem-file-into-your-system…" class="headerlink" title="If you want to add .pem file into your system…"></a>If you want to add .pem file into your system…</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add -K key.pem</span><br><span class="line">ssh username@ipaddress</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Env/Config</tag>
         <tag>SSH</tag>
@@ -667,6 +734,10 @@
 <h3 id="Enjoy-your-odoo-12"><a href="#Enjoy-your-odoo-12" class="headerlink" title="Enjoy your odoo 12"></a>Enjoy your odoo 12</h3><p>If you want to customize you odoo addon, maybe you can check this link.</p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Odoo</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
@@ -719,6 +790,10 @@
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Dockerfile">Dockerfile download link</a></p>
 <p><a href="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Odoo</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Env/Config</tag>
@@ -743,6 +818,10 @@
 <h3 id="Set-some-environment-varible"><a href="#Set-some-environment-varible" class="headerlink" title="Set some environment varible"></a>Set some environment varible</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ENV</span> PYENV_ROOT=/var/local/pyenv</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Quick Check</tag>
@@ -767,6 +846,10 @@
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://blog.csdn.net/qq_16736531/article/details/80663023">Common FTP Command</a></p>
 <p><a href="https://blog.csdn.net/qq_41985134/article/details/121182623">Ubuntu Auto-On Service</a></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Quick Check</tag>
@@ -789,6 +872,9 @@
 
 <h3 id="Install-specific-version-packages"><a href="#Install-specific-version-packages" class="headerlink" title="Install specific version packages"></a>Install specific version packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install lxml=4.9.2</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
       <tags>
         <tag>Quick Check</tag>
         <tag>Python</tag>
@@ -828,6 +914,10 @@
 
 <h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/2023/02/15/Quick-Check/Docker/Docker-Command/1.png"></p>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Docker</category>
+      </categories>
       <tags>
         <tag>DevOps</tag>
         <tag>Quick Check</tag>
@@ -852,5 +942,8 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>Undefined</category>
+      </categories>
   </entry>
 </search>

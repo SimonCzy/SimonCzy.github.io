@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://simonczy.github.io/2023/02/15/Others/User-Manual/</loc>
+    <loc>https://simonczy.github.io/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</loc>
     
     <lastmod>2023-04-16</lastmod>
     
@@ -11,7 +11,79 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Linux-Command/</loc>
+    <loc>https://simonczy.github.io/2023/03/09/Quick-Check/Mac-SSH-Amazon-Using-Pem/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/04/07/Quick-Check/Python/Python-Virtual-Environment-On-Ubuntu/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/26/Quick-Check/Python/Python-Common-Code/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Python/Pip-Command/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/21/Share/Recommended-Software-On-MacOS/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/04/15/Quick-Check/Docker/Install-Docker-On-Ubuntu/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Docker/Dockerfile-Command/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/04/15/Quick-Check/Docker/Docker-Compose-Command/</loc>
     
     <lastmod>2023-04-16</lastmod>
     
@@ -29,7 +101,61 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/</loc>
+    <loc>https://simonczy.github.io/2023/03/23/Quick-Check/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Linux-Command/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/23/Quick-Check/Install-FTP-Service-On-Ubuntu-20-04/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/28/Quick-Check/Git-Command/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/02/15/Others/User-Manual/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2022/12/09/Others/hello-world/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/2023/03/23/Guidance/Odoo/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</loc>
     
     <lastmod>2023-04-16</lastmod>
     
@@ -65,16 +191,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/</loc>
-    
-    <lastmod>2023-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</loc>
+    <loc>https://simonczy.github.io/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/</loc>
     
     <lastmod>2023-04-16</lastmod>
     
@@ -92,135 +209,18 @@
   </url>
   
   <url>
+    <loc>https://simonczy.github.io/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/</loc>
+    
+    <lastmod>2023-04-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/</loc>
     
     <lastmod>2023-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/04/15/Quick-Check/Docker/Docker-Compose-Command/</loc>
-    
-    <lastmod>2023-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/04/15/Quick-Check/Docker/Install-Docker-On-Ubuntu/</loc>
-    
-    <lastmod>2023-04-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/26/Quick-Check/Python/Python-Common-Code/</loc>
-    
-    <lastmod>2023-04-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/04/07/Quick-Check/Python/Python-Virtual-Environment-On-Ubuntu/</loc>
-    
-    <lastmod>2023-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/23/Quick-Check/Install-FTP-Service-On-Ubuntu-20-04/</loc>
-    
-    <lastmod>2023-04-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/23/Guidance/Odoo/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</loc>
-    
-    <lastmod>2023-04-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/</loc>
-    
-    <lastmod>2023-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/21/Share/Recommended-Software-On-MacOS/</loc>
-    
-    <lastmod>2023-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/28/Quick-Check/Git-Command/</loc>
-    
-    <lastmod>2023-03-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/23/Quick-Check/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/09/Quick-Check/Mac-SSH-Amazon-Using-Pem/</loc>
-    
-    <lastmod>2023-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Docker/Dockerfile-Command/</loc>
-    
-    <lastmod>2023-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2023/03/07/Quick-Check/Python/Pip-Command/</loc>
-    
-    <lastmod>2023-03-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/2022/12/09/Others/hello-world/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -284,6 +284,13 @@
   </url>
   
   <url>
+    <loc>https://simonczy.github.io/tags/BIOS/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/tags/Env-Config/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -298,6 +305,13 @@
   </url>
   
   <url>
+    <loc>https://simonczy.github.io/tags/MacOS/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/tags/Introduction/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -305,21 +319,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/tags/BIOS/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://simonczy.github.io/tags/Quick-Check/</loc>
-    <lastmod>2023-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/MacOS/</loc>
     <lastmod>2023-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -340,5 +340,54 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Undefined/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Bot/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Linux/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Docker/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Bot/Discord/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/categories/Make/Odoo/</loc>
+    <lastmod>2023-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
