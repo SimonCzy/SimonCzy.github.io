@@ -34,9 +34,9 @@ https://simonczy.github.io/tags/Bot/
 https://simonczy.github.io/tags/Linux/
 https://simonczy.github.io/tags/Env-Config/
 https://simonczy.github.io/tags/BIOS/
+https://simonczy.github.io/tags/MacOS/
 https://simonczy.github.io/tags/SSH/
 https://simonczy.github.io/tags/Quick-Check/
-https://simonczy.github.io/tags/MacOS/
 https://simonczy.github.io/tags/Odoo/
 https://simonczy.github.io/tags/Python/
 https://simonczy.github.io/categories/Make/
