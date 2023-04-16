@@ -29,6 +29,7 @@
 <ul>
 <li>Related to specific fields<ul>
 <li><strong><u>BIOS</u></strong></li>
+<li><strong><u>Bot</u></strong></li>
 <li><strong><u>DevOps</u></strong></li>
 <li><strong><u>Linux</u></strong></li>
 <li><strong><u>MacOS</u></strong></li>
@@ -59,18 +60,113 @@
   <entry>
     <title>Set Up V2ray Environment On Oracle Free Tier</title>
     <url>/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Learn to use oracle cloud platform</li>
+<li>Set up a v2ray environment on linux</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1-Apply-for-an-Oracle-Free-Tier"><a href="#1-Apply-for-an-Oracle-Free-Tier" class="headerlink" title="1. Apply for an Oracle Free Tier"></a>1. Apply for an Oracle Free Tier</h3><p>Go to <a href="https://www.oracle.com/au/cloud/free/">the official website</a> to apply for your free cloud server.</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/1.png"></p>
+<p>In order to successfully apply for the free cloud server, you should have your credit card, billing address and your real IP location with you.</p>
+<h3 id="2-Create-your-instance"><a href="#2-Create-your-instance" class="headerlink" title="2. Create your instance"></a>2. Create your instance</h3><p>Now you have already successfully applied for an free account and log in to the Oracle cloud interface.</p>
+<h4 id="2-1-Click-the-instance"><a href="#2-1-Click-the-instance" class="headerlink" title="2.1 Click the instance"></a>2.1 Click the instance</h4><p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/2.png"></p>
+<h4 id="2-2-Create-Instance"><a href="#2-2-Create-Instance" class="headerlink" title="2.2 Create Instance"></a>2.2 Create Instance</h4><p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/3.png"></p>
+<p>After you create your instances, you can see them in this page.</p>
+<h4 id="2-3-Custom-Initialization"><a href="#2-3-Custom-Initialization" class="headerlink" title="2.3 Custom Initialization"></a>2.3 Custom Initialization</h4><p>You should customize four things in this page.</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/4.png"></p>
+<h5 id="2-3-1-Image-and-shape"><a href="#2-3-1-Image-and-shape" class="headerlink" title="2.3.1 Image and shape"></a>2.3.1 Image and shape</h5><p>Set it as CentOS 7 image</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/5.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/6.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/7.png"></p>
+<h5 id="2-3-2-Networking"><a href="#2-3-2-Networking" class="headerlink" title="2.3.2 Networking"></a>2.3.2 Networking</h5><p>It should be your first time to create a network. So just create a new network.</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/8.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/9.png"></p>
+<h5 id="2-3-3-Add-SSH-keys"><a href="#2-3-3-Add-SSH-keys" class="headerlink" title="2.3.3 Add SSH keys"></a>2.3.3 Add SSH keys</h5><p>Save your private key, which you will use to login your machin by ssh.</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/10.png"></p>
+<p>You can check <a href="https://simonczy.github.io/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/#8-B-Use-private-key-to-ssh-A">here</a> to learn how to ssh a machine by private key.</p>
+<h5 id="2-3-4-Boot-volume"><a href="#2-3-4-Boot-volume" class="headerlink" title="2.3.4 Boot volume"></a>2.3.4 Boot volume</h5><p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/11.png"></p>
+<p>After completing the four steps above, you can now create your machine.</p>
+<h3 id="3-Machine-detail"><a href="#3-Machine-detail" class="headerlink" title="3. Machine detail"></a>3. Machine detail</h3><p>When your machine is running, you should be able to get its public ip address and user name, which you will use to ssh your cloud server. </p>
+<p>And then, you should click the subnet.</p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/12.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/13.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/14.png"></p>
+<p><img data-src="/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/15.png"></p>
+<p>And now, you already create your ingress rules.</p>
+<h3 id="4-Build-up-your-v2ray-configuration-on-server"><a href="#4-Build-up-your-v2ray-configuration-on-server" class="headerlink" title="4. Build up your v2ray configuration on server"></a>4. Build up your v2ray configuration on server</h3><h4 id="4-1-SSH-your-machine"><a href="#4-1-SSH-your-machine" class="headerlink" title="4.1 SSH your machine"></a>4.1 SSH your machine</h4><h4 id="4-2-Switch-to-root"><a href="#4-2-Switch-to-root" class="headerlink" title="4.2 Switch to root"></a>4.2 Switch to root</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-Configure-v2ray"><a href="#4-3-Configure-v2ray" class="headerlink" title="4.3 Configure v2ray"></a>4.3 Configure v2ray</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
+
+<p>Chooes 1 at the first question, and then keep pressing “Enter”.</p>
+<h4 id="4-4-Stop-firewall"><a href="#4-4-Stop-firewall" class="headerlink" title="4.4 Stop firewall"></a>4.4 Stop firewall</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-Get-the-link"><a href="#4-5-Get-the-link" class="headerlink" title="4.5 Get the link"></a>4.5 Get the link</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># for url</span></span><br><span class="line">v2ray url</span><br><span class="line"></span><br><span class="line"><span class="comment"># or for qr code</span></span><br><span class="line">v2ray qr</span><br></pre></td></tr></table></figure>
+
+<p>Now, you have already finish your work on server.</p>
+<h3 id="5-Client"><a href="#5-Client" class="headerlink" title="5. Client"></a>5. Client</h3><p>You should install different clients based on different systems and use the link from <strong><u>4.5</u></strong> you just obtained to use the v2ray service.</p>
+]]></content>
       <categories>
-        <category>Draft</category>
+        <category>Make</category>
+        <category>Linux</category>
       </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Env/Config</tag>
+      </tags>
   </entry>
   <entry>
     <title>Create Your Own Discord Bot</title>
     <url>/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Create a discord bot</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To set up a assisting robots to help me obtain information.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="0-Preparation"><a href="#0-Preparation" class="headerlink" title="0. Preparation"></a>0. Preparation</h3><p>You should:</p>
+<ul>
+<li>have a discord accound</li>
+<li>have a python environment</li>
+</ul>
+<h3 id="1-Create-a-discord-bot"><a href="#1-Create-a-discord-bot" class="headerlink" title="1. Create a discord bot"></a>1. Create a discord bot</h3><h4 id="1-1-Enter-discord-application-page"><a href="#1-1-Enter-discord-application-page" class="headerlink" title="1.1 Enter discord application page"></a>1.1 Enter <a href="https://discord.com/developers/applications">discord application page</a></h4><h4 id="1-2-Click-“New-Application”"><a href="#1-2-Click-“New-Application”" class="headerlink" title="1.2 Click “New Application”"></a>1.2 Click “New Application”</h4><p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/1.png"></p>
+<h4 id="1-3-Give-it-a-new-name"><a href="#1-3-Give-it-a-new-name" class="headerlink" title="1.3 Give it a new name"></a>1.3 Give it a new name</h4><p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/2.png"></p>
+<h4 id="1-4-Get-your-discord-bot-token"><a href="#1-4-Get-your-discord-bot-token" class="headerlink" title="1.4 Get your discord bot token"></a>1.4 Get your discord bot token</h4><p>Enter Bot page</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/4.png"></p>
+<p>At the beginning, you need to click the “Reset Token” button to gain your first token. You should safely store it because anyone who owns this token can control its corresponding bot. We will use it in <strong><u>Step 4 Make the first move</u></strong>.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/3.png"></p>
+<p>If you feel unncomfortable, you can reset your token at any time.</p>
+<h3 id="2-Add-you-discord-server"><a href="#2-Add-you-discord-server" class="headerlink" title="2. Add you discord server"></a>2. Add you discord server</h3><p>This server is the place that you can put your dicord bot in.</p>
+<h3 id="3-Add-your-bot-into-your-server"><a href="#3-Add-your-bot-into-your-server" class="headerlink" title="3. Add your bot into your server"></a>3. Add your bot into your server</h3><p>Set your application as a bot.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/5.png"></p>
+<p>Assign it corresponding permissions. And copy the link.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/6.png"></p>
+<p>Go to the link, select your server and authorize it.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/7.png"></p>
+<p>Now you have your offline server bot.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/8.png"></p>
+<h3 id="4-Make-the-first-move"><a href="#4-Make-the-first-move" class="headerlink" title="4. Make the first move"></a>4. Make the first move</h3><p>Your have already created a bot and assign it into your server. And you have your bot token saved in <strong><u>step 2</u></strong>. Now you can teach your bot to make the first move.</p>
+<p>Create this python file and run it.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"></span><br><span class="line">client = discord.Client(intents=discord.Intents.default())</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;We have logged in as &#123;0.user&#125;&#x27;</span>.<span class="built_in">format</span>(client))</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_message</span>(<span class="params">message</span>):</span><br><span class="line">    <span class="keyword">if</span> message.author == client.user:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> message.content.startswith(<span class="string">&#x27;$hello&#x27;</span>):</span><br><span class="line">        <span class="keyword">await</span> message.channel.send(<span class="string">&#x27;Hello!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Assume your token is &quot;abc456DEF&quot;.</span></span><br><span class="line">token = <span class="string">&quot;abc456DEF&quot;</span></span><br><span class="line"></span><br><span class="line">client.run(token)</span><br></pre></td></tr></table></figure>
+
+<p>And now Jarvis is online.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/9.png"></p>
+<p>Then the bot will reply you “Hello!” when you say “$hello” to it.</p>
+<p><img data-src="/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/10.png"></p>
+<h3 id="5-Improvement"><a href="#5-Improvement" class="headerlink" title="5. Improvement"></a>5. Improvement</h3><p>Now, you have create your bot. What you can do next is to create a new world!</p>
+<p>For more information, you can check the <a href="https://discordpy.readthedocs.io/en/latest/index.html">discord official doc</a>.</p>
+]]></content>
       <categories>
-        <category>Draft</category>
+        <category>Make</category>
+        <category>Bot</category>
+        <category>Discord</category>
       </categories>
+      <tags>
+        <tag>Introduction</tag>
+        <tag>Bot</tag>
+      </tags>
   </entry>
   <entry>
     <title>Docker Compose Command</title>
@@ -87,8 +183,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
@@ -113,9 +209,9 @@
         <category>Docker</category>
       </categories>
       <tags>
+        <tag>DevOps</tag>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
-        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -333,9 +429,9 @@
         <category>Draft</category>
       </categories>
       <tags>
+        <tag>DevOps</tag>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
-        <tag>DevOps</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -422,8 +518,8 @@
         <category>Undefined</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -621,9 +717,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
         <tag>SSH</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -789,10 +885,10 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>DevOps</tag>
-        <tag>Python</tag>
+        <tag>Env/Config</tag>
         <tag>Odoo</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -817,8 +913,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
@@ -913,8 +1009,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
