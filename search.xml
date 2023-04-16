@@ -2,22 +2,34 @@
 <search>
   <entry>
     <title>The First Thing You Should Know</title>
-    <url>/2023/02/15/User-Manual/</url>
+    <url>/2023/02/15/Others/User-Manual/User-Manual/</url>
     <content><![CDATA[<p>🥳 Welcome to Mind Game!!!</p>
 <p>📑 As the first post on my personal website, it can show you the way my thought hidden behind all my posts. Please take your time and enjoy your trip! </p>
 <span id="more"></span>
 
-<h2 id="My-Game"><a href="#My-Game" class="headerlink" title="My Game"></a>My Game</h2><h3 id="Title-Name"><a href="#Title-Name" class="headerlink" title="Title Name"></a>Title Name</h3><p>Those articles’ title followed by “(*)” means they are just drafts.</p>
-<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p>Sort by alphabetical order.</p>
+<h2 id="My-Game"><a href="#My-Game" class="headerlink" title="My Game"></a>My Game</h2><h3 id="1-Homepage-Content"><a href="#1-Homepage-Content" class="headerlink" title="1. Homepage Content"></a>1. Homepage Content</h3><p>Those articles’ content shown on homepasg without “more” means they are just drafts.</p>
+<h3 id="2-Categories"><a href="#2-Categories" class="headerlink" title="2. Categories:"></a>2. Categories:</h3><p>Sort by alphabetical order.</p>
+<ul>
+<li><strong><u>Make</u></strong>: Practical operation<ul>
+<li><strong>Bot</strong></li>
+<li><strong>Docker</strong></li>
+<li><strong>Linux</strong></li>
+<li><strong>Odoo</strong></li>
+</ul>
+</li>
+<li><strong><u>Mind</u></strong>: Personal interests and hobbies</li>
+<li><strong><u>Undefined</u></strong></li>
+</ul>
+<h3 id="3-Tag"><a href="#3-Tag" class="headerlink" title="3. Tag"></a>3. Tag</h3><p>Sort by alphabetical order.</p>
 <ul>
 <li>Related to specific fields<ul>
+<li><strong><u>BIOS</u></strong></li>
 <li><strong><u>DevOps</u></strong></li>
 <li><strong><u>Linux</u></strong></li>
-<li><strong><u>Python</u></strong></li>
-<li><strong><u>Odoo</u></strong></li>
 <li><strong><u>MacOS</u></strong></li>
+<li><strong><u>Odoo</u></strong></li>
+<li><strong><u>Python</u></strong></li>
 <li><strong><u>SSH</u></strong></li>
-<li><strong><u>BIOS</u></strong></li>
 </ul>
 </li>
 <li>Related to the purpose of posts<ul>
@@ -28,14 +40,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
+<h3 id="4-Todo-List"><a href="#4-Todo-List" class="headerlink" title="4. Todo List"></a>4. Todo List</h3><p>❓The thing that I should do (All the people should keep doing sport and sleep early, but you know…).</p>
 <ul>
 <li><input disabled="" type="checkbox"> Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image</li>
 <li><input disabled="" type="checkbox"> Git Command</li>
-<li><input disabled="" type="checkbox"> Turn On SSL Service On Ubuntu</li>
 <li><input disabled="" type="checkbox"> …</li>
 </ul>
-<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><ul>
+<h3 id="99-Other"><a href="#99-Other" class="headerlink" title="99. Other"></a>99. Other</h3><ul>
 <li>All blog content may be modified at some point in the future for some reason. (I will try to keep my change log, but human beings are lazy).</li>
 </ul>
 ]]></content>
@@ -44,8 +55,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Set Up V2ray Environment On Oracle Free Tier</title>
+    <url>/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Create Your Own Discord Bot</title>
+    <url>/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/Create-Your-Own-Discord-Bot/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Docker Compose Command</title>
+    <url>/2023/04/15/Quick-Check/Docker/Docker-Compose-Command/Docker-Compose-Command/</url>
+    <content><![CDATA[<p>Frequently used docker compose commands</p>
+<span id="more"></span>
+
+<h2 id="Docker-Compose-Start"><a href="#Docker-Compose-Start" class="headerlink" title="Docker Compose Start"></a>Docker Compose Start</h2><h3 id="Start-compose"><a href="#Start-compose" class="headerlink" title="Start compose"></a>Start compose</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
+
+<h3 id="End-compose"><a href="#End-compose" class="headerlink" title="End compose"></a>End compose</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose down</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Quick Check</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Install Docker On Ubuntu</title>
+    <url>/2023/04/15/Quick-Check/Docker/Install-Docker-On-Ubuntu/Install-Docker-On-Ubuntu/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Install docker  on your ubuntu</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>OS: Ubuntu 20.04</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Install-docker-and-docker-compose"><a href="#Install-docker-and-docker-compose" class="headerlink" title="Install docker and docker-compose"></a>Install <a href="https://docs.docker.com/get-docker/">docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose</a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://get.docker.com | sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-current-user-to-docker-group"><a href="#Add-current-user-to-docker-group" class="headerlink" title="Add current user to docker group"></a>Add current user to docker group</h3><p>and you will not need to add sudo when you use docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.rocket.chat/deploy/prepare-for-your-deployment/rapid-deployment-methods/docker-and-docker-compose">Docker &amp; Docker Compose</a></p>
+]]></content>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Virtual Environment On Ubuntu</title>
-    <url>/2023/04/07/Python-Virtual-Environment-On-Ubuntu/</url>
+    <url>/2023/04/07/Quick-Check/Python/Python-Virtual-Environment-On-Ubuntu/Python-Virtual-Environment-On-Ubuntu/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Python Virtual Environment</li>
@@ -62,19 +121,19 @@
 
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>Git Command</title>
-    <url>/2023/03/28/Git-Command/</url>
+    <url>/2023/03/28/Quick-Check/Git-Command/Git-Command/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Develop Your Addon Based On Odoo 12</title>
-    <url>/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/</url>
+    <url>/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/Develop-Your-Addon-Based-On-Odoo-12/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Addon Customization</li>
@@ -85,7 +144,7 @@
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>I have already installed odoo 12 successfully on my Ubuntu  20.04, so the next step is to develop my personal addon module.</p>
 <h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p><a href="https://simonczy.github.io/2023/03/08/Install-Odoo12-On-Ubuntu20-04/">Install-Odoo12-On-Ubuntu20-04</a></p>
 <h3 id="Clone-your-code-or-create-your-develop-folder"><a href="#Clone-your-code-or-create-your-develop-folder" class="headerlink" title="Clone your code or create your develop folder"></a>Clone your code or create your develop folder</h3><h3 id="Update-your-odoorc-file"><a href="#Update-your-odoorc-file" class="headerlink" title="Update your .odoorc file"></a>Update your .odoorc file</h3><p>Add your code folder into odoo configuration location and use “,” as separator.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/1.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/1.png"></p>
 <p>If you check the link from Preparation carefully, you will know where .odoorc is.</p>
 <p>If you decide to <strong>write your addon from scratch</strong>, you <strong>don’t need to</strong> follow the rest of this post. You can just write your code on the folder you just created.</p>
 <p>The rest of this post is for the people who want to <strong>use their previous code as foundation</strong>.</p>
@@ -93,17 +152,17 @@
 <h4 id="Go-to-the-odoo-database-manager"><a href="#Go-to-the-odoo-database-manager" class="headerlink" title="Go to the odoo database manager"></a>Go to the odoo database manager</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://localhost:8069/web/database/manager</span><br></pre></td></tr></table></figure>
 
 <h4 id="Export-your-database"><a href="#Export-your-database" class="headerlink" title="Export your database"></a>Export your database</h4><p>Backup your database and save the .zip file.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/2.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/2.png"></p>
 <h4 id="Import-your-database"><a href="#Import-your-database" class="headerlink" title="Import your database"></a>Import your database</h4><p>Restore your database from downloaded .zip file</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/3.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/3.png"></p>
 <p>Input the master password you set up before, chooes the .zip file and set up a new name.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/4.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/4.png"></p>
 <p>When it finishes, you may not find the database you just imported.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/6.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/6.png"></p>
 <p>Do not need to be panic, if you import again, it will show up this alert.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/5.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/5.png"></p>
 <h3 id="Update-your-odoorc-file-Optional"><a href="#Update-your-odoorc-file-Optional" class="headerlink" title="Update your .odoorc file (Optional)"></a>Update your .odoorc file (Optional)</h3><p>What you need to do is to update your database name in odoo configuration file.</p>
-<p><img data-src="/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/7.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/7.png"></p>
 <h3 id="Initialize-your-database-Optional"><a href="#Initialize-your-database-Optional" class="headerlink" title="Initialize your database (Optional)"></a>Initialize your database (Optional)</h3><p>In this time, when you run odoo, it may ask you to initial your database. You can run this command to initialize your database.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./odoo-bin -i base</span><br></pre></td></tr></table></figure>
 
@@ -112,13 +171,13 @@
 
 <h3 id="Enjoy-your-addon"><a href="#Enjoy-your-addon" class="headerlink" title="Enjoy your addon"></a>Enjoy your addon</h3>]]></content>
       <tags>
-        <tag>Odoo</tag>
         <tag>Env/Config</tag>
+        <tag>Odoo</tag>
       </tags>
   </entry>
   <entry>
     <title>Turn On SSH Service On Ubuntu</title>
-    <url>/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/</url>
+    <url>/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/Turn-On-SSH-Service-On-Ubuntu/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Turn On Ubuntu SSL Service</li>
@@ -145,37 +204,39 @@
 
 <h3 id="Add-private-into-system-in-B"><a href="#Add-private-into-system-in-B" class="headerlink" title="Add private into system in B"></a>Add private into system in B</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># login successfully now even without linking private key, however, it needs to run this command every time you poweroff B</span></span><br><span class="line">ssh-add -K id_rsa</span><br><span class="line">ssh user@192.168.1.1 -p 33333</span><br><span class="line"></span><br><span class="line"><span class="comment"># or you can set up the ssh configuration on B, which is macOS system</span></span><br><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/3.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/3.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># and you can ssh A like that now, without setting username, port and identify file</span></span><br><span class="line">ssh ubuntu</span><br></pre></td></tr></table></figure>
 
 <h3 id="Connect-to-A-from-public-IP"><a href="#Connect-to-A-from-public-IP" class="headerlink" title="Connect to A from public IP"></a>Connect to A from public IP</h3><p>You need to enter your router to configure NAT Forwarding.</p>
-<p><img data-src="/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/1.png"></p>
-<p><img data-src="/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/2.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/1.png"></p>
+<p><img data-src="/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/2.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you can now ssh to your server in outside by public IP address just like you did in your local network</span></span><br><span class="line">ssh user@142.251.165.100 -p 33333 -i id_rsa</span><br></pre></td></tr></table></figure>
 
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://simonczy.github.io/2023/03/09/Mac-SSH-Amazon-Using-Pem/">Mac SSH Amazon Using Pem</a></p>
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
     <title>Python Common Code</title>
-    <url>/2023/03/26/Python-Common-Code/</url>
+    <url>/2023/03/26/Quick-Check/Python/Python-Common-Code/Python-Common-Code/</url>
     <content><![CDATA[<p>Frequently used python code</p>
 <span id="more"></span>
 
-<h2 id="Python-Quick-Start"><a href="#Python-Quick-Start" class="headerlink" title="Python Quick Start"></a>Python Quick Start</h2><h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><h4 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate integer from 1 to 20</span></span><br><span class="line"><span class="built_in">print</span> (random.randint(<span class="number">1</span>, <span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="Python-Quick-Start"><a href="#Python-Quick-Start" class="headerlink" title="Python Quick Start"></a>Python Quick Start</h2><h3 id="Ternary-operator"><a href="#Ternary-operator" class="headerlink" title="Ternary operator"></a>Ternary operator</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">p_max_count = <span class="built_in">len</span>(i[<span class="string">&#x27;prompt&#x27;</span>]) <span class="keyword">if</span> p_max_count &lt; <span class="built_in">len</span>(i[<span class="string">&#x27;prompt&#x27;</span>]) <span class="keyword">else</span> p_max_count</span><br></pre></td></tr></table></figure>
+
+<h3 id="Calculate-time-spent"><a href="#Calculate-time-spent" class="headerlink" title="Calculate time spent"></a>Calculate time spent</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">start_time = datetime.datetime.now()</span><br><span class="line"></span><br><span class="line"><span class="comment"># target function</span></span><br><span class="line"></span><br><span class="line">end_time = datetime.datetime.now()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;it takes &#123;&#125; seconds&quot;</span>.<span class="built_in">format</span>((end_time - start_time).seconds))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><h4 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate integer from 1 to 20</span></span><br><span class="line"><span class="built_in">print</span> (random.randint(<span class="number">1</span>, <span class="number">20</span>))</span><br></pre></td></tr></table></figure>
 
 <h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><h4 id="Sort-2D-list"><a href="#Sort-2D-list" class="headerlink" title="Sort 2D list"></a>Sort 2D list</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">employees = [[<span class="number">10</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">1997</span>], [<span class="number">3</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">1998</span>], [<span class="number">8</span>, <span class="string">&#x27;Smith&#x27;</span>, <span class="number">2001</span>]]</span><br><span class="line"></span><br><span class="line">sorted_e_a = <span class="built_in">sorted</span>(employees, key=(<span class="keyword">lambda</span> x:x[<span class="number">0</span>]))</span><br><span class="line">sorted_e_b = <span class="built_in">sorted</span>(employees, key=(<span class="keyword">lambda</span> x:[x[<span class="number">2</span>], x[<span class="number">1</span>]]), reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(employees)</span><br><span class="line"><span class="built_in">print</span>(sorted_e_a)</span><br><span class="line"><span class="built_in">print</span>(sorted_e_b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># [[10, &#x27;Jack&#x27;, 1997], [3, &#x27;Jack&#x27;, 1998], [8, &#x27;Smith&#x27;, 2001]]</span></span><br><span class="line"><span class="comment"># [[3, &#x27;Jack&#x27;, 1998], [8, &#x27;Smith&#x27;, 2001], [10, &#x27;Jack&#x27;, 1997]]</span></span><br><span class="line"><span class="comment"># [[8, &#x27;Smith&#x27;, 2001], [3, &#x27;Jack&#x27;, 1998], [10, &#x27;Jack&#x27;, 1997]]</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="Sort-dictionary"><a href="#Sort-dictionary" class="headerlink" title="Sort dictionary"></a>Sort dictionary</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dic = &#123;<span class="number">2</span>: <span class="number">56</span>, <span class="number">1</span>: <span class="number">2</span>, <span class="number">7</span>: <span class="number">12</span>, <span class="number">4</span>: <span class="number">24</span>, <span class="number">5</span>: <span class="number">12</span>, <span class="number">3</span>: <span class="number">323</span>&#125;</span><br><span class="line">sorted_dict_1 = <span class="built_in">sorted</span>(dic.items(), key = <span class="keyword">lambda</span> kv:(kv[<span class="number">0</span>]))</span><br><span class="line">sorted_dict_2 = <span class="built_in">sorted</span>(dic.items(), key = <span class="keyword">lambda</span> kv:(kv[<span class="number">1</span>]))</span><br><span class="line">sorted_dict_3 = <span class="built_in">sorted</span>(dic.items(), key = <span class="keyword">lambda</span> kv:(kv[<span class="number">1</span>], kv[<span class="number">0</span>]))</span><br><span class="line"><span class="built_in">print</span>(sorted_dict_1)</span><br><span class="line"><span class="built_in">print</span>(sorted_dict_2)</span><br><span class="line"><span class="built_in">print</span>(sorted_dict_3)</span><br><span class="line"></span><br><span class="line"><span class="comment"># [(1, 2), (2, 56), (3, 323), (4, 24), (5, 12), (7, 12)]</span></span><br><span class="line"><span class="comment"># [(1, 2), (7, 12), (5, 12), (4, 24), (2, 56), (3, 323)]</span></span><br><span class="line"><span class="comment"># [(1, 2), (5, 12), (7, 12), (4, 24), (2, 56), (3, 323)]</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">&quot;54321&quot;</span></span><br><span class="line"><span class="built_in">print</span>(a[::-<span class="number">1</span>])</span><br><span class="line"><span class="comment"># 12345</span></span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><h4 id="List-generator"><a href="#List-generator" class="headerlink" title="List generator"></a>List generator</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">b = [i+<span class="number">1</span> <span class="keyword">for</span> i <span class="keyword">in</span> a]</span><br><span class="line"><span class="comment"># b = [2, 3, 4, 5, 6, 7]</span></span><br><span class="line"></span><br><span class="line">c = [i+<span class="number">1</span> <span class="keyword">for</span> i <span class="keyword">in</span> a <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line"><span class="comment"># c = [3, 5, 7]</span></span><br></pre></td></tr></table></figure>
 
@@ -190,6 +251,14 @@
 
 <h3 id="Simplify"><a href="#Simplify" class="headerlink" title="Simplify"></a>Simplify</h3><h4 id="Dictionary-Count"><a href="#Dictionary-Count" class="headerlink" title="Dictionary Count"></a>Dictionary Count</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> char <span class="keyword">not</span> <span class="keyword">in</span> unigram_counts:</span><br><span class="line">    unigram_counts[char] = <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    unigram_counts[char] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># can be replace by    </span></span><br><span class="line">unigram_counts[char] = unigram_counts.get(char, <span class="number">0</span>) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="Visualization"><a href="#Visualization" class="headerlink" title="Visualization"></a>Visualization</h3><h4 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
+
+<h5 id="Draw-by-one-list"><a href="#Draw-by-one-list" class="headerlink" title="Draw by one list"></a>Draw by one list</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">a = [<span class="number">17</span>, <span class="number">15</span>, <span class="number">1479</span>, <span class="number">76</span>, <span class="number">1485</span>, <span class="number">68</span>, <span class="number">1493</span>, <span class="number">10</span>, <span class="number">1500</span>, <span class="number">1492</span>, <span class="number">1478</span>, <span class="number">86</span>, <span class="number">1515</span>, <span class="number">1518</span>, <span class="number">1520</span>, <span class="number">1502</span>, <span class="number">1519</span>, <span class="number">1497</span>, <span class="number">1525</span>, <span class="number">87</span>]</span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.plot(a)</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/Users/simon/Desktop/myblog/source/_posts/Python-Common-Code/1.png"></p>
+<h5 id="Draw-by-two-list"><a href="#Draw-by-two-list" class="headerlink" title="Draw by two list"></a>Draw by two list</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">a = [<span class="number">17</span>, <span class="number">15</span>, <span class="number">1479</span>, <span class="number">76</span>, <span class="number">1485</span>, <span class="number">68</span>, <span class="number">1493</span>, <span class="number">10</span>, <span class="number">1500</span>, <span class="number">1492</span>, <span class="number">1478</span>, <span class="number">86</span>, <span class="number">1515</span>, <span class="number">1518</span>, <span class="number">1520</span>, <span class="number">1502</span>, <span class="number">1519</span>, <span class="number">1497</span>, <span class="number">1525</span>, <span class="number">87</span>]</span><br><span class="line">b = a[::-<span class="number">1</span>]</span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.plot(a, color=<span class="string">&quot;r&quot;</span>, marker=<span class="string">&quot;*&quot;</span>)</span><br><span class="line">plt.plot(b, color=<span class="string">&quot;b&quot;</span>, marker=<span class="string">&quot;o&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/Users/simon/Desktop/myblog/source/_posts/Python-Common-Code/2.png"></p>
 ]]></content>
       <tags>
         <tag>Quick Check</tag>
@@ -198,7 +267,7 @@
   </entry>
   <entry>
     <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image</title>
-    <url>/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
+    <url>/2023/03/23/Guidance/Odoo/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Installation</li>
@@ -229,14 +298,14 @@
 ]]></content>
       <tags>
         <tag>DevOps</tag>
-        <tag>Odoo</tag>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
+        <tag>Odoo</tag>
       </tags>
   </entry>
   <entry>
     <title>Install FTP Service On Ubuntu 20.04</title>
-    <url>/2023/03/23/Install-FTP-Service-On-Ubuntu-20-04/</url>
+    <url>/2023/03/23/Quick-Check/Install-FTP-Service-On-Ubuntu-20-04/Install-FTP-Service-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>FTP</li>
@@ -270,13 +339,13 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
     <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
-    <url>/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
+    <url>/2023/03/23/Quick-Check/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Network Error</li>
@@ -287,13 +356,13 @@
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
 <h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
     <title>Recommended Software On MacOS</title>
-    <url>/2023/03/21/Recommended-Software-On-MacOS/</url>
+    <url>/2023/03/21/Share/Recommended-Software-On-MacOS/Recommended-Software-On-MacOS/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>MacOS Software Recommendation</li>
@@ -311,7 +380,7 @@
   </entry>
   <entry>
     <title>Recommended Software On Ubuntu 20.04</title>
-    <url>/2023/03/21/Recommended-Software-On-Ubuntu-20-04/</url>
+    <url>/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/Recommended-Software-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Linux Software Recommendation</li>
@@ -323,13 +392,13 @@
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
     <title>A Web 502 Error Caused By A Docker Upgrade</title>
-    <url>/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
+    <url>/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Handle Docker or DevOps Error</li>
@@ -346,14 +415,14 @@
 </ul>
 <h2 id="Operation-amp-Problem"><a href="#Operation-amp-Problem" class="headerlink" title="Operation &amp; Problem"></a>Operation &amp; Problem</h2><h3 id="Upgrade-the-docker-image"><a href="#Upgrade-the-docker-image" class="headerlink" title="Upgrade the docker image"></a>Upgrade the docker image</h3><p>Update the template in EC2 instance. Deploy a new environment by GitLab.</p>
 <h3 id="502-Error"><a href="#502-Error" class="headerlink" title="502 Error"></a>502 Error</h3><p>Yeah…it causes 502 error obviously.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/1.png"></p>
 <h3 id="Check-the-docker-container"><a href="#Check-the-docker-container" class="headerlink" title="Check the docker container"></a>Check the docker container</h3><p>In fact, it took quite a bit of time to jump from the previous step to this one. </p>
 <p>At first, I mistakenly thought it was due to a network configuration error, so I kept checking the template and also the configuration file. But in fact, the 502 error can be interpreted as a service provisioning failure, and therefore incoming requests cannot be accessed.</p>
 <p>So the first step of troubleshooting should be to check whether the service is started properly, and then start the rest of the troubleshooting later.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check all the containers</span></span><br><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
 <p>As we can see from the following picture, the containers started and exited many times in about 3min. It means there are some error when waking up the image</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/2.png"></p>
 <h3 id="Track-error-information-exitcode-126"><a href="#Track-error-information-exitcode-126" class="headerlink" title="Track error information - exitcode 126"></a>Track error information - exitcode 126</h3><p>Get the basic information from container.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect ContainerID</span><br></pre></td></tr></table></figure>
 
@@ -362,9 +431,9 @@
 <li>ExitCode: The reason why a container exit. You can check <a href="https://komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/">this page</a> for more specific exitcode. It is always a error summary. For 126,  it means that a command used in the container specification could not be invoked.</li>
 <li>LogPath: The location where docker containers save their log</li>
 </ul>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png" alt="image-20230316031409045"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/3.png" alt="image-20230316031409045"></p>
 <p>Print out the log shown on the inspect, which is excatly a great example for <strong>exitcode-126</strong>.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png" alt="image-20230316032028422"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/4.png" alt="image-20230316032028422"></p>
 <h3 id="Upgrade-docker-image-use-user-“odoo”-to-install-pyenv"><a href="#Upgrade-docker-image-use-user-“odoo”-to-install-pyenv" class="headerlink" title="Upgrade docker image - use user “odoo” to install pyenv"></a>Upgrade docker image - use user “odoo” to install pyenv</h3><p>As you can see from the <font color='red'>previous post</font>, the error is introduced at that time.</p>
 <p>The following dockerfile sentence will install pyenv into &#x2F;root&#x2F;, which results in that user “odoo” can not call python3.8.</p>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash &amp;&amp; <span class="built_in">printf</span> <span class="string">&quot;export PATH=\&quot;/root/.pyenv/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n\nexport LC_ALL=C.UTF-8\nexport LANG=C.UTF-8&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
@@ -373,7 +442,7 @@
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"></span><br><span class="line"><span class="comment"># omit some sentences</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># use user &quot;odoo&quot; install pyenv, install python3.8.15 and make it global</span></span><br><span class="line"><span class="keyword">USER</span> odoo</span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">printf</span> <span class="string">&quot;export PYENV_ROOT=\&quot;\$HOME/.pyenv\&quot;\ncommand -v pyenv &gt;/dev/null || export PATH=\&quot;\$PYENV_ROOT/bin:\$PATH\&quot;\neval \&quot;\$(pyenv init -)\&quot;\neval \&quot;\$(pyenv virtualenv-init -)\&quot;\n&quot;</span> &gt;&gt; ~/.bashrc &amp;&amp; <span class="built_in">source</span> ~/.bashrc &amp;&amp; pyenv install 3.8.15 &amp;&amp; pyenv global 3.8.15</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">USER</span> root</span><br><span class="line"><span class="comment"># omit some sentences</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Upload-docker-image-to-docker-hub"><a href="#Upload-docker-image-to-docker-hub" class="headerlink" title="Upload docker image to docker hub"></a>Upload docker image to docker hub</h3><p>After downloading lots of third-party libraries, the size of image increased to almost 10GB.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png" alt="image-20230317112956700"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/5.png" alt="image-20230317112956700"></p>
 <p>There’s not much more to say. In the future, I will only recommend using the command line for uploading docker images that are too large, which took me 5 hours to learn this lesson.</p>
 <h3 id="502-Error-1"><a href="#502-Error-1" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️ Take it easy.</p>
 <h3 id="Fail-to-download-docker-image-in-server"><a href="#Fail-to-download-docker-image-in-server" class="headerlink" title="Fail to download docker image in server"></a>Fail to download docker image in server</h3><p>Though I click the “Run” button in the pipeline, I still can not find any containers on the server.</p>
@@ -387,15 +456,15 @@
 </ul>
 <h3 id="502-Error-2"><a href="#502-Error-2" class="headerlink" title="502 Error"></a>502 Error</h3><p>🧘‍♀️</p>
 <h3 id="Track-error-information-exitcode-127"><a href="#Track-error-information-exitcode-127" class="headerlink" title="Track error information - exitcode 127"></a>Track error information - exitcode 127</h3><p>Here is the log</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png" alt="image-20230319230931264"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/6.png" alt="image-20230319230931264"></p>
 <p>Here is some python feature. Some .py files will put “#!&#x2F;usr&#x2F;bin&#x2F;env python3” in their first line. Therefore, the file can be run by system python3 parser.</p>
 <p>According to the log, there seems to be no python in this image, which is completely different from my local environment.</p>
 <p>As the docker is run by the command “&#x2F;entrypoint.sh odoo”, I need to debug by putting some output in the entrypoint.sh to see what is going on.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png" alt="image-20230319231749335"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/7.png" alt="image-20230319231749335"></p>
 <p>Here comes the result.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png" alt="image-20230319232203595"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/8.png" alt="image-20230319232203595"></p>
 <p>Fxck, it takes me about 4 hours. And the reason is that the .yaml file of this image change the folder.</p>
-<p><img data-src="/2023/03/16/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png" alt="image-20230319233445111"></p>
+<p><img data-src="/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/9.png" alt="image-20230319233445111"></p>
 <p>Then just need to update the docker to change the pyenv location.</p>
 <p>After reading the pyenv-installer script, I set up the env variable $PYENV_ROOT by dockerfile. And finally, everything works well!</p>
 <h3 id="Winner-Winner-Chicken-Dinner"><a href="#Winner-Winner-Chicken-Dinner" class="headerlink" title="Winner Winner Chicken Dinner"></a>Winner Winner Chicken Dinner</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
@@ -409,7 +478,7 @@
   </entry>
   <entry>
     <title>Install Linux By BIOS On Window Machine</title>
-    <url>/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/</url>
+    <url>/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/Install-Linux-By-BIOS-On-Window-Machine/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Install System</li>
@@ -423,11 +492,11 @@
 <p>Then, you should know <strong>the way to enter your machine BIOS</strong>. Generally speaking, different computers have very different ways of turning on the BIOS. Therefore, you’d better ask your computer provider or related technical support.</p>
 <p>Last, you should have a USB flash drive (at least 8g).</p>
 <h3 id="Intall-an-Ubuntu-image"><a href="#Intall-an-Ubuntu-image" class="headerlink" title="Intall an Ubuntu image"></a>Intall an Ubuntu image</h3><p>Click <a href="https://ubuntu.com/download/desktop">this page</a> to download the Ubuntu you want. As I want to download 20.04 LTS, I need to go to <a href="https://ubuntu.com/download/alternative-downloads">alternative page</a> to search.</p>
-<p><img data-src="/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/1.png" alt="image-20230315184213566"></p>
+<p><img data-src="/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/1.png"></p>
 <h3 id="Create-a-bootable-USB-stick"><a href="#Create-a-bootable-USB-stick" class="headerlink" title="Create a bootable USB stick"></a>Create a bootable USB stick</h3><p>Use <a href="https://www.balena.io/etcher/">balenaEtcher</a> to create bootable USB stick. You should select your .iso file and your USB flash drive. It may take about 5mins.</p>
 <h3 id="Enter-your-machine-BIOS"><a href="#Enter-your-machine-BIOS" class="headerlink" title="Enter your machine BIOS"></a>Enter your machine BIOS</h3><p>My computer is made from KNOKA.</p>
-<p><img data-src="/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/2.PNG" alt="IMG_1556"></p>
-<p><img data-src="/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/3.PNG" alt="IMG_1556"></p>
+<p><img data-src="/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/2.PNG"></p>
+<p><img data-src="/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/3.PNG"></p>
 <p>The way to enter its BIOS is KEEP CLICKING “Delete” BUTTON UNTIL BIOS SHOW UP.</p>
 <p>So, what you should do now is</p>
 <ol>
@@ -436,9 +505,9 @@
 <li>Enter BIOS</li>
 </ol>
 <p>When you finish it, you should see the BIOS (1980s style of GUI 🥸).</p>
-<p><img data-src="/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/4.jpeg"></p>
+<p><img data-src="/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/4.jpeg"></p>
 <h3 id="Boot-from-your-USB-stick"><a href="#Boot-from-your-USB-stick" class="headerlink" title="Boot from your USB stick"></a>Boot from your USB stick</h3><p>Selete the USB stick and move to the highest option.</p>
-<p><img data-src="/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/5.jpeg"></p>
+<p><img data-src="/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/5.jpeg"></p>
 <h3 id="Install-your-Ubuntu"><a href="#Install-your-Ubuntu" class="headerlink" title="Install your Ubuntu"></a>Install your Ubuntu</h3><p>Just do what you want</p>
 <h3 id="Turn-on-your-Wi-Fi-adapter-optional"><a href="#Turn-on-your-Wi-Fi-adapter-optional" class="headerlink" title="Turn on your Wi-Fi adapter (optional)"></a>Turn on your Wi-Fi adapter (optional)</h3><p>Some times you may find that you can’t use the Wi-Fi after successful installation 🤡, this may be due to the Wi-Fi driver or system first installation. I solved it by the following command.</p>
 <p>(Sadly, you need to connect to the Internet first if you want to use Wi-Fi module, like wired connection or wireless network USB)</p>
@@ -461,14 +530,14 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>BIOS</tag>
       </tags>
   </entry>
   <entry>
     <title>Mac SSH Amazon Using Pem</title>
-    <url>/2023/03/09/Mac-SSH-Amazon-Using-Pem/</url>
+    <url>/2023/03/09/Quick-Check/Mac-SSH-Amazon-Using-Pem/Mac-SSH-Amazon-Using-Pem/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Use .pem file to ssh</li>
@@ -487,13 +556,13 @@
 ]]></content>
       <tags>
         <tag>Env/Config</tag>
-        <tag>MacOS</tag>
         <tag>SSH</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
     <title>Install Odoo12 On Ubuntu20.04</title>
-    <url>/2023/03/08/Install-Odoo12-On-Ubuntu20-04/</url>
+    <url>/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/Install-Odoo12-On-Ubuntu20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Installation</li>
@@ -507,7 +576,7 @@
 
 <h3 id="Install-PostgreSQL"><a href="#Install-PostgreSQL" class="headerlink" title="Install PostgreSQL"></a>Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">sudo apt-get install -y postgresql</span><br><span class="line"></span><br><span class="line"><span class="comment"># we can use the following command to check postgresql version</span></span><br><span class="line">psql --version</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/1.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/1.png"></p>
 <h3 id="Create-PostgreSQL-user-and-database"><a href="#Create-PostgreSQL-user-and-database" class="headerlink" title="Create PostgreSQL user and database"></a>Create PostgreSQL user and database</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># start postgresql service</span></span><br><span class="line">sudo service postgresql start</span><br><span class="line"></span><br><span class="line"><span class="comment"># create postgresql user and database</span></span><br><span class="line">sudo -u postgres -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># type your password and remember it</span></span><br><span class="line">createuser -P --superuser odoo</span><br><span class="line"></span><br><span class="line"><span class="comment"># may cause error</span></span><br><span class="line">createdb odoo -U odoo -W</span><br></pre></td></tr></table></figure>
 
 <p>You may meet some error when you run the last command</p>
@@ -516,7 +585,7 @@
 <p>If so, you should change your pg_hba.conf configuration</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/postgresql/12/main/pg_hba.conf</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/2.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/2.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># then restare postgresql service</span></span><br><span class="line">sudo service postgresql restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># complete commands that were not fully executed before</span></span><br><span class="line">sudo -u postgres -i</span><br><span class="line">createdb odoo -U odoo -W</span><br></pre></td></tr></table></figure>
 
 <h3 id="Install-curl"><a href="#Install-curl" class="headerlink" title="Install curl"></a>Install curl</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install curl</span><br></pre></td></tr></table></figure>
@@ -525,7 +594,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L http://git.io/n-install | bash  </span><br></pre></td></tr></table></figure>
 
 <p><strong>Reopen</strong> your terminal and check current version </p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/3.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/3.png"></p>
 <p>Install less</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure>
 
@@ -549,12 +618,12 @@
 <li>lxml: install it without specific version.</li>
 </ul>
 <p>You need to modify requirements.txt</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/4.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/4.png"></p>
 <ul>
 <li>Pillow: install it without specific version</li>
 </ul>
 <p>You need to modify requirements.txt</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/5.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/5.png"></p>
 <ul>
 <li>psycopg2: lack of specific library</li>
 </ul>
@@ -569,39 +638,39 @@
 
 <h3 id="Start-odoo"><a href="#Start-odoo" class="headerlink" title="Start odoo"></a>Start odoo</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># enter odoo folder (which is odoo12 as I wrote above)</span></span><br><span class="line"><span class="built_in">cd</span> odoo12</span><br><span class="line"></span><br><span class="line"><span class="comment"># install odoo dependencies provided by odoo</span></span><br><span class="line">./odoo-bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># press ctrl+c to quit</span></span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/7.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/7.png"></p>
 <p>Then turn on your browser and go to this url -&gt; localhost:8069, and you may find some error now.</p>
 <p>Front end:</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/6.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/6.png"></p>
 <p>Back end:</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/9.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/9.png"></p>
 <p>This is because you have not configure your odoo.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># run this command and then exit it </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># this command mean save the configuration in the user folder</span></span><br><span class="line">./odoo-bin -s</span><br></pre></td></tr></table></figure>
 
 <p>You can see there is odoo configuration now.</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/8.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/8.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># modify your .odoorc configuration file</span></span><br><span class="line">vim /home/simon/.odoorc</span><br></pre></td></tr></table></figure>
 
 <p>You should update these three configuration: “db_name”, “db_user”, “db_password”. </p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/14.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/14.png"></p>
 <p>Start the odoo again, and it show the error message like these.</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/12.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/12.png"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># well let&#x27;s initialize our database as there is nothing in the database</span></span><br><span class="line">./odoo-bin -i base</span><br></pre></td></tr></table></figure>
 
 <p>And this time everything is fine.</p>
-<p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/13.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/13.png"></p>
 <h3 id="Enjoy-your-odoo-12"><a href="#Enjoy-your-odoo-12" class="headerlink" title="Enjoy your odoo 12"></a>Enjoy your odoo 12</h3><p>If you want to customize you odoo addon, maybe you can check this link.</p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
 ]]></content>
       <tags>
-        <tag>Odoo</tag>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
+        <tag>Odoo</tag>
       </tags>
   </entry>
   <entry>
     <title>Upgrade Official Odoo12 Image From py3.5 To py3.8</title>
-    <url>/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
+    <url>/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Python Upgrade</li>
@@ -620,16 +689,16 @@
 
 <h3 id="Install-python-3-8-by-pyenv"><a href="#Install-python-3-8-by-pyenv" class="headerlink" title="Install python 3.8 by pyenv"></a>Install python 3.8 by pyenv</h3><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># install python 3.8</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> /var/local/pyenv/bin/pyenv install 3.8.15 &amp;&amp; /var/local/pyenv/bin/pyenv global 3.8.15</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Change-python-3-5-gt-python-3-8-for-odoo-binary-file"><a href="#Change-python-3-5-gt-python-3-8-for-odoo-binary-file" class="headerlink" title="Change python 3.5 -&gt; python 3.8 for odoo binary file"></a>Change python 3.5 -&gt; python 3.8 for odoo binary file</h3><p>The way to test if the odoo can run in odoo offcial docker image, is to input “odoo” and click “enter” button.<br><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png"></p>
+<h3 id="Change-python-3-5-gt-python-3-8-for-odoo-binary-file"><a href="#Change-python-3-5-gt-python-3-8-for-odoo-binary-file" class="headerlink" title="Change python 3.5 -&gt; python 3.8 for odoo binary file"></a>Change python 3.5 -&gt; python 3.8 for odoo binary file</h3><p>The way to test if the odoo can run in odoo offcial docker image, is to input “odoo” and click “enter” button.<br><img data-src="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/1.png"></p>
 <p>How do you know which python it is using? Let try!</p>
-<p><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/2.png"></p>
 <p>Well. Now is easy. Just create a soft link to current python3.</p>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">rm</span> /usr/bin/python3 &amp;&amp; <span class="built_in">ln</span> -s /var/local/pyenv/shims/python3 /usr/bin/python3</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="List-all-the-python-3-5-package-and-try-to-install-them-into-python-3-8-package"><a href="#List-all-the-python-3-5-package-and-try-to-install-them-into-python-3-8-package" class="headerlink" title="List all the python 3.5 package and try to install them into python 3.8 package"></a>List all the python 3.5 package and try to install them into python 3.8 package</h3><p>Use this command to see current package.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check current package</span></span><br><span class="line">pip3 list</span><br><span class="line"></span><br><span class="line"><span class="comment"># output current package as requirements.txt</span></span><br><span class="line">pip3 freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/3.png"></p>
+<p><img data-src="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/3.png"></p>
 <p>Here comes some principle that I follow:</p>
 <ul>
 <li>For some packages you can not download it by pip, like odoo,  you should completely move it from 3.5 package to 3.8 package, including package itself and its information (.egg-info file)</li>
@@ -642,19 +711,19 @@
 
 <h3 id="Build-the-docker-image"><a href="#Build-the-docker-image" class="headerlink" title="Build the docker image"></a>Build the docker image</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t UserName/RepName:TagName .</span><br></pre></td></tr></table></figure>
 
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Dockerfile">Dockerfile download link</a></p>
-<p><a href="/2023/03/08/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Dockerfile">Dockerfile download link</a></p>
+<p><a href="/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
 ]]></content>
       <tags>
         <tag>DevOps</tag>
-        <tag>Odoo</tag>
         <tag>Env/Config</tag>
+        <tag>Odoo</tag>
         <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>Dockerfile Command</title>
-    <url>/2023/03/07/Dockerfile-Command/</url>
+    <url>/2023/03/07/Quick-Check/Docker/Dockerfile-Command/Dockerfile-Command/</url>
     <content><![CDATA[<p>Frequently used dockerfile commands</p>
 <span id="more"></span>
 
@@ -676,7 +745,7 @@
   </entry>
   <entry>
     <title>Linux Command</title>
-    <url>/2023/03/07/Linux-Command/</url>
+    <url>/2023/03/07/Quick-Check/Linux-Command/Linux-Command/</url>
     <content><![CDATA[<p>Frequently used linux commands</p>
 <span id="more"></span>
 
@@ -686,17 +755,19 @@
 
 <h3 id="ftp-common-command"><a href="#ftp-common-command" class="headerlink" title="ftp common command"></a>ftp common command</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># check ftp service status</span></span><br><span class="line">service vsftpd status</span><br><span class="line"></span><br><span class="line"><span class="comment"># check ftp process</span></span><br><span class="line">ps ef | grep -i ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># display ftp auto-on process</span></span><br><span class="line">systemctl  list-unit-files | grep ftp</span><br><span class="line"></span><br><span class="line"><span class="comment"># start ftp service</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># stop ftp service</span></span><br><span class="line">systemctl stop vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on on</span></span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line"></span><br><span class="line"><span class="comment"># set ftp auto-on off</span></span><br><span class="line">systemctl <span class="built_in">disable</span> vsftpd</span><br></pre></td></tr></table></figure>
 
+<h3 id="display-folder-size"><a href="#display-folder-size" class="headerlink" title="display folder size"></a>display folder size</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">du</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://blog.csdn.net/qq_16736531/article/details/80663023">Common FTP Command</a></p>
 <p><a href="https://blog.csdn.net/qq_41985134/article/details/121182623">Ubuntu Auto-On Service</a></p>
 ]]></content>
       <tags>
-        <tag>Quick Check</tag>
         <tag>Linux</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
     <title>Pip Command</title>
-    <url>/2023/03/07/Pip-Command/</url>
+    <url>/2023/03/07/Quick-Check/Python/Pip-Command/Pip-Command/</url>
     <content><![CDATA[<p>Frequently used pip commands</p>
 <span id="more"></span>
 
@@ -718,7 +789,7 @@
   </entry>
   <entry>
     <title>Docker Command</title>
-    <url>/2023/02/15/Docker-Command/</url>
+    <url>/2023/02/15/Quick-Check/Docker/Docker-Command/Docker-Command/</url>
     <content><![CDATA[<p>Frequently used docker commands</p>
 <span id="more"></span>
 
@@ -748,7 +819,7 @@
 
 <h3 id="Debug-dead-container"><a href="#Debug-dead-container" class="headerlink" title="Debug dead container"></a>Debug dead container</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy file from container to local</span></span><br><span class="line">docker <span class="built_in">cp</span> ContainerID:/a/b/c.txt /aa/bb/</span><br></pre></td></tr></table></figure>
 
-<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/2023/02/15/Docker-Command/image-20230319020733223.png" alt="image-20230319020733223"></p>
+<h3 id="Check-container-start-command"><a href="#Check-container-start-command" class="headerlink" title="Check container start command"></a>Check container start command</h3><p><img data-src="/2023/02/15/Quick-Check/Docker/Docker-Command/1.png"></p>
 ]]></content>
       <tags>
         <tag>DevOps</tag>
@@ -757,7 +828,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2022/12/09/hello-world/</url>
+    <url>/2022/12/09/Others/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
 
