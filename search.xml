@@ -56,17 +56,17 @@
   </entry>
   <entry>
     <title>Set Up V2ray Environment On Oracle Free Tier</title>
-    <url>/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/</url>
+    <url>/2023/04/17/Guidance/Set-Up-V2ray-Environment-On-Oracle-Free-Tier/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Create Your Own Discord Bot</title>
-    <url>/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/Create-Your-Own-Discord-Bot/</url>
+    <url>/2023/04/17/Guidance/Create-Your-Own-Discord-Bot/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Docker Compose Command</title>
-    <url>/2023/04/15/Quick-Check/Docker/Docker-Compose-Command/Docker-Compose-Command/</url>
+    <url>/2023/04/15/Quick-Check/Docker/Docker-Compose-Command/</url>
     <content><![CDATA[<p>Frequently used docker compose commands</p>
 <span id="more"></span>
 
@@ -81,7 +81,7 @@
   </entry>
   <entry>
     <title>Install Docker On Ubuntu</title>
-    <url>/2023/04/15/Quick-Check/Docker/Install-Docker-On-Ubuntu/Install-Docker-On-Ubuntu/</url>
+    <url>/2023/04/15/Quick-Check/Docker/Install-Docker-On-Ubuntu/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Install docker  on your ubuntu</li>
@@ -104,7 +104,7 @@
   </entry>
   <entry>
     <title>Python Virtual Environment On Ubuntu</title>
-    <url>/2023/04/07/Quick-Check/Python/Python-Virtual-Environment-On-Ubuntu/Python-Virtual-Environment-On-Ubuntu/</url>
+    <url>/2023/04/07/Quick-Check/Python/Python-Virtual-Environment-On-Ubuntu/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Python Virtual Environment</li>
@@ -128,12 +128,12 @@
   </entry>
   <entry>
     <title>Git Command</title>
-    <url>/2023/03/28/Quick-Check/Git-Command/Git-Command/</url>
+    <url>/2023/03/28/Quick-Check/Git-Command/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Develop Your Addon Based On Odoo 12</title>
-    <url>/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/Develop-Your-Addon-Based-On-Odoo-12/</url>
+    <url>/2023/03/27/Guidance/Odoo/Develop-Your-Addon-Based-On-Odoo-12/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Addon Customization</li>
@@ -177,7 +177,7 @@
   </entry>
   <entry>
     <title>Turn On SSH Service On Ubuntu</title>
-    <url>/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/Turn-On-SSH-Service-On-Ubuntu/</url>
+    <url>/2023/03/27/Guidance/Turn-On-SSH-Service-On-Ubuntu/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Turn On Ubuntu SSL Service</li>
@@ -222,7 +222,7 @@
   </entry>
   <entry>
     <title>Python Common Code</title>
-    <url>/2023/03/26/Quick-Check/Python/Python-Common-Code/Python-Common-Code/</url>
+    <url>/2023/03/26/Quick-Check/Python/Python-Common-Code/</url>
     <content><![CDATA[<p>Frequently used python code</p>
 <span id="more"></span>
 
@@ -267,7 +267,7 @@
   </entry>
   <entry>
     <title>Set Up A Odoo 12 Development Docker Image From Ubuntu 20.04 Docker Image</title>
-    <url>/2023/03/23/Guidance/Odoo/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
+    <url>/2023/03/23/Guidance/Odoo/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Installation</li>
@@ -305,7 +305,7 @@
   </entry>
   <entry>
     <title>Install FTP Service On Ubuntu 20.04</title>
-    <url>/2023/03/23/Quick-Check/Install-FTP-Service-On-Ubuntu-20-04/Install-FTP-Service-On-Ubuntu-20-04/</url>
+    <url>/2023/03/23/Quick-Check/Install-FTP-Service-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>FTP</li>
@@ -345,7 +345,7 @@
   </entry>
   <entry>
     <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
-    <url>/2023/03/23/Quick-Check/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
+    <url>/2023/03/23/Quick-Check/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Network Error</li>
@@ -362,7 +362,7 @@
   </entry>
   <entry>
     <title>Recommended Software On MacOS</title>
-    <url>/2023/03/21/Share/Recommended-Software-On-MacOS/Recommended-Software-On-MacOS/</url>
+    <url>/2023/03/21/Share/Recommended-Software-On-MacOS/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>MacOS Software Recommendation</li>
@@ -380,7 +380,7 @@
   </entry>
   <entry>
     <title>Recommended Software On Ubuntu 20.04</title>
-    <url>/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/Recommended-Software-On-Ubuntu-20-04/</url>
+    <url>/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Linux Software Recommendation</li>
@@ -398,7 +398,7 @@
   </entry>
   <entry>
     <title>A Web 502 Error Caused By A Docker Upgrade</title>
-    <url>/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
+    <url>/2023/03/16/Guidance/A-Web-502-Error-Caused-By-A-Docker-Upgrade/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Handle Docker or DevOps Error</li>
@@ -478,7 +478,7 @@
   </entry>
   <entry>
     <title>Install Linux By BIOS On Window Machine</title>
-    <url>/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/Install-Linux-By-BIOS-On-Window-Machine/</url>
+    <url>/2023/03/15/Guidance/Install-Linux-By-BIOS-On-Window-Machine/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Install System</li>
@@ -531,13 +531,13 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-        <tag>Env/Config</tag>
         <tag>BIOS</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
     <title>Mac SSH Amazon Using Pem</title>
-    <url>/2023/03/09/Quick-Check/Mac-SSH-Amazon-Using-Pem/Mac-SSH-Amazon-Using-Pem/</url>
+    <url>/2023/03/09/Quick-Check/Mac-SSH-Amazon-Using-Pem/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Use .pem file to ssh</li>
@@ -562,7 +562,7 @@
   </entry>
   <entry>
     <title>Install Odoo12 On Ubuntu20.04</title>
-    <url>/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/Install-Odoo12-On-Ubuntu20-04/</url>
+    <url>/2023/03/08/Guidance/Odoo/Install-Odoo12-On-Ubuntu20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Odoo Installation</li>
@@ -670,7 +670,7 @@
   </entry>
   <entry>
     <title>Upgrade Official Odoo12 Image From py3.5 To py3.8</title>
-    <url>/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
+    <url>/2023/03/08/Guidance/Odoo/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Python Upgrade</li>
@@ -723,7 +723,7 @@
   </entry>
   <entry>
     <title>Dockerfile Command</title>
-    <url>/2023/03/07/Quick-Check/Docker/Dockerfile-Command/Dockerfile-Command/</url>
+    <url>/2023/03/07/Quick-Check/Docker/Dockerfile-Command/</url>
     <content><![CDATA[<p>Frequently used dockerfile commands</p>
 <span id="more"></span>
 
@@ -745,7 +745,7 @@
   </entry>
   <entry>
     <title>Linux Command</title>
-    <url>/2023/03/07/Quick-Check/Linux-Command/Linux-Command/</url>
+    <url>/2023/03/07/Quick-Check/Linux-Command/</url>
     <content><![CDATA[<p>Frequently used linux commands</p>
 <span id="more"></span>
 
@@ -767,7 +767,7 @@
   </entry>
   <entry>
     <title>Pip Command</title>
-    <url>/2023/03/07/Quick-Check/Python/Pip-Command/Pip-Command/</url>
+    <url>/2023/03/07/Quick-Check/Python/Pip-Command/</url>
     <content><![CDATA[<p>Frequently used pip commands</p>
 <span id="more"></span>
 
@@ -789,7 +789,7 @@
   </entry>
   <entry>
     <title>Docker Command</title>
-    <url>/2023/02/15/Quick-Check/Docker/Docker-Command/Docker-Command/</url>
+    <url>/2023/02/15/Quick-Check/Docker/Docker-Command/</url>
     <content><![CDATA[<p>Frequently used docker commands</p>
 <span id="more"></span>
 
