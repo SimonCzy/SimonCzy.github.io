@@ -58,11 +58,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Help AIDS Event</title>
+    <url>/2023/05/27/Help-AIDS-Event/</url>
+    <content><![CDATA[<p>We are organizing an AIDS support event on 26th May, with a strong emphasis on caring for individuals affected by HIV&#x2F;AIDS. We invite you to purchase tickets and join us in raising awareness and support for those living with this condition.</p>
+<p>Here is the coming <a href="https://tectal-dev-ed.develop.my.salesforce-sites.com/AAkPay__EventsUpcoming">event</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Help AIDS</title>
     <url>/2023/05/27/Help-AIDS/</url>
     <content><![CDATA[<p>Dear friends, we have the power to make a difference in the lives of those affected by HIV&#x2F;AIDS. Today, I urge you to join me in supporting AHL, an incredible organization dedicated to combating this global epidemic. By contributing to AHL, we can provide critical resources, raise awareness, and offer hope to individuals living with HIV&#x2F;AIDS. Together, let’s make a profound impact on the lives of those affected and work towards a world free from the burden of this disease.</p>
 <p>Here is the donation <a href="https://tectal-dev-ed.develop.my.salesforce-sites.com/AAkPay__CheckoutM">link</a></p>
-<p>Here is the coming <a href="https://tectal-dev-ed.develop.my.salesforce-sites.com/AAkPay__EventsUpcoming">event</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -135,8 +141,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>DevOps</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -232,9 +238,9 @@
         <category>Docker</category>
       </categories>
       <tags>
+        <tag>DevOps</tag>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
-        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -466,9 +472,9 @@
         <category>Draft</category>
       </categories>
       <tags>
+        <tag>DevOps</tag>
         <tag>Linux</tag>
         <tag>Env/Config</tag>
-        <tag>DevOps</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -922,8 +928,8 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>DevOps</tag>
+        <tag>Env/Config</tag>
         <tag>Odoo</tag>
         <tag>Python</tag>
       </tags>
