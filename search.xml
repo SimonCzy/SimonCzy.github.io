@@ -11,19 +11,14 @@
 <ul>
 <li><strong><u>Draft</u></strong> </li>
 <li><strong><u>Make</u></strong>: Practical operation<ul>
-<li><strong><u>Bot</u></strong><ul>
-<li><strong><u>Telegram</u></strong></li>
-<li><strong><u>Discord</u></strong></li>
-<li><strong><u>Rocket.Chat</u></strong></li>
-</ul>
-</li>
+<li><strong><u>Bot</u></strong></li>
 <li><u><strong>Docker</strong></u></li>
 <li><u><strong>Linux</strong></u></li>
 <li><u><strong>Odoo</strong></u></li>
+<li><strong><u>Python</u></strong></li>
 </ul>
 </li>
-<li><strong><u>Mind</u></strong>: Personal interests and hobbies</li>
-<li><strong><u>Undefined</u></strong></li>
+<li><strong><u>Others</u></strong></li>
 </ul>
 <h3 id="2-Tag"><a href="#2-Tag" class="headerlink" title="2. Tag"></a>2. Tag</h3><p>Sort by alphabetical order.</p>
 <ul>
@@ -33,6 +28,7 @@
 <li><strong><u>DevOps</u></strong></li>
 <li><strong><u>Linux</u></strong></li>
 <li><strong><u>MacOS</u></strong></li>
+<li><strong><u>Network</u></strong></li>
 <li><strong><u>Odoo</u></strong></li>
 <li><strong><u>Python</u></strong></li>
 <li><strong><u>SSH</u></strong></li>
@@ -51,40 +47,166 @@
 </ul>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Others</category>
       </categories>
       <tags>
         <tag>Introduction</tag>
       </tags>
   </entry>
   <entry>
-    <title>Help AIDS Event</title>
-    <url>/2023/05/27/Help-AIDS-Event/</url>
-    <content><![CDATA[<p>We are organizing an AIDS support event on 26th May, with a strong emphasis on caring for individuals affected by HIV&#x2F;AIDS. We invite you to purchase tickets and join us in raising awareness and support for those living with this condition.</p>
-<p>Here is the coming <a href="https://tectal-dev-ed.develop.my.salesforce-sites.com/AAkPay__EventsUpcoming">event</a></p>
+    <title>Ubuntu Safety Command</title>
+    <url>/2023/06/03/Quick-Check/Linux/Ubuntu-Safety-Command/</url>
+    <content><![CDATA[<p>Frequently used ubuntu safety commands</p>
+<span id="more"></span>
+
+<h2 id="Ubuntu-Safety-Quick-Start"><a href="#Ubuntu-Safety-Quick-Start" class="headerlink" title="Ubuntu Safety Quick Start"></a>Ubuntu Safety Quick Start</h2><h3 id="display-current-user"><a href="#display-current-user" class="headerlink" title="display current user"></a>display current user</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">who</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="display-login-log"><a href="#display-login-log" class="headerlink" title="display login log"></a>display login log</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">last</span><br></pre></td></tr></table></figure>
+
+<h3 id="display-user-login-log"><a href="#display-user-login-log" class="headerlink" title="display user login log"></a>display user login log</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lastlog</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Quick Check</tag>
+      </tags>
   </entry>
   <entry>
-    <title>Help AIDS</title>
-    <url>/2023/05/27/Help-AIDS/</url>
-    <content><![CDATA[<p>Dear friends, we have the power to make a difference in the lives of those affected by HIV&#x2F;AIDS. Today, I urge you to join me in supporting AHL, an incredible organization dedicated to combating this global epidemic. By contributing to AHL, we can provide critical resources, raise awareness, and offer hope to individuals living with HIV&#x2F;AIDS. Together, let’s make a profound impact on the lives of those affected and work towards a world free from the burden of this disease.</p>
-<p>Here is the donation <a href="https://tectal-dev-ed.develop.my.salesforce-sites.com/AAkPay__CheckoutM">link</a></p>
+    <title>Anaconda Linux Command</title>
+    <url>/2023/06/03/Quick-Check/Linux/Anaconda-Linux-Command/</url>
+    <content><![CDATA[<p>Frequently used anaconda-related commands</p>
+<span id="more"></span>
+
+<h2 id="Anaconda-Linux-Command-Quick-Start"><a href="#Anaconda-Linux-Command-Quick-Start" class="headerlink" title="Anaconda Linux Command Quick Start"></a>Anaconda Linux Command Quick Start</h2><h3 id="Turn-off-the-default-startup-base-environment"><a href="#Turn-off-the-default-startup-base-environment" class="headerlink" title="Turn off the default startup base environment"></a>Turn off the default startup base environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Turn-on-the-default-startup-base-environment"><a href="#Turn-on-the-default-startup-base-environment" class="headerlink" title="Turn on the default startup base environment"></a>Turn on the default startup base environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Steam Needs to Be Online to Update</title>
-    <url>/2023/05/22/Steam-Needs-to-Be-Online-to-Update/</url>
-    <content><![CDATA[]]></content>
+    <url>/2023/05/22/Guidance/Steam-Needs-to-Be-Online-to-Update/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Handle Steam Update Problem</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>One day after I reinstalled my steam on my Mac, my steam couldn’t be opened anymore 😭. Every time I try to start my steam, it will show that it need to update and after a few minutes it pop up the error message like this.</p>
+<p><img data-src="/2023/05/22/Guidance/Steam-Needs-to-Be-Online-to-Update/1.png"></p>
+<p>You may want to know my version information:</p>
+<ul>
+<li><p>MacOS 13.1.1</p>
+</li>
+<li><p>Steam (downloaded from official website on 2023&#x2F;05&#x2F;21)</p>
+</li>
+</ul>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="0-Preparation"><a href="#0-Preparation" class="headerlink" title="0. Preparation"></a>0. Preparation</h3><p>Before delving into my personal solution, I’d like to introduce some general troubleshooting approaches. This will help you identify any basic errors that might be causing the update failure before diving deeper into the issue.</p>
+<ul>
+<li><p>Check &#x2F; change your internet connection (wired, wireless, mobile hotspot)</p>
+</li>
+<li><p>Check &#x2F; change DNS configuration</p>
+</li>
+<li><p>Enable &#x2F; disable any VPN or proxy</p>
+</li>
+<li><p>Verify <a href="https://steamcommunity.com/">Steam server</a> status</p>
+</li>
+<li><p>Restart Steam &#x2F; computer</p>
+</li>
+<li><p>Reinstall Steam</p>
+</li>
+</ul>
+<p>If you have already tried the above-mentioned methods and none of them have resolved your issue, then it is essential for you to go through the following content.</p>
+<h3 id="1-My-solution"><a href="#1-My-solution" class="headerlink" title="1. My solution"></a>1. My solution</h3><p>Just like any other software, Steam relies on running a local update script to update itself. My solution will be to first locate this update script, then manually execute the update function to see what is going wrong, and finally resolve the issue.</p>
+<h3 id="2-Find-out-the-steam-update-script"><a href="#2-Find-out-the-steam-update-script" class="headerlink" title="2. Find out the steam update script"></a>2. Find out the steam update script</h3><p>When our approach is correct, we usually see results quickly. Let’s explore the executable files in the Steam package content (There won’t be too many files in this folder because you just install it but haven’t updated yet).</p>
+<p>Here is the update file I found.</p>
+<p><code>Application -&gt; Steam -&gt; Contents -&gt; MacOS -&gt; steam_osx</code></p>
+<h3 id="3-Run-the-update-script-manually"><a href="#3-Run-the-update-script-manually" class="headerlink" title="3. Run the update script manually"></a>3. Run the update script manually</h3><p>You just need to double click the steam_osx file, which is a unix executable file.</p>
+<p><img data-src="/2023/05/22/Guidance/Steam-Needs-to-Be-Online-to-Update/2.png"></p>
+<p>Here come the output message.</p>
+<p><img data-src="/2023/05/22/Guidance/Steam-Needs-to-Be-Online-to-Update/3.png"></p>
+<p>As you can see, it shows that steam can not download something from <a href="http://media.steampowered.com/client/steam_client_osx">http://media.steampowered.com/client/steam_client_osx</a></p>
+<p>Then I tried accessing the link in my browser, and indeed, my computer couldn’t access that link, but my mobile phone could.</p>
+<p>Well, the we have identified the issue, and now the remaining task is to determine how to resolve it.</p>
+<h3 id="4-Resolve-the-network-connection-issue"><a href="#4-Resolve-the-network-connection-issue" class="headerlink" title="4. Resolve the network connection issue"></a>4. Resolve the network connection issue</h3><p>It should be noted that my phones can be connected, but my computers cannot, which means there should be some configuration error in my computer.</p>
+<p>Because I had already checked DNS configuration in step 0 before. Therefore, I am now inclined towards the incorrect configuration of the host file. </p>
+<p>Before I move on, please let me introduce some details about host file.</p>
+<h4 id="What-is-host"><a href="#What-is-host" class="headerlink" title="What is host"></a>What is host</h4><p><em>A system’s hosts file maps hostnames to IP addresses. Users can override default DNS information for a given domain and specify their IP addresses.</em></p>
+<p>Let us use vim to edit the host file. The host file path in my mac is:</p>
+<p><code>/etc/hosts</code></p>
+<p>Here comes the problem (I have already add “# “ at the beginning of each line here to fix the problem, so what you see is a problem-fixed version. You can just remove the “# “ at the beginning of each line to reproduce the problem).</p>
+<p><img data-src="/2023/05/22/Guidance/Steam-Needs-to-Be-Online-to-Update/4.png"></p>
+<h3 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h3><p>On a previous day, for some reason, I added this batch of strategies to modify the host for Steam. But at a certain point in time, these strategies no longer apply, and I forgot to make adjustments to the host file. Therefore, after reinstalling the Steam, every time the program tries to perform the “Update Steam” operation, it will be redirected to an unavailable IP (74.126.135.131), which leads to the failure of “Update Steam” operation.</p>
+]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>MacOS</tag>
+        <tag>Troubleshoot</tag>
+        <tag>Nerwork</tag>
+      </tags>
   </entry>
   <entry>
     <title>Reactivate Ubuntu Software Store</title>
-    <url>/2023/05/21/Reactivate-Ubuntu-Software-Store/</url>
-    <content><![CDATA[]]></content>
+    <url>/2023/05/21/Guidance/Reactivate-Ubuntu-Software-Store/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Can not open your Ubuntu Software Store</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Suddenly, I couldn’t open my Ubuntu Software Store anymore. (Ubuntu 20.04)</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="1-The-command-I-already-run-but-may-most-likely-be-unnecessary"><a href="#1-The-command-I-already-run-but-may-most-likely-be-unnecessary" class="headerlink" title="1. The command I already run but may most likely be unnecessary"></a>1. The command I already run but may most likely be unnecessary</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo snap remove snap-store</span><br><span class="line">sudo apt purge snapd</span><br><span class="line">sudo apt install snapd</span><br><span class="line">sudo snap install snap-store</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-The-command-I-already-which-may-be-the-key-to-solve-the-problem-but-havent-been-verified"><a href="#2-The-command-I-already-which-may-be-the-key-to-solve-the-problem-but-havent-been-verified" class="headerlink" title="2. The command I already, which may be the key to solve the problem but havent been verified"></a>2. The command I already, which may be the key to solve the problem but havent been verified</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># this following commands may delete the software you install</span></span><br><span class="line"><span class="comment"># via Ubuntu Software Store. Please be careful.</span></span><br><span class="line">sudo <span class="built_in">rm</span> -rvf /var/lib/apt/lists/*</span><br><span class="line">sudp apt-get update</span><br><span class="line">sudo shutdown -r now</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Troubleshoot</tag>
+      </tags>
   </entry>
   <entry>
     <title>Python Public Util Code</title>
-    <url>/2023/05/21/Python-Public-Util-Code/</url>
-    <content><![CDATA[]]></content>
+    <url>/2023/05/21/Quick-Check/Python/Python-Public-Util-Code/</url>
+    <content><![CDATA[<p>Personal frequently used public python function code</p>
+<span id="more"></span>
+
+<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_day_time</span>():</span><br><span class="line">    <span class="keyword">return</span> time.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>, time.localtime())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_detail_time</span>():</span><br><span class="line">    <span class="keyword">return</span> time.strftime(<span class="string">&quot;%Y-%m-%d_%H:%M:%S&quot;</span>, time.localtime())</span><br></pre></td></tr></table></figure>
+
+<h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_detail_time</span>():</span><br><span class="line">    <span class="keyword">return</span> time.strftime(<span class="string">&quot;%Y-%m-%d_%H:%M:%S&quot;</span>, time.localtime())</span><br><span class="line"></span><br><span class="line">log_level_dict = &#123;</span><br><span class="line">    <span class="string">&#x27;DEBUG&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;INFO&#x27;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;WARNING&#x27;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&#x27;ERROR&#x27;</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="string">&#x27;CRITICAL&#x27;</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_log</span>(<span class="params">log_info, log_level=<span class="string">&#x27;INFO&#x27;</span></span>):</span><br><span class="line">    os.makedirs(<span class="string">&#x27;./log&#x27;</span>, exist_ok=<span class="literal">True</span>)</span><br><span class="line">    log_dir = <span class="string">&#x27;./log/nlp.log&#x27;</span></span><br><span class="line">    current_level = log_level_dict[<span class="string">&#x27;INFO&#x27;</span>]</span><br><span class="line">    log = <span class="string">&quot;[&#123;0&#125;] &#123;1&#125;: &#123;2&#125;\n&quot;</span>.<span class="built_in">format</span>(log_level, get_detail_time(), log_info)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> log_level_dict[log_level] &gt;= current_level:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(log_dir, <span class="string">&#x27;a+&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(log)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Write-x2F-Read-File"><a href="#Write-x2F-Read-File" class="headerlink" title="Write &#x2F; Read File"></a>Write &#x2F; Read File</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">write_file</span>(<span class="params">file_name, data</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_file</span>(<span class="params">file_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">return</span> f.read()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Write-x2F-Read-Json-File"><a href="#Write-x2F-Read-Json-File" class="headerlink" title="Write &#x2F; Read Json File"></a>Write &#x2F; Read Json File</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">write_file</span>(<span class="params">file_name, data</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_file</span>(<span class="params">file_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">return</span> f.read()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">json_to_dict</span>(<span class="params">json_data</span>):</span><br><span class="line">    <span class="keyword">return</span> json.loads(json_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dict_to_json</span>(<span class="params">dict_data</span>):</span><br><span class="line">    <span class="keyword">return</span> json.dumps(dict_data, indent=<span class="number">4</span>, ensure_ascii=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">write_json_file</span>(<span class="params">file_name, dic</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(dict_to_json(dic))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_json_file</span>(<span class="params">file_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">return</span> json.load(f)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-x2F-Post-Request"><a href="#Get-x2F-Post-Request" class="headerlink" title="Get &#x2F; Post Request"></a>Get &#x2F; Post Request</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">send_req_by_get</span>(<span class="params">url</span>):</span><br><span class="line">    <span class="keyword">return</span> requests.get(url).text</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">send_req_by_post</span>(<span class="params">url, body</span>):</span><br><span class="line">    <span class="keyword">return</span> requests.post(</span><br><span class="line">        url,</span><br><span class="line">        data=body,</span><br><span class="line">        headers=&#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>&#125;</span><br><span class="line">    ).text</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;Need some code shown above&#x27;&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_raw_data</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;code&#x27;</span> <span class="keyword">in</span> data:</span><br><span class="line">        <span class="keyword">if</span> data[<span class="string">&#x27;code&#x27;</span>] == <span class="number">200</span>:</span><br><span class="line">            <span class="keyword">return</span> data[<span class="string">&#x27;data&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">raise</span> Exception(<span class="string">&#x27;Fail To Send Request! Error Message: &#123;0&#125; &#123;1&#125;&#x27;</span>.<span class="built_in">format</span>(data[<span class="string">&#x27;code&#x27;</span>], data[<span class="string">&#x27;message&#x27;</span>]))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_rsp_data</span>(<span class="params">url, req_type, body=<span class="string">&quot;&quot;</span></span>):</span><br><span class="line">    <span class="keyword">if</span> req_type.upper() == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> get_raw_data(json_to_dict(send_req_by_get(url)))</span><br><span class="line">    <span class="keyword">elif</span> req_type.upper() == <span class="string">&quot;POST&quot;</span>:</span><br><span class="line">        <span class="keyword">if</span> body == <span class="string">&quot;&quot;</span>:</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">&#x27;Empty body to post.&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> get_raw_data(json_to_dict(send_req_by_post(url, body)))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">raise</span> Exception(<span class="string">&#x27;Error reqType: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(req_type))</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Make</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Quick Check</tag>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Set Up V2ray Environment On Oracle Free Tier</title>
@@ -141,8 +263,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
         <tag>Env/Config</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -190,7 +312,6 @@
       <categories>
         <category>Make</category>
         <category>Bot</category>
-        <category>Discord</category>
       </categories>
       <tags>
         <tag>Introduction</tag>
@@ -212,8 +333,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
         <tag>Quick Check</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -238,9 +359,9 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -259,22 +380,21 @@
 <h3 id="Activate-the-virtual-environment"><a href="#Activate-the-virtual-environment" class="headerlink" title="Activate the virtual environment"></a>Activate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ven/bin/activate</span><br></pre></td></tr></table></figure>
 
 <h3 id="Deactivate-the-virtual-environment"><a href="#Deactivate-the-virtual-environment" class="headerlink" title="Deactivate the virtual environment"></a>Deactivate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Make</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
         <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>Git Command</title>
     <url>/2023/03/28/Quick-Check/Git-Command/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/m0_50861902/article/details/119181470">https://blog.csdn.net/m0_50861902/article/details/119181470</a></p>
-<p>Frequently used git commands</p>
+    <content><![CDATA[<p>Frequently used git commands</p>
 <span id="more"></span>
 
 <h2 id="Git-Quick-Start"><a href="#Git-Quick-Start" class="headerlink" title="Git Quick Start"></a>Git Quick Start</h2><h3 id="version-fallback"><a href="#version-fallback" class="headerlink" title="version fallback"></a>version fallback</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># you need to be in the branch you want to fall back</span></span><br><span class="line"><span class="comment"># input &quot;q&quot; to quit</span></span><br><span class="line"><span class="comment"># write down the commit number, let us assume it it aa11bb22cc33dd44</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># you can fallback to the specific commit you want</span></span><br><span class="line"><span class="comment"># please remember to save your original or it will be erased</span></span><br><span class="line">git reset --hard aa11bb22cc33dd44</span><br></pre></td></tr></table></figure>
@@ -282,10 +402,10 @@
 <h3 id="display-branch"><a href="#display-branch" class="headerlink" title="display branch"></a>display branch</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># output shown as following</span></span><br><span class="line"><span class="comment"># WI325-Simon-0413</span></span><br><span class="line"><span class="comment"># *develop (current branch with &quot;*&quot;)</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="delete-branch"><a href="#delete-branch" class="headerlink" title="delete branch"></a>delete branch</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -d WI325-Simon-0413</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
-        <category>Draft</category>
+        <category>Make</category>
+        <category>Linux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
@@ -384,8 +504,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
         <tag>SSH</tag>
       </tags>
   </entry>
@@ -430,7 +550,8 @@
 <p><img data-src="/2023/03/26/Quick-Check/Python/Python-Common-Code/2.png"></p>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Make</category>
+        <category>Python</category>
       </categories>
       <tags>
         <tag>Quick Check</tag>
@@ -472,9 +593,9 @@
         <category>Draft</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
+        <tag>DevOps</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -518,8 +639,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -540,13 +661,13 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
     <title>Recommended Software On MacOS</title>
-    <url>/2023/03/21/Share/Recommended-Software-On-MacOS/</url>
+    <url>/2023/03/21/Others/Recommended-Software-On-MacOS/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>MacOS Software Recommendation</li>
@@ -556,18 +677,19 @@
 <h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><h3 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h3><p><a href="https://www.snipaste.com/">Snipaste</a> 🌟🌟🌟🌟🌟</p>
 <h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><p>ForkLift 🌟🌟🌟🌟🌟</p>
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
+<p><a href="https://github.com/marktext/marktext">MarkText</a> 🌟🌟🌟🌟🌟</p>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Others</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>MacOS</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
     <title>Recommended Software On Ubuntu 20.04</title>
-    <url>/2023/03/21/Share/Recommended-Software-On-Ubuntu-20-04/</url>
+    <url>/2023/03/21/Others/Recommended-Software-On-Ubuntu-20-04/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
 <ul>
 <li>Linux Software Recommendation</li>
@@ -579,11 +701,11 @@
 <h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Markdown-Editor"><a href="#Markdown-Editor" class="headerlink" title="Markdown Editor"></a>Markdown Editor</h3><p>Typora (Free Version) 🌟🌟🌟🌟🌟</p>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Others</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -728,8 +850,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
         <tag>BIOS</tag>
       </tags>
   </entry>
@@ -760,9 +882,9 @@
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>MacOS</tag>
         <tag>Env/Config</tag>
         <tag>SSH</tag>
-        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -872,8 +994,8 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Env/Config</tag>
+        <tag>Linux</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -928,10 +1050,10 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
         <tag>Env/Config</tag>
-        <tag>Odoo</tag>
+        <tag>DevOps</tag>
         <tag>Python</tag>
+        <tag>Odoo</tag>
       </tags>
   </entry>
   <entry>
@@ -956,13 +1078,13 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
         <tag>Quick Check</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
     <title>Linux Command</title>
-    <url>/2023/03/07/Quick-Check/Linux-Command/</url>
+    <url>/2023/03/07/Quick-Check/Linux/Linux-Command/</url>
     <content><![CDATA[<p>Frequently used linux commands</p>
 <span id="more"></span>
 
@@ -980,7 +1102,15 @@
 
 <h3 id="compressed-folder"><a href="#compressed-folder" class="headerlink" title="compressed folder"></a>compressed folder</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># SML_P1.tar.gz is the name of target compressed file</span></span><br><span class="line"><span class="comment"># SML_P1/ is the folder you want to compress</span></span><br><span class="line">tar -zcvf SML_P1.tar.gz SML_P1/</span><br></pre></td></tr></table></figure>
 
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://blog.csdn.net/qq_16736531/article/details/80663023">Common FTP Command</a></p>
+<h3 id="login-other-machine-by-ssh"><a href="#login-other-machine-by-ssh" class="headerlink" title="login other machine by ssh"></a>login other machine by ssh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># let us set ip as 192.168.1.1, port as 12345, user as root</span></span><br><span class="line">ssh root@192.168.1.1 -p 12345</span><br></pre></td></tr></table></figure>
+
+<h3 id="ssh-other-machine-and-run-local-shell-script"><a href="#ssh-other-machine-and-run-local-shell-script" class="headerlink" title="ssh other machine and run local shell script"></a>ssh other machine and run local shell script</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># let us set ip as 192.168.1.1, port as 12345, user as root</span></span><br><span class="line"><span class="comment"># shell script as base.sh</span></span><br><span class="line">ssh -T root@192.168.1.1 -p 12345 &lt; bash.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="copy-file-to-other-machine"><a href="#copy-file-to-other-machine" class="headerlink" title="copy file to other machine"></a>copy file to other machine</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># let us set ip as 192.168.1.1, port as 12345, user as root</span></span><br><span class="line"><span class="comment"># relative local file path ./FinalCode.txt</span></span><br><span class="line">scp -P 12345 ./FinalCode.txt root@192.168.1.1:~/Documents</span><br></pre></td></tr></table></figure>
+
+<h3 id="copy-folder-to-other-machine"><a href="#copy-folder-to-other-machine" class="headerlink" title="copy folder to other machine"></a>copy folder to other machine</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># let us set ip as 192.168.1.1, port as 12345, user as root</span></span><br><span class="line"><span class="comment"># relative local folder path ./FinalCode/</span></span><br><span class="line">scp -P 12345 -r ./FinalCode/ root@192.168.1.1:~/Documents</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/qq_16736531/article/details/80663023">Common FTP Command</a></p>
 <p><a href="https://blog.csdn.net/qq_41985134/article/details/121182623">Ubuntu Auto-On Service</a></p>
 ]]></content>
       <categories>
@@ -1010,7 +1140,8 @@
 <h3 id="Install-specific-version-packages"><a href="#Install-specific-version-packages" class="headerlink" title="Install specific version packages"></a>Install specific version packages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install lxml=4.9.2</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Make</category>
+        <category>Python</category>
       </categories>
       <tags>
         <tag>Quick Check</tag>
@@ -1056,8 +1187,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>DevOps</tag>
         <tag>Quick Check</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -1080,7 +1211,7 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>Undefined</category>
+        <category>Others</category>
       </categories>
   </entry>
 </search>
