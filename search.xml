@@ -154,9 +154,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Troubleshoot</tag>
         <tag>Nerwork</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -178,8 +178,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Troubleshoot</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -263,8 +263,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>DevOps</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -333,8 +333,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
@@ -359,9 +359,9 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
-        <tag>Linux</tag>
         <tag>DevOps</tag>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -386,8 +386,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>Python</tag>
       </tags>
   </entry>
@@ -504,8 +504,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>SSH</tag>
       </tags>
   </entry>
@@ -593,9 +593,9 @@
         <category>Draft</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
-        <tag>Linux</tag>
         <tag>DevOps</tag>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -639,8 +639,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -661,8 +661,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -683,8 +683,8 @@
         <category>Others</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -704,8 +704,8 @@
         <category>Others</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -850,9 +850,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
         <tag>BIOS</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -882,8 +882,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
+        <tag>MacOS</tag>
         <tag>SSH</tag>
       </tags>
   </entry>
@@ -994,8 +994,8 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Linux</tag>
+        <tag>Env/Config</tag>
         <tag>Odoo</tag>
       </tags>
   </entry>
@@ -1050,10 +1050,10 @@
         <category>Odoo</category>
       </categories>
       <tags>
-        <tag>Env/Config</tag>
         <tag>DevOps</tag>
-        <tag>Python</tag>
+        <tag>Env/Config</tag>
         <tag>Odoo</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1078,8 +1078,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
@@ -1187,8 +1187,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
         <tag>DevOps</tag>
+        <tag>Quick Check</tag>
       </tags>
   </entry>
   <entry>
