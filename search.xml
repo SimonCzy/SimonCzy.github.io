@@ -97,29 +97,64 @@
       </tags>
   </entry>
   <entry>
-    <title>C++代码知识整理</title>
-    <url>/2023/08/24/Cpp%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p>💡 面向就业的C++代码知识整理</p>
+    <title>Create Your Own Discord Bot</title>
+    <url>/2023/04/17/Create-Your-Own-Discord-Bot/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Create a discord bot</li>
+</ul>
 <span id="more"></span>
 
-<h1 id="C-代码知识"><a href="#C-代码知识" class="headerlink" title="C++代码知识"></a>C++代码知识</h1><h3 id="For"><a href="#For" class="headerlink" title="For"></a>For</h3><h4 id="for-each"><a href="#for-each" class="headerlink" title="for-each"></a>for-each</h4><h4 id="for-specific-value"><a href="#for-specific-value" class="headerlink" title="for specific value"></a>for specific value</h4><h3 id="Reference-amp"><a href="#Reference-amp" class="headerlink" title="Reference (&amp;)"></a>Reference (&amp;)</h3><h4 id="Use-Reference-in-Function-Parameter"><a href="#Use-Reference-in-Function-Parameter" class="headerlink" title="Use Reference in Function Parameter"></a>Use Reference in Function Parameter</h4><h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><p>The magical way to use trravelsal in STL (vector, map, list).</p>
-<h4 id="Forward-amp-Backward"><a href="#Forward-amp-Backward" class="headerlink" title="Forward &amp; Backward"></a>Forward &amp; Backward</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># forward</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span> ,<span class="number">8</span>&#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator i;</span><br><span class="line"><span class="keyword">for</span> (i = v.<span class="built_in">begin</span>(); i != v.<span class="built_in">end</span>(); ++i) &#123;</span><br><span class="line">    count &lt;&lt; *i; <span class="meta"># use *i to show the item</span></span><br><span class="line">&#125; # <span class="number">13578</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># backward</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span> ,<span class="number">8</span>&#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::reverse_iterator i;</span><br><span class="line"><span class="keyword">for</span> (i = v.<span class="built_in">rbegin</span>(); i != v.<span class="built_in">rend</span>(); ++i) &#123;</span><br><span class="line">    count &lt;&lt; *i; <span class="meta"># use *i to show the item</span></span><br><span class="line">&#125; # <span class="number">87531</span></span><br></pre></td></tr></table></figure>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To set up a assisting robots to help me obtain information.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="0-Preparation"><a href="#0-Preparation" class="headerlink" title="0. Preparation"></a>0. Preparation</h3><p>You should:</p>
+<ul>
+<li>have a discord accound</li>
+<li>have a python environment</li>
+</ul>
+<h3 id="1-Create-a-discord-bot"><a href="#1-Create-a-discord-bot" class="headerlink" title="1. Create a discord bot"></a>1. Create a discord bot</h3><h4 id="1-1-Enter-discord-application-page"><a href="#1-1-Enter-discord-application-page" class="headerlink" title="1.1 Enter discord application page"></a>1.1 Enter <a href="https://discord.com/developers/applications">discord application page</a></h4><h4 id="1-2-Click-“New-Application”"><a href="#1-2-Click-“New-Application”" class="headerlink" title="1.2 Click “New Application”"></a>1.2 Click “New Application”</h4><p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/1.png"></p>
+<h4 id="1-3-Give-it-a-new-name"><a href="#1-3-Give-it-a-new-name" class="headerlink" title="1.3 Give it a new name"></a>1.3 Give it a new name</h4><p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/2.png"></p>
+<h4 id="1-4-Get-your-discord-bot-token"><a href="#1-4-Get-your-discord-bot-token" class="headerlink" title="1.4 Get your discord bot token"></a>1.4 Get your discord bot token</h4><p>Enter Bot page</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/4.png"></p>
+<p>At the beginning, you need to click the “Reset Token” button to gain your first token. You should safely store it because anyone who owns this token can control its corresponding bot. We will use it in <strong><u>Step 4 Make the first move</u></strong>.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/3.png"></p>
+<p>If you feel unncomfortable, you can reset your token at any time.</p>
+<h3 id="2-Add-you-discord-server"><a href="#2-Add-you-discord-server" class="headerlink" title="2. Add you discord server"></a>2. Add you discord server</h3><p>This server is the place that you can put your dicord bot in.</p>
+<h3 id="3-Add-your-bot-into-your-server"><a href="#3-Add-your-bot-into-your-server" class="headerlink" title="3. Add your bot into your server"></a>3. Add your bot into your server</h3><p>Set your application as a bot.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/5.png"></p>
+<p>Assign it corresponding permissions. And copy the link.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/6.png"></p>
+<p>Go to the link, select your server and authorize it.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/7.png"></p>
+<p>Now you have your offline server bot.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/8.png"></p>
+<h3 id="4-Make-the-first-move"><a href="#4-Make-the-first-move" class="headerlink" title="4. Make the first move"></a>4. Make the first move</h3><p>Your have already created a bot and assign it into your server. And you have your bot token saved in <strong><u>step 2</u></strong>. Now you can teach your bot to make the first move.</p>
+<p>Create this python file and run it.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"></span><br><span class="line">client = discord.Client(intents=discord.Intents.default())</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;We have logged in as &#123;0.user&#125;&#x27;</span>.<span class="built_in">format</span>(client))</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_message</span>(<span class="params">message</span>):</span><br><span class="line">    <span class="keyword">if</span> message.author == client.user:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> message.content.startswith(<span class="string">&#x27;$hello&#x27;</span>):</span><br><span class="line">        <span class="keyword">await</span> message.channel.send(<span class="string">&#x27;Hello!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Assume your token is &quot;abc456DEF&quot;.</span></span><br><span class="line">token = <span class="string">&quot;abc456DEF&quot;</span></span><br><span class="line"></span><br><span class="line">client.run(token)</span><br></pre></td></tr></table></figure>
 
-<h2 id="C-11"><a href="#C-11" class="headerlink" title="C++ 11"></a>C++ 11</h2><h3 id="Emplace"><a href="#Emplace" class="headerlink" title="Emplace"></a>Emplace</h3><h4 id="why-emplace-function-have-a-better-efficiency"><a href="#why-emplace-function-have-a-better-efficiency" class="headerlink" title="why emplace function have a better efficiency"></a>why emplace function have a better efficiency</h4><p>Emplace can just create the data at the suitable location. But insert need to create first and then move to the suitable.</p>
-<h3 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h3><p>Before c++11, auto exists but is useless.</p>
-<p>On c++11, auto is used to infer data type. For example, if you have a very long data type name, you can use auto to replace it.</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># you have a unorder_map name umap and you want to create a iterator</span></span><br><span class="line">std::unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt;::iterator iter = umap.<span class="built_in">begin</span>();</span><br><span class="line"><span class="meta"># now you can replace as</span></span><br><span class="line"><span class="keyword">auto</span> iter = umap.<span class="built_in">begin</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><h4 id="hashmap"><a href="#hashmap" class="headerlink" title="hashmap"></a>hashmap</h4><p>There is no standard hashmap before c++11. So c++11 adds hashmap into its standard library and names ‘unorder_map’</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"># Initialization</span><br><span class="line">std::unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line"></span><br><span class="line"><span class="meta"># add item</span></span><br><span class="line">umap.<span class="built_in">emplace</span>(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">umap.<span class="built_in">emplace</span>(<span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
+<p>And now Jarvis is online.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/9.png"></p>
+<p>Then the bot will reply you “Hello!” when you say “$hello” to it.</p>
+<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/10.png"></p>
+<h3 id="5-Improvement"><a href="#5-Improvement" class="headerlink" title="5. Improvement"></a>5. Improvement</h3><p>Now, you have create your bot. What you can do next is to create a new world!</p>
+<p>For more information, you can check the <a href="https://discordpy.readthedocs.io/en/latest/index.html">discord official doc</a>.</p>
 ]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>Introduction</tag>
+        <tag>Bot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Create Your Own Telegram Bot</title>
+    <url>/2023/08/09/Create-Your-Own-Telegram-Bot/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>Draft</category>
       </categories>
       <tags>
-        <tag>Quick Check</tag>
-        <tag>Interview</tag>
+        <tag>Python</tag>
+        <tag>Introduction</tag>
+        <tag>Bot</tag>
       </tags>
   </entry>
   <entry>
@@ -230,64 +265,29 @@
       </tags>
   </entry>
   <entry>
-    <title>Create Your Own Discord Bot</title>
-    <url>/2023/04/17/Create-Your-Own-Discord-Bot/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Create a discord bot</li>
-</ul>
+    <title>C++代码知识整理</title>
+    <url>/2023/08/24/Cpp%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>💡 面向就业的C++代码知识整理</p>
 <span id="more"></span>
 
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To set up a assisting robots to help me obtain information.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="0-Preparation"><a href="#0-Preparation" class="headerlink" title="0. Preparation"></a>0. Preparation</h3><p>You should:</p>
-<ul>
-<li>have a discord accound</li>
-<li>have a python environment</li>
-</ul>
-<h3 id="1-Create-a-discord-bot"><a href="#1-Create-a-discord-bot" class="headerlink" title="1. Create a discord bot"></a>1. Create a discord bot</h3><h4 id="1-1-Enter-discord-application-page"><a href="#1-1-Enter-discord-application-page" class="headerlink" title="1.1 Enter discord application page"></a>1.1 Enter <a href="https://discord.com/developers/applications">discord application page</a></h4><h4 id="1-2-Click-“New-Application”"><a href="#1-2-Click-“New-Application”" class="headerlink" title="1.2 Click “New Application”"></a>1.2 Click “New Application”</h4><p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/1.png"></p>
-<h4 id="1-3-Give-it-a-new-name"><a href="#1-3-Give-it-a-new-name" class="headerlink" title="1.3 Give it a new name"></a>1.3 Give it a new name</h4><p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/2.png"></p>
-<h4 id="1-4-Get-your-discord-bot-token"><a href="#1-4-Get-your-discord-bot-token" class="headerlink" title="1.4 Get your discord bot token"></a>1.4 Get your discord bot token</h4><p>Enter Bot page</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/4.png"></p>
-<p>At the beginning, you need to click the “Reset Token” button to gain your first token. You should safely store it because anyone who owns this token can control its corresponding bot. We will use it in <strong><u>Step 4 Make the first move</u></strong>.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/3.png"></p>
-<p>If you feel unncomfortable, you can reset your token at any time.</p>
-<h3 id="2-Add-you-discord-server"><a href="#2-Add-you-discord-server" class="headerlink" title="2. Add you discord server"></a>2. Add you discord server</h3><p>This server is the place that you can put your dicord bot in.</p>
-<h3 id="3-Add-your-bot-into-your-server"><a href="#3-Add-your-bot-into-your-server" class="headerlink" title="3. Add your bot into your server"></a>3. Add your bot into your server</h3><p>Set your application as a bot.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/5.png"></p>
-<p>Assign it corresponding permissions. And copy the link.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/6.png"></p>
-<p>Go to the link, select your server and authorize it.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/7.png"></p>
-<p>Now you have your offline server bot.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/8.png"></p>
-<h3 id="4-Make-the-first-move"><a href="#4-Make-the-first-move" class="headerlink" title="4. Make the first move"></a>4. Make the first move</h3><p>Your have already created a bot and assign it into your server. And you have your bot token saved in <strong><u>step 2</u></strong>. Now you can teach your bot to make the first move.</p>
-<p>Create this python file and run it.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"></span><br><span class="line">client = discord.Client(intents=discord.Intents.default())</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;We have logged in as &#123;0.user&#125;&#x27;</span>.<span class="built_in">format</span>(client))</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_message</span>(<span class="params">message</span>):</span><br><span class="line">    <span class="keyword">if</span> message.author == client.user:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> message.content.startswith(<span class="string">&#x27;$hello&#x27;</span>):</span><br><span class="line">        <span class="keyword">await</span> message.channel.send(<span class="string">&#x27;Hello!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Assume your token is &quot;abc456DEF&quot;.</span></span><br><span class="line">token = <span class="string">&quot;abc456DEF&quot;</span></span><br><span class="line"></span><br><span class="line">client.run(token)</span><br></pre></td></tr></table></figure>
+<h1 id="C-代码知识"><a href="#C-代码知识" class="headerlink" title="C++代码知识"></a>C++代码知识</h1><h3 id="For"><a href="#For" class="headerlink" title="For"></a>For</h3><h4 id="for-each"><a href="#for-each" class="headerlink" title="for-each"></a>for-each</h4><h4 id="for-specific-value"><a href="#for-specific-value" class="headerlink" title="for specific value"></a>for specific value</h4><h3 id="Reference-amp"><a href="#Reference-amp" class="headerlink" title="Reference (&amp;)"></a>Reference (&amp;)</h3><h4 id="Use-Reference-in-Function-Parameter"><a href="#Use-Reference-in-Function-Parameter" class="headerlink" title="Use Reference in Function Parameter"></a>Use Reference in Function Parameter</h4><h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><p>The magical way to use trravelsal in STL (vector, map, list).</p>
+<h4 id="Forward-amp-Backward"><a href="#Forward-amp-Backward" class="headerlink" title="Forward &amp; Backward"></a>Forward &amp; Backward</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># forward</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span> ,<span class="number">8</span>&#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator i;</span><br><span class="line"><span class="keyword">for</span> (i = v.<span class="built_in">begin</span>(); i != v.<span class="built_in">end</span>(); ++i) &#123;</span><br><span class="line">    count &lt;&lt; *i; <span class="meta"># use *i to show the item</span></span><br><span class="line">&#125; # <span class="number">13578</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># backward</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span> ,<span class="number">8</span>&#125;;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::reverse_iterator i;</span><br><span class="line"><span class="keyword">for</span> (i = v.<span class="built_in">rbegin</span>(); i != v.<span class="built_in">rend</span>(); ++i) &#123;</span><br><span class="line">    count &lt;&lt; *i; <span class="meta"># use *i to show the item</span></span><br><span class="line">&#125; # <span class="number">87531</span></span><br></pre></td></tr></table></figure>
 
-<p>And now Jarvis is online.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/9.png"></p>
-<p>Then the bot will reply you “Hello!” when you say “$hello” to it.</p>
-<p><img data-src="/2023/04/17/Create-Your-Own-Discord-Bot/10.png"></p>
-<h3 id="5-Improvement"><a href="#5-Improvement" class="headerlink" title="5. Improvement"></a>5. Improvement</h3><p>Now, you have create your bot. What you can do next is to create a new world!</p>
-<p>For more information, you can check the <a href="https://discordpy.readthedocs.io/en/latest/index.html">discord official doc</a>.</p>
+<h2 id="C-11"><a href="#C-11" class="headerlink" title="C++ 11"></a>C++ 11</h2><h3 id="Emplace"><a href="#Emplace" class="headerlink" title="Emplace"></a>Emplace</h3><h4 id="why-emplace-function-have-a-better-efficiency"><a href="#why-emplace-function-have-a-better-efficiency" class="headerlink" title="why emplace function have a better efficiency"></a>why emplace function have a better efficiency</h4><p>Emplace can just create the data at the suitable location. But insert need to create first and then move to the suitable.</p>
+<h3 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h3><p>Before c++11, auto exists but is useless.</p>
+<p>On c++11, auto is used to infer data type. For example, if you have a very long data type name, you can use auto to replace it.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta"># you have a unorder_map name umap and you want to create a iterator</span></span><br><span class="line">std::unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt;::iterator iter = umap.<span class="built_in">begin</span>();</span><br><span class="line"><span class="meta"># now you can replace as</span></span><br><span class="line"><span class="keyword">auto</span> iter = umap.<span class="built_in">begin</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><h4 id="hashmap"><a href="#hashmap" class="headerlink" title="hashmap"></a>hashmap</h4><p>There is no standard hashmap before c++11. So c++11 adds hashmap into its standard library and names ‘unorder_map’</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"># Initialization</span><br><span class="line">std::unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line"></span><br><span class="line"><span class="meta"># add item</span></span><br><span class="line">umap.<span class="built_in">emplace</span>(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">umap.<span class="built_in">emplace</span>(<span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
 ]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>Introduction</tag>
-        <tag>Bot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Create Your Own Telegram Bot</title>
-    <url>/2023/08/09/Create-Your-Own-Telegram-Bot/</url>
-    <content><![CDATA[]]></content>
       <categories>
         <category>Draft</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Introduction</tag>
-        <tag>Bot</tag>
+        <tag>Quick Check</tag>
+        <tag>Interview</tag>
       </tags>
   </entry>
   <entry>
@@ -789,24 +789,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
-    <url>/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Network Error</li>
-<li>Ubuntu Error</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Env/Config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pip Command</title>
     <url>/2023/03/07/Pip-Command/</url>
     <content><![CDATA[<p>Frequently used pip commands</p>
@@ -826,6 +808,24 @@
       <tags>
         <tag>Quick Check</tag>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Occational Network Disconnection Error On Ubuntu 20.04</title>
+    <url>/2023/03/23/Occational-Network-Disconnection-Error-On-Ubuntu-20-04/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Network Error</li>
+<li>Ubuntu Error</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>When I installed my Ubuntu 20.04, it may meet some error because it could not use Wi-Fi module. Even <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/#Turn-on-your-Wi-Fi-adapter-optional">I fixed it</a> at that time, my computer <strong>sometimes can not connect to Internet</strong> now.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Reset-the-network-service"><a href="#Reset-the-network-service" class="headerlink" title="Reset the network service"></a>Reset the network service</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network-manager stop</span><br><span class="line">sudo <span class="built_in">rm</span> /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service network-manager start</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -896,29 +896,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Virtual Environment On Ubuntu</title>
-    <url>/2023/04/07/Python-Virtual-Environment-On-Ubuntu/</url>
-    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
-<ul>
-<li>Python Virtual Environment</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Install-virtualenv"><a href="#Install-virtualenv" class="headerlink" title="Install virtualenv"></a>Install virtualenv</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-virtualenv</span><br></pre></td></tr></table></figure>
-
-<h3 id="Intialize-the-virtual-environment"><a href="#Intialize-the-virtual-environment" class="headerlink" title="Intialize the virtual environment"></a>Intialize the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> a_folder</span><br><span class="line"></span><br><span class="line"><span class="comment"># it will create a folder named &quot;venv&quot; which stores virtual environment</span></span><br><span class="line">virtual venv</span><br></pre></td></tr></table></figure>
-
-<h3 id="Activate-the-virtual-environment"><a href="#Activate-the-virtual-environment" class="headerlink" title="Activate the virtual environment"></a>Activate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ven/bin/activate</span><br></pre></td></tr></table></figure>
-
-<h3 id="Deactivate-the-virtual-environment"><a href="#Deactivate-the-virtual-environment" class="headerlink" title="Deactivate the virtual environment"></a>Deactivate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>Env/Config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Reactivate Ubuntu Software Store</title>
     <url>/2023/05/21/Reactivate-Ubuntu-Software-Store/</url>
     <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
@@ -953,6 +930,29 @@
 ]]></content>
       <tags>
         <tag>MacOS</tag>
+        <tag>Env/Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Virtual Environment On Ubuntu</title>
+    <url>/2023/04/07/Python-Virtual-Environment-On-Ubuntu/</url>
+    <content><![CDATA[<p>💡 This post is insightful for the following scenarios.</p>
+<ul>
+<li>Python Virtual Environment</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Install-virtualenv"><a href="#Install-virtualenv" class="headerlink" title="Install virtualenv"></a>Install virtualenv</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install python3-virtualenv</span><br></pre></td></tr></table></figure>
+
+<h3 id="Intialize-the-virtual-environment"><a href="#Intialize-the-virtual-environment" class="headerlink" title="Intialize the virtual environment"></a>Intialize the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> a_folder</span><br><span class="line"></span><br><span class="line"><span class="comment"># it will create a folder named &quot;venv&quot; which stores virtual environment</span></span><br><span class="line">virtual venv</span><br></pre></td></tr></table></figure>
+
+<h3 id="Activate-the-virtual-environment"><a href="#Activate-the-virtual-environment" class="headerlink" title="Activate the virtual environment"></a>Activate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ven/bin/activate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deactivate-the-virtual-environment"><a href="#Deactivate-the-virtual-environment" class="headerlink" title="Deactivate the virtual environment"></a>Deactivate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Python</tag>
         <tag>Env/Config</tag>
       </tags>
   </entry>
