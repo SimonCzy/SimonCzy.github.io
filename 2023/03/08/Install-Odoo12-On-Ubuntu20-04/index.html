@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://simonczy.github.io/2023/03/08/Install-Odoo12-On-Ubuntu20-04/12.png">
 <meta property="og:image" content="https://simonczy.github.io/2023/03/08/Install-Odoo12-On-Ubuntu20-04/13.png">
 <meta property="article:published_time" content="2023-03-07T17:55:49.000Z">
-<meta property="article:modified_time" content="2024-01-25T19:09:48.333Z">
+<meta property="article:modified_time" content="2024-01-25T20:11:53.609Z">
 <meta property="article:author" content="Simon Chen">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Odoo">
@@ -108,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">14</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">41</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">14</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">41</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -159,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step"><span class="nav-text">Step</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Preparation"><span class="nav-text">Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Git"><span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-PostgreSQL"><span class="nav-text">Install PostgreSQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-PostgreSQL-user-and-database"><span class="nav-text">Create PostgreSQL user and database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-curl"><span class="nav-text">Install curl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-node-js-and-less"><span class="nav-text">Install node.js and less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Clone-Odoo-source-code"><span class="nav-text">Clone Odoo source code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-specific-python-version-optional"><span class="nav-text">Install specific python version (optional)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-odoo-dependencies-by-pip3"><span class="nav-text">Install odoo dependencies by pip3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-odoo"><span class="nav-text">Start odoo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enjoy-your-odoo-12"><span class="nav-text">Enjoy your odoo 12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step"><span class="nav-text">Step</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-Preparation"><span class="nav-text">0. Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Install-Git"><span class="nav-text">1. Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Install-PostgreSQL"><span class="nav-text">2. Install PostgreSQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Create-PostgreSQL-user-and-database"><span class="nav-text">3. Create PostgreSQL user and database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Install-curl"><span class="nav-text">4. Install curl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Install-node-js-and-less"><span class="nav-text">5. Install node.js and less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Clone-Odoo-source-code"><span class="nav-text">6. Clone Odoo source code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Install-specific-python-version-optional"><span class="nav-text">7. Install specific python version (optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-Install-pyenv-to-manage-python-version"><span class="nav-text">7.1 Install pyenv to manage python version</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-Use-original-python3-from-ubunutu"><span class="nav-text">7.2 Use original python3 from ubunutu</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Install-odoo-dependencies-by-pip3"><span class="nav-text">8. Install odoo dependencies by pip3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-lxml-install-it-without-specific-version"><span class="nav-text">8.1 lxml: install it without specific version.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-Pillow-install-it-without-specific-version"><span class="nav-text">8.2 Pillow: install it without specific version</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-psycopg2-lack-of-specific-library"><span class="nav-text">8.3 psycopg2: lack of specific library</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-4-pyldap-lack-of-specific-library"><span class="nav-text">8.4 pyldap: lack of specific library</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Start-odoo"><span class="nav-text">9. Start odoo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Enjoy-your-odoo-12"><span class="nav-text">10. Enjoy your odoo 12</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,7 +180,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -257,20 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-01-26 03:09:48" itemprop="dateModified" datetime="2024-01-26T03:09:48+08:00">2024-01-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Make/" itemprop="url" rel="index"><span itemprop="name">Make</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Make/Odoo/" itemprop="url" rel="index"><span itemprop="name">Odoo</span></a>
-        </span>
+      <time title="Modified: 2024-01-26 04:11:53" itemprop="dateModified" datetime="2024-01-26T04:11:53+08:00">2024-01-26</time>
     </span>
 
   
@@ -287,14 +274,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>686</span>
+      <span>703</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>2 mins.</span>
+      <span>3 mins.</span>
     </span>
 </div>
 
@@ -312,14 +299,14 @@
 <span id="more"></span>
 
 <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>To avoid Odoo corrupting my noble macOS 🤫, I’ve decided to install Odoo on Ubuntu.</p>
-<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> (X86) and it need to be able to connect the Internet.</p>
+<h2 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h2><h3 id="0-Preparation"><a href="#0-Preparation" class="headerlink" title="0. Preparation"></a>0. Preparation</h3><p>Of course, you need to have Ubuntu which is <strong>20.04</strong> (X86) and it need to be able to connect the Internet.</p>
 <p>The system I use is build from <a href="https://simonczy.github.io/2023/03/15/Install-Linux-By-BIOS-On-Window-Machine/">my previous post</a>.</p>
-<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y git</span><br></pre></td></tr></table></figure>
+<h3 id="1-Install-Git"><a href="#1-Install-Git" class="headerlink" title="1. Install Git"></a>1. Install Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y git</span><br></pre></td></tr></table></figure>
 
-<h3 id="Install-PostgreSQL"><a href="#Install-PostgreSQL" class="headerlink" title="Install PostgreSQL"></a>Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">sudo apt-get install -y postgresql</span><br><span class="line"></span><br><span class="line"><span class="comment"># we can use the following command to check postgresql version</span></span><br><span class="line">psql --version</span><br></pre></td></tr></table></figure>
+<h3 id="2-Install-PostgreSQL"><a href="#2-Install-PostgreSQL" class="headerlink" title="2. Install PostgreSQL"></a>2. Install PostgreSQL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the version I downloaded is postgresql12</span></span><br><span class="line">sudo apt-get install -y postgresql</span><br><span class="line"></span><br><span class="line"><span class="comment"># we can use the following command to check postgresql version</span></span><br><span class="line">psql --version</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/1.png"></p>
-<h3 id="Create-PostgreSQL-user-and-database"><a href="#Create-PostgreSQL-user-and-database" class="headerlink" title="Create PostgreSQL user and database"></a>Create PostgreSQL user and database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># start postgresql service</span></span><br><span class="line">sudo service postgresql start</span><br><span class="line"></span><br><span class="line"><span class="comment"># create postgresql user and database</span></span><br><span class="line">sudo -u postgres -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># type your password and remember it</span></span><br><span class="line">createuser -P --superuser odoo</span><br><span class="line"></span><br><span class="line"><span class="comment"># may cause error</span></span><br><span class="line">createdb odoo -U odoo -W</span><br></pre></td></tr></table></figure>
+<h3 id="3-Create-PostgreSQL-user-and-database"><a href="#3-Create-PostgreSQL-user-and-database" class="headerlink" title="3. Create PostgreSQL user and database"></a>3. Create PostgreSQL user and database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># start postgresql service</span></span><br><span class="line">sudo service postgresql start</span><br><span class="line"></span><br><span class="line"><span class="comment"># create postgresql user and database</span></span><br><span class="line">sudo -u postgres -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># type your password and remember it</span></span><br><span class="line">createuser -P --superuser odoo</span><br><span class="line"></span><br><span class="line"><span class="comment"># may cause error</span></span><br><span class="line">createdb odoo -U odoo -W</span><br></pre></td></tr></table></figure>
 
 <p>You may meet some error when you run the last command</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FATAL:  Peer authentication failed <span class="keyword">for</span> user <span class="string">&quot;odoo&quot;</span></span><br></pre></td></tr></table></figure>
@@ -330,9 +317,9 @@
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/2.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># then restare postgresql service</span></span><br><span class="line">sudo service postgresql restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># complete commands that were not fully executed before</span></span><br><span class="line">sudo -u postgres -i</span><br><span class="line">createdb odoo -U odoo -W</span><br></pre></td></tr></table></figure>
 
-<h3 id="Install-curl"><a href="#Install-curl" class="headerlink" title="Install curl"></a>Install curl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install curl</span><br></pre></td></tr></table></figure>
+<h3 id="4-Install-curl"><a href="#4-Install-curl" class="headerlink" title="4. Install curl"></a>4. Install curl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install curl</span><br></pre></td></tr></table></figure>
 
-<h3 id="Install-node-js-and-less"><a href="#Install-node-js-and-less" class="headerlink" title="Install node.js and less"></a>Install node.js and less</h3><p>Install nodejs version manager </p>
+<h3 id="5-Install-node-js-and-less"><a href="#5-Install-node-js-and-less" class="headerlink" title="5. Install node.js and less"></a>5. Install node.js and less</h3><p>Install nodejs version manager </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L http://git.io/n-install | bash  </span><br></pre></td></tr></table></figure>
 
 <p><strong>Reopen</strong> your terminal and check current version </p>
@@ -340,45 +327,26 @@
 <p>Install less</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure>
 
-<h3 id="Clone-Odoo-source-code"><a href="#Clone-Odoo-source-code" class="headerlink" title="Clone Odoo source code"></a>Clone Odoo source code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/odoo/odoo.git -b 12.0 --depth=1 ./odoo12</span><br></pre></td></tr></table></figure>
+<h3 id="6-Clone-Odoo-source-code"><a href="#6-Clone-Odoo-source-code" class="headerlink" title="6. Clone Odoo source code"></a>6. Clone Odoo source code</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/odoo/odoo.git -b 12.0 --depth=1 ./odoo12</span><br></pre></td></tr></table></figure>
 
-<h3 id="Install-specific-python-version-optional"><a href="#Install-specific-python-version-optional" class="headerlink" title="Install specific python version (optional)"></a>Install specific python version (optional)</h3><p><strong>You could</strong></p>
-<ol>
-<li><u>Install pyenv to manage python version</u></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install pyenv</span></span><br><span class="line">curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># install python dependencies (optional, mostly depend on your perrsonal situation)</span></span><br><span class="line">sudo apt-get update &amp;&amp; apt-get install -y default-libmysqlclient-dev build-essential git gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libldap2-dev libsasl2-dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># install python 3.8</span></span><br><span class="line">pyenv install 3.8 &amp;&amp; pyenv global 3.8</span><br></pre></td></tr></table></figure>
+<h3 id="7-Install-specific-python-version-optional"><a href="#7-Install-specific-python-version-optional" class="headerlink" title="7. Install specific python version (optional)"></a>7. Install specific python version (optional)</h3><p>Choose one of these two options that you like</p>
+<h4 id="7-1-Install-pyenv-to-manage-python-version"><a href="#7-1-Install-pyenv-to-manage-python-version" class="headerlink" title="7.1 Install pyenv to manage python version"></a>7.1 Install pyenv to manage python version</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install pyenv</span></span><br><span class="line">curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># install python dependencies (optional, mostly depend on your perrsonal situation)</span></span><br><span class="line">sudo apt-get update &amp;&amp; apt-get install -y default-libmysqlclient-dev build-essential git gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libldap2-dev libsasl2-dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># install python 3.8</span></span><br><span class="line">pyenv install 3.8 &amp;&amp; pyenv global 3.8</span><br></pre></td></tr></table></figure>
 
-<p><strong>Or</strong></p>
-<ol start="2">
-<li><u>Use original python3 from ubunutu</u></li>
-</ol>
-<p>Here I use original python 3.8 from ubunutu (which not include pip3)</p>
-<h3 id="Install-odoo-dependencies-by-pip3"><a href="#Install-odoo-dependencies-by-pip3" class="headerlink" title="Install odoo dependencies by pip3"></a>Install odoo dependencies by pip3</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install pip3</span></span><br><span class="line">sudo apt-get install python3-pip</span><br><span class="line"></span><br><span class="line"><span class="comment"># enter odoo folder (which is odoo12 as I wrote above)</span></span><br><span class="line"><span class="built_in">cd</span> odoo12</span><br><span class="line"></span><br><span class="line"><span class="comment"># install odoo dependencies provided by odoo</span></span><br><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="7-2-Use-original-python3-from-ubunutu"><a href="#7-2-Use-original-python3-from-ubunutu" class="headerlink" title="7.2 Use original python3 from ubunutu"></a>7.2 Use original python3 from ubunutu</h4><p>Here I use original python 3.8 from ubunutu (which not include pip3)</p>
+<h3 id="8-Install-odoo-dependencies-by-pip3"><a href="#8-Install-odoo-dependencies-by-pip3" class="headerlink" title="8. Install odoo dependencies by pip3"></a>8. Install odoo dependencies by pip3</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install pip3</span></span><br><span class="line">sudo apt-get install python3-pip</span><br><span class="line"></span><br><span class="line"><span class="comment"># enter odoo folder (which is odoo12 as I wrote above)</span></span><br><span class="line"><span class="built_in">cd</span> odoo12</span><br><span class="line"></span><br><span class="line"><span class="comment"># install odoo dependencies provided by odoo</span></span><br><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
 
 <p>You may meet some difficulties when you want to install the following package:</p>
-<ul>
-<li>lxml: install it without specific version.</li>
-</ul>
-<p>You need to modify requirements.txt</p>
+<h4 id="8-1-lxml-install-it-without-specific-version"><a href="#8-1-lxml-install-it-without-specific-version" class="headerlink" title="8.1 lxml: install it without specific version."></a>8.1 lxml: install it without specific version.</h4><p>You need to modify requirements.txt</p>
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/4.png"></p>
-<ul>
-<li>Pillow: install it without specific version</li>
-</ul>
-<p>You need to modify requirements.txt</p>
+<h4 id="8-2-Pillow-install-it-without-specific-version"><a href="#8-2-Pillow-install-it-without-specific-version" class="headerlink" title="8.2 Pillow: install it without specific version"></a>8.2 Pillow: install it without specific version</h4><p>You need to modify requirements.txt</p>
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/5.png"></p>
-<ul>
-<li>psycopg2: lack of specific library</li>
-</ul>
-<p>You need to install some package. You don’t need to modify requirements.txt.</p>
+<h4 id="8-3-psycopg2-lack-of-specific-library"><a href="#8-3-psycopg2-lack-of-specific-library" class="headerlink" title="8.3 psycopg2: lack of specific library"></a>8.3 psycopg2: lack of specific library</h4><p>You need to install some package. You don’t need to modify requirements.txt.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libpq-dev</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>pyldap: lack of specific library</li>
-</ul>
-<p>You need to install some package. You don’t need to modify requirements.txt.</p>
+<h4 id="8-4-pyldap-lack-of-specific-library"><a href="#8-4-pyldap-lack-of-specific-library" class="headerlink" title="8.4 pyldap: lack of specific library"></a>8.4 pyldap: lack of specific library</h4><p>You need to install some package. You don’t need to modify requirements.txt.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If you follow the approach &quot;Install pyenv to manage python version&quot; in this article, you may not meet this error because you already install these libraries before</span></span><br><span class="line">sudo apt-get install libldap2-dev libsasl2-dev</span><br></pre></td></tr></table></figure>
 
-<h3 id="Start-odoo"><a href="#Start-odoo" class="headerlink" title="Start odoo"></a>Start odoo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># enter odoo folder (which is odoo12 as I wrote above)</span></span><br><span class="line"><span class="built_in">cd</span> odoo12</span><br><span class="line"></span><br><span class="line"><span class="comment"># install odoo dependencies provided by odoo</span></span><br><span class="line">./odoo-bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># press ctrl+c to quit</span></span><br></pre></td></tr></table></figure>
+<h3 id="9-Start-odoo"><a href="#9-Start-odoo" class="headerlink" title="9. Start odoo"></a>9. Start odoo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># enter odoo folder (which is odoo12 as I wrote above)</span></span><br><span class="line"><span class="built_in">cd</span> odoo12</span><br><span class="line"></span><br><span class="line"><span class="comment"># install odoo dependencies provided by odoo</span></span><br><span class="line">./odoo-bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># press ctrl+c to quit</span></span><br></pre></td></tr></table></figure>
 
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/7.png"></p>
 <p>Then turn on your browser and go to this url -&gt; localhost:8069, and you may find some error now.</p>
@@ -401,8 +369,8 @@
 
 <p>And this time everything is fine.</p>
 <p><img data-src="/2023/03/08/Install-Odoo12-On-Ubuntu20-04/13.png"></p>
-<h3 id="Enjoy-your-odoo-12"><a href="#Enjoy-your-odoo-12" class="headerlink" title="Enjoy your odoo 12"></a>Enjoy your odoo 12</h3><p>If you want to customize you odoo addon, maybe you can check this link.</p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
+<h3 id="10-Enjoy-your-odoo-12"><a href="#10-Enjoy-your-odoo-12" class="headerlink" title="10. Enjoy your odoo 12"></a>10. Enjoy your odoo 12</h3><p>If you want to customize you odoo addon, maybe you can check this link.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://odoobook.tnk-studio.eu.org/Chapter-2/Odoo-Development-Environment.html">Build up your odoo environment</a></p>
 
     </div>
 
@@ -486,7 +454,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">34 mins.</span>
+    <span title="Reading time total">35 mins.</span>
   </span>
 </div>
 <div class="busuanzi-count">
