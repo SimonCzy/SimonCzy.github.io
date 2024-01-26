@@ -25,6 +25,7 @@
 <li><strong><u>Odoo</u></strong></li>
 <li><strong><u>Python</u></strong></li>
 <li><strong><u>SSH</u></strong></li>
+<li><strong><u>VR&#x2F;MR</u></strong></li>
 </ul>
 </li>
 <li>Related to the purpose of posts<ul>
@@ -45,21 +46,64 @@
       </tags>
   </entry>
   <entry>
-    <title>Delete Mendeley From Word In Mac</title>
-    <url>/2024/01/25/Delete-Mendeley-From-Word-In-Mac/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Draft</category>
-      </categories>
+    <title>Unity VR/MR 多人白板项目开发</title>
+    <url>/2024/01/26/Unity-VR-MR-%E5%A4%9A%E4%BA%BA%E7%99%BD%E6%9D%BF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<p>💡 本文主要用作项目记录.</p>
+<ul>
+<li>本项目是基于Unity构建的VR&#x2F;MR多人白板协作引用，其能支持Meta Avatar的虚拟人像跟踪</li>
+<li>本项目依赖于以下库：Oculus Integration, Meta Avatar, Photon Fusion</li>
+</ul>
+<span id="more"></span>
+
+<p>展示视频如下</p>
+<iframe width="560" height="360" src="//player.bilibili.com/player.html?aid=277063018&bvid=BV1Dw411A7Ee&cid=1297725829&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>更多细节请查看对应的<a href="https://github.com/SimonCzy/Whiteboard-UnityXR">github项目</a>。</p>
+]]></content>
+      <tags>
+        <tag>VR/MR</tag>
+        <tag>Record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Master Project: Unity MR Application</title>
+    <url>/2024/01/26/Master-Project-Unity-MR-Application/</url>
+    <content><![CDATA[<p>💡 This post is used to archive my master project.</p>
+<ul>
+<li>It is a Unity VR Whiteboard with the function of multiplayer and Meta Avatar.</li>
+<li>It relies on the following libraries: Oculus Integration, Meta Avatar, Photon Fusion.</li>
+</ul>
+<span id="more"></span>
+
+<p>Here is the presentation video.</p>
+<iframe width="560" height="360" src="https://www.youtube.com/embed/3Ok5VuJZO0s?si=UXb7-K6rovddiKkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Here is the <a href="https://github.com/SimonCzy/Whiteboard-UnityXR">github repository</a>. Click to know more detail.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>在MacOS删除Word中的Mendeley</title>
+    <url>/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/</url>
+    <content><![CDATA[<p>💡 本文对以下场景有所帮助</p>
+<ul>
+<li>在macOS删除Mendeley并消除其影响</li>
+<li>管理Word中的加载项</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这是个很久没用的软件了，想着直接删除就好了，没想到还影响了Word的使用。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-直接删除Mendeley"><a href="#1-直接删除Mendeley" class="headerlink" title="1. 直接删除Mendeley"></a>1. 直接删除Mendeley</h3><p>我这里使用的是<a href="http://freemacsoft.net/appcleaner/">AppCleaner</a>直接删除的Mendeley，想着删除完就好了，没想到删除了之后word一直在报各种异常（如下），因此才有后续的步骤。</p>
+<p><img data-src="/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/1.png"></p>
+<p><img data-src="/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/2.png"></p>
+<h3 id="2-打开Word加载项"><a href="#2-打开Word加载项" class="headerlink" title="2. 打开Word加载项"></a>2. 打开Word加载项</h3><p><img data-src="/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/3.png"></p>
+<h3 id="3-定位到Word启动时调用的Mendeley模版路径"><a href="#3-定位到Word启动时调用的Mendeley模版路径" class="headerlink" title="3. 定位到Word启动时调用的Mendeley模版路径"></a>3. 定位到Word启动时调用的Mendeley模版路径</h3><p><img data-src="/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/4.png"></p>
+<h3 id="4-删除该模版即可"><a href="#4-删除该模版即可" class="headerlink" title="4. 删除该模版即可"></a>4. 删除该模版即可</h3><p>在完全退出Word后，删除目标路径下Mendeley的dotm文件。此时重新打开Word，问题已解决。</p>
+<p><img data-src="/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/5.png"></p>
+]]></content>
       <tags>
         <tag>Troubleshoot</tag>
         <tag>MacOS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Master Project: Unity VR Application</title>
-    <url>/2023/10/13/Master-Project-Unity-VR-Application/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Leetcode Q64 Cpp</title>
@@ -866,8 +910,8 @@
 <p><a href="https://github.com/marktext/marktext">MarkText</a> 🌟🌟🌟🌟</p>
 ]]></content>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -1057,8 +1101,8 @@
 <p>Sure! <strong>Check <a href="https://simonczy.github.io/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/#9-Add-private-into-system-in-B">here</a>!</strong></p>
 ]]></content>
       <tags>
-        <tag>MacOS</tag>
         <tag>Env/Config</tag>
+        <tag>MacOS</tag>
         <tag>SSH</tag>
       </tags>
   </entry>

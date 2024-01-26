@@ -1,3 +1,7 @@
+https://simonczy.github.io/2024/01/26/Unity-VR-MR-%E5%A4%9A%E4%BA%BA%E7%99%BD%E6%9D%BF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/
+https://simonczy.github.io/2024/01/26/Master-Project-Unity-MR-Application/
+https://simonczy.github.io/2023/02/15/The-First-Thing-You-Should-Know/
+https://simonczy.github.io/2024/01/26/%E5%9C%A8MacOS%E5%88%A0%E9%99%A4Word%E4%B8%AD%E7%9A%84Mendeley/
 https://simonczy.github.io/2023/04/15/Install-Docker-On-Ubuntu/
 https://simonczy.github.io/2023/03/27/Develop-Your-Addon-Based-On-Odoo-12/
 https://simonczy.github.io/2023/03/27/Turn-On-SSH-Service-On-Ubuntu/
@@ -17,11 +21,9 @@ https://simonczy.github.io/2023/04/17/Set-Up-V2ray-Environment-On-Oracle-Free-Ti
 https://simonczy.github.io/2023/05/22/Steam-Needs-to-Be-Online-to-Update/
 https://simonczy.github.io/2023/08/25/Leetcode-Q64-Cpp/
 https://simonczy.github.io/2023/04/17/Create-Your-Own-Discord-Bot/
-https://simonczy.github.io/2024/01/25/Delete-Mendeley-From-Word-In-Mac/
 https://simonczy.github.io/2023/04/15/Docker-Compose-Command/
 https://simonczy.github.io/2023/05/21/Reactivate-Ubuntu-Software-Store/
 https://simonczy.github.io/2023/06/03/Ubuntu-Safety-Command/
-https://simonczy.github.io/2023/02/15/The-First-Thing-You-Should-Know/
 https://simonczy.github.io/2023/03/07/Pip-Command/
 https://simonczy.github.io/2023/05/21/Python-Public-Util-Code/
 https://simonczy.github.io/2023/03/26/Python-Common-Code/
@@ -36,7 +38,6 @@ https://simonczy.github.io/2023/08/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF
 https://simonczy.github.io/2023/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/
 https://simonczy.github.io/2023/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/
 https://simonczy.github.io/2023/08/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/
-https://simonczy.github.io/2023/10/13/Master-Project-Unity-VR-Application/
 https://simonczy.github.io/2023/08/09/Create-Your-Own-Telegram-Bot/
 https://simonczy.github.io/2023/03/23/Set-Up-A-Odoo-12-Development-Docker-Image-From-Ubuntu-20-04-Docker-Image/
 https://simonczy.github.io/archives/index.html
@@ -51,10 +52,12 @@ https://simonczy.github.io/tags/Python/
 https://simonczy.github.io/tags/Interview/
 https://simonczy.github.io/tags/Introduction/
 https://simonczy.github.io/tags/Bot/
-https://simonczy.github.io/tags/MacOS/
 https://simonczy.github.io/tags/Odoo/
 https://simonczy.github.io/tags/Env-Config/
 https://simonczy.github.io/tags/BIOS/
+https://simonczy.github.io/tags/MacOS/
 https://simonczy.github.io/tags/SSH/
 https://simonczy.github.io/tags/Nerwork/
+https://simonczy.github.io/tags/VR-MR/
+https://simonczy.github.io/tags/Record/
 https://simonczy.github.io/categories/Draft/
