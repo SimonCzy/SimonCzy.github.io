@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/origin-s.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/s-logo.svg" color="#222">
+  <meta name="google-site-verification" content="9kMGYTc5QXX8ytt39zuRECPSk2TxHe-P9OUC4LsUA1c">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"simonczy.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="💡 本文对以下场景有所帮助  网站搭建的技术介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网站前后端开发概念讲解">
+<meta property="og:url" content="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/index.html">
+<meta property="og:site_name" content="Mind Game">
+<meta property="og:description" content="💡 本文对以下场景有所帮助  网站搭建的技术介绍">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/1.png">
+<meta property="og:image" content="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/2.png">
+<meta property="og:image" content="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/3.png">
+<meta property="article:published_time" content="2024-05-15T04:35:36.000Z">
+<meta property="article:modified_time" content="2024-06-05T15:31:06.419Z">
+<meta property="article:author" content="Simon Chen">
+<meta property="article:tag" content="网站开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/1.png">
+
+
+<link rel="canonical" href="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/","path":"2024/05/15/开发项目/网站前后端开发概念讲解/","title":"网站前后端开发概念讲解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网站前后端开发概念讲解 | Mind Game</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mind Game</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Think More, Do Less</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">42</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%89%8D%E7%AB%AF"><span class="nav-text">1. 前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%8E%E7%AB%AF"><span class="nav-text">2. 后端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8E%A5%E5%8F%A3"><span class="nav-text">3. 接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">4. 数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF"><span class="nav-text">5. 开发思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98"><span class="nav-text">6. 项目实战</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Simon Chen"
+      src="/images/selfie_cartoon.gif">
+  <p class="site-author-name" itemprop="name">Simon Chen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SimonCzy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SimonCzy" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:simon_czy_au_level2@outlook.com" title="E-Mail → mailto:simon_czy_au_level2@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/selfie_cartoon.gif">
+      <meta itemprop="name" content="Simon Chen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mind Game">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网站前后端开发概念讲解 | Mind Game">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网站前后端开发概念讲解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-05-15 12:35:36" itemprop="dateCreated datePublished" datetime="2024-05-15T12:35:36+08:00">2024-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-06-05 23:31:06" itemprop="dateModified" datetime="2024-06-05T23:31:06+08:00">2024-06-05</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>5 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>💡 本文对以下场景有所帮助</p>
+<ul>
+<li>网站搭建的技术介绍</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>最近要开发一个多角色的订单管理项目，借这个机会重新回顾下网站的前后端搭建流程，用文字记录一下，以后捡起来速度也快一点，不像现在手忙脚乱啥都给忘了。</p>
+<p>为了方便大家理解，我将开发主体分为以下四个模块：前端、后端、接口和数据库。接下来的操作步骤并不严格按照以上顺序，而是根据实际的流程来进行开发，大家心里有个模块划分的概念就行。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-前端"><a href="#1-前端" class="headerlink" title="1. 前端"></a>1. 前端</h3><p>其实就是用户界面，也就是用户能够看到或操作的界面。因此，按照这个角度来理解的话，它负责的功能不外乎就是信息展示和用户交互。</p>
+<p>而又因为我们希望这个系统更加智能，那信息展示就需要具备实时性，我们就需要引入请求和相应模块：我们需要通过用户的某些行为（如点击按钮），来触发一个发到<strong>后端</strong>的请求（如查询当前在职人数），进而利用请求所返回的响应，刷新当前的界面，让用户能够看到最新的信息（如此时此刻的当前在此人数）。</p>
+<p><img data-src="/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/1.png"></p>
+<p>通常情况下，每一个用户相当于一个<strong>前端</strong>，而他们都需要将请求发到<strong>后端</strong>，可以近似理解成这是一个一对多的模型，后端的负荷较大。因此，为了减少后端的计算量，或者<strong>更好地分割业务代码和输入验证</strong>，我们通常会把一些不需要设计业务数据的逻辑操作前移到前端，如两次输入的密码是否一致，邮箱格式是否正确等。这些能力如今已经很好地被集成到诸多框架中。</p>
+<h3 id="2-后端"><a href="#2-后端" class="headerlink" title="2. 后端"></a>2. 后端</h3><p>处理业务逻辑的模块。后端接收到前端发来的请求后，会结合业务逻辑和系统数据，返回适当的响应给前端。</p>
+<p>后端的代码就比较像我们日常写的代码了，就是该干嘛干嘛，业务让怎么做就怎么做。不过呢，有以下四点需要注意：</p>
+<ol>
+<li>接口：既然存在请求和响应，那自然就存在着对应的数据格式和接口调用。具体细节我们后面聊，这里不做赘述。</li>
+<li>权限管理：要考虑到不同用户身份的行为是否满足其当前的期望。（如我们肯定不希望某个普通用户有权限看到所有的用户信息）。</li>
+<li>错误处理：需要涵盖所有的可能出现的错误情况，并把对应的错误情况也一并反馈到前端。</li>
+<li>系统数据：其实就是数据持久化，一般系统的数据持久化的方式就是用的数据库。后端可以通过调用数据库接口来对数据进行增删改查。具体细节也是后面聊，不做赘述。</li>
+</ol>
+<h3 id="3-接口"><a href="#3-接口" class="headerlink" title="3. 接口"></a>3. 接口</h3><p>前后端走请求响应，其实就是通信的一种。既然是通信，那就是需要有通信格式（如网络通信中的tcp协议）。当前的前后端框架，基本支持了接口的优雅调用。可以理解成是通过一些简单的定义，让我们只需要关注信息的主体部分，而不需要关注协议，消息头等无关信息。</p>
+<p>既然接口是自行定义的，那自然就有风格的说法（如python代码风格）。当前的API风格以RESTful为主。动宾格式的描述来作为接口名称，清晰明确地状态码作为本次响应的结果。</p>
+<p><img data-src="/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/2.png"></p>
+<h3 id="4-数据库"><a href="#4-数据库" class="headerlink" title="4. 数据库"></a>4. 数据库</h3><p>对系统数据进行持久化的模块，用来存储系统中的所有相关数据。从性能角度考虑的话，由于数据涉及的增删改查很多，因此在开发阶段，我们需要根据业务发展的情况，不断对表数据进行结构上的优化。并且，由于考虑到未来系统的扩展性，我们在表字段更新的时候需要认真规划，避免遗失重要信息。</p>
+<p>之前提到，后端可以通过调用数据库接口来连接并操作数据库，通过定制化的sql语句对数据进行增删改查。其实，现在许多的后端框架已经支持了ORM的方式来操作数据库，每个数据库中的表其实就是代码中的一个类。通过这种方式，将sql语句的编写隐藏在框架中，开发人员只需要对类或者对象进行增删改查即可。</p>
+<p><img data-src="/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/3.png"></p>
+<h3 id="5-开发思路"><a href="#5-开发思路" class="headerlink" title="5. 开发思路"></a>5. 开发思路</h3><p>本网站前后端开发，所使用到的技术栈是：前端Amis，后端Django，数据库PostgreSQL。</p>
+<p>前端通过json的方式进行页面的制作，并且在对应的地方添加上适当的接口。</p>
+<p>后端利用Django框架来实现用户认证和数据操作，使用Django-ninja来进行API的编写。</p>
+<h3 id="6-项目实战"><a href="#6-项目实战" class="headerlink" title="6. 项目实战"></a>6. 项目实战</h3><p>由于篇幅原因，将会另起一篇文章专门讲解项目代码和开发框架，敬请期待。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Simon Chen
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://simonczy.github.io/2024/05/15/%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE/%E7%BD%91%E7%AB%99%E5%89%8D%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E8%AE%B2%E8%A7%A3/" title="网站前后端开发概念讲解">https://simonczy.github.io/2024/05/15/开发项目/网站前后端开发概念讲解/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/" rel="tag"># 网站开发</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/05/14/%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/%E7%BA%AF%E6%89%93%E5%8D%A1/%E6%8A%80%E6%9C%AF%E6%A0%88%E6%95%B4%E7%90%86/" rel="prev" title="技术栈整理">
+                  <i class="fa fa-chevron-left"></i> 技术栈整理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/06/05/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BAUbuntu-24-04-Server%E7%89%88%E6%9C%AC/" rel="next" title="从零搭建Ubuntu 24.04 Server版本">
+                  从零搭建Ubuntu 24.04 Server版本 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Simon Chen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>Word count total: </span>
+    <span title="Word count total">13k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>Reading time total &asymp;</span>
+    <span title="Reading time total">48 mins.</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"SimonCzy/next-blog-utterances","issue_term":"pathname","theme":"preferred-color-scheme"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
