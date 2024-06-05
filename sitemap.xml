@@ -423,6 +423,20 @@
   </url>
   
   <url>
+    <loc>https://simonczy.github.io/tags/VR-MR/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/Record/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/tags/Odoo/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -431,13 +445,6 @@
   
   <url>
     <loc>https://simonczy.github.io/tags/Env-Config/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/Linux/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -458,28 +465,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/tags/Bot/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/VR-MR/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/Record/</loc>
+    <loc>https://simonczy.github.io/tags/Linux/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -494,6 +480,20 @@
   
   <url>
     <loc>https://simonczy.github.io/tags/MacOS/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/Bot/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
