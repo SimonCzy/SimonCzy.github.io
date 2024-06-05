@@ -472,6 +472,20 @@
   </url>
   
   <url>
+    <loc>https://simonczy.github.io/tags/Bot/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonczy.github.io/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://simonczy.github.io/tags/Quick-Check/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -493,14 +507,7 @@
   </url>
   
   <url>
-    <loc>https://simonczy.github.io/tags/Bot/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://simonczy.github.io/tags/SSH/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -515,13 +522,6 @@
   
   <url>
     <loc>https://simonczy.github.io/tags/Nerwork/</loc>
-    <lastmod>2024-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://simonczy.github.io/tags/SSH/</loc>
     <lastmod>2024-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
