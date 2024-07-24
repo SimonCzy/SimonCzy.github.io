@@ -48,7 +48,95 @@
   <entry>
     <title>在AWS上部署Django服务</title>
     <url>/2024/07/23/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA/%E5%9C%A8AWS%E4%B8%8A%E9%83%A8%E7%BD%B2Django%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>💡 本文对以下场景有所帮助</p>
+<ul>
+<li>AWS服务的申请和使用</li>
+<li>Django服务的部署</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>AWS上有免费的云服务一年使用额度，不用白不用，刚好用来试试手。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>整个部署大致分为三步：aws申请、环境配置、服务运行。</p>
+<h3 id="0-AWS帐户申请"><a href="#0-AWS帐户申请" class="headerlink" title="0. AWS帐户申请"></a>0. AWS帐户申请</h3><p>直接去<a href="https://aws.amazon.com/cn/">官网</a>创建即可，如果之前已经创建过了的可以忽略这一步。</p>
+<p><img data-src="/2024/07/23/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA/%E5%9C%A8AWS%E4%B8%8A%E9%83%A8%E7%BD%B2Django%E6%9C%8D%E5%8A%A1/1.png"></p>
+<p>注册过程中需要用到的信息：</p>
+<ul>
+<li>邮箱</li>
+<li>密码</li>
+<li>手机号</li>
+<li>合适的地址</li>
+<li>visa或者万事达信用卡</li>
+</ul>
+<p>如果之前已经使用完AWS Free Tier额度，后续申请实例就需要收费了。</p>
+<h3 id="1-申请EC2实例"><a href="#1-申请EC2实例" class="headerlink" title="1. 申请EC2实例"></a>1. 申请EC2实例</h3><p>出于使用习惯，系统镜像的话选择了ubuntu 24.04 LTS。</p>
+<p>实例类型选的是micro，nano还是太小了，而且micro刚好是免费额度内最高标准的。</p>
+<p>创个新的密钥对。把生成的pem保存下来，具体登陆脚本创建完aws会给你的。嫌命令麻烦的话可以参考<a href="2023/03/27/%E7%BB%B4%E4%BF%AE%E6%8A%A5%E5%91%8A/Turn-On-SSH-Service-On-Ubuntu/#9-Add-private-into-system-in-B">之前的博客</a>，直接将ssh的信息配置进系统里面。</p>
+<p>安全组的话，先开个SSH和HTTP就行，后续的看需求来开。</p>
+<p>磁盘随意，反正不用钱。</p>
+<h3 id="2-系统相关环境配置"><a href="#2-系统相关环境配置" class="headerlink" title="2. 系统相关环境配置"></a>2. 系统相关环境配置</h3><p>系统已经有git和python的了，但是没有pip。并且如果使用pip来下载python库的话，会被系统劝退。这边推荐是使用虚拟环境来解决。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update 							<span class="comment"># 刚拿到手的新系统，不得更新下</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这个是用来安装pip</span></span><br><span class="line">sudo apt install python3-pip			<span class="comment"># 不知道下载哪个就直接运行pip，看系统推荐你下哪个</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这个是用来安装python虚拟环境管理工具的</span></span><br><span class="line">sudo apt install python3.12-venv 	<span class="comment"># 和上面一样，不知道运行哪个就直接运行python3 -m venv</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Django相关环境配置"><a href="#3-Django相关环境配置" class="headerlink" title="3. Django相关环境配置"></a>3. Django相关环境配置</h3><p>我这边数据库用的是postgresql，所以只需要下载postgresql就行。你要是想用django自带的SQLite的话，这个session可以直接跳过了。</p>
+<p>注意：如果项目中链接postgresql的相关python库是psycopg2的话，哪怕安装完postgresql后可能还是会出现库文件确实的错误，所以需要将psycopg2修改成psycopg2-binary，让它从源码自信构建即可。</p>
+<h4 id="3-1-下载PostgreSQL"><a href="#3-1-下载PostgreSQL" class="headerlink" title="3.1 下载PostgreSQL"></a>3.1 下载PostgreSQL</h4><p>后面那个postgresql-contrib其实是一些有可能用上的数据库工具包，不想下的话也无所谓。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install postgresql postgresql-contrib</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-查看运行状态"><a href="#3-2-查看运行状态" class="headerlink" title="3.2 查看运行状态"></a>3.2 查看运行状态</h4><p>下载后已经自运行了，可以通过以下命令去查服务是否正常启动了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl status postgresql</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-连接数据库"><a href="#3-3-连接数据库" class="headerlink" title="3.3 连接数据库"></a>3.3 连接数据库</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切换到对应的数据库用户</span></span><br><span class="line">sudo -i -u postgres</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入到数据库的命令行界面</span></span><br><span class="line">psql</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4-创建项目所需要的用户和数据库"><a href="#3-4-创建项目所需要的用户和数据库" class="headerlink" title="3.4 创建项目所需要的用户和数据库"></a>3.4 创建项目所需要的用户和数据库</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切换到对应的数据库用户</span></span><br><span class="line">CREATE USER myuser WITH PASSWORD <span class="string">&#x27;mypassword&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到对应的数据库用户</span></span><br><span class="line">CREATE DATABASE mydatabase OWNER myuser;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-5-退出数据库服务"><a href="#3-5-退出数据库服务" class="headerlink" title="3.5 退出数据库服务"></a>3.5 退出数据库服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 退出命令行界面</span></span><br><span class="line">\q</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出postgres用户</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-下载项目到AWS"><a href="#4-下载项目到AWS" class="headerlink" title="4. 下载项目到AWS"></a>4. 下载项目到AWS</h3><p>如果你是从头开始构建项目的话，不需要看这一个session。</p>
+<p>本来想直接git clone的，后来因为提升了认证等级，密码不能用，最终改为用公私钥来clone，具体操作参考<a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux">github官方文档</a>，这种方式通过公私钥直接绑定机器。需要注意的是，在生成密钥所定义的passphrase，其实就是一个多因子验证。可以理解成以后每次push或者clone的时候，需要输一次passphrase，才能调用对应的公私钥。</p>
+<h3 id="5-运行项目并用公网IP连接"><a href="#5-运行项目并用公网IP连接" class="headerlink" title="5. 运行项目并用公网IP连接"></a>5. 运行项目并用公网IP连接</h3><p>先进入到项目文件夹，然后配置python虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> mydir/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置虚拟环境</span></span><br><span class="line">python3 -m venv venv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<p>运行项目之前，需要下载项目依赖（不会有人还不写项目依赖吧🤯</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<p>数据表迁移脚本和迁移操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 manage.py makemigrations</span><br><span class="line">python3 manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<p>创建超级管理员</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+
+<p>修改项目配置文件setting.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 用这个库，只需要在根目录下添加.env文件，就可以当作环境变量来用了，代码不需要保留key value</span></span><br><span class="line"><span class="keyword">from</span> decouple <span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加上AWS的公网IP</span></span><br><span class="line">ALLOWED_HOSTS = config(<span class="string">&#x27;ALLOWED_HOSTS&#x27;</span>).split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将数据库配置修改成postgresql</span></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;ENGINE&#x27;</span>: <span class="string">&#x27;django.db.backends.postgresql&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;NAME&#x27;</span>: config(<span class="string">&#x27;DB_NAME&#x27;</span>),</span><br><span class="line">        <span class="string">&#x27;USER&#x27;</span>: config(<span class="string">&#x27;DB_USER&#x27;</span>),</span><br><span class="line">        <span class="string">&#x27;PASSWORD&#x27;</span>: config(<span class="string">&#x27;DB_PASSWORD&#x27;</span>),</span><br><span class="line">        <span class="string">&#x27;HOST&#x27;</span>: config(<span class="string">&#x27;DB_HOST&#x27;</span>),</span><br><span class="line">        <span class="string">&#x27;PORT&#x27;</span>: config(<span class="string">&#x27;DB_PORT&#x27;</span>),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>.env文件内容如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ALLOWED_HOSTS=localhost,127.0.0.1,1.2.3.4</span><br><span class="line"></span><br><span class="line">DB_NAME=mydatabase</span><br><span class="line">DB_USER=myuser</span><br><span class="line">DB_PASSWORD=mypassword</span><br><span class="line">DB_HOST=127.0.0.1</span><br><span class="line">DB_PORT=5432</span><br></pre></td></tr></table></figure>
+
+<p>运行项目在公网IP上</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3 manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
+
+<p>接下来，和修改aws的postgresql入站规则一样，我们再给django服务器增加一条8000端口的入站规则，接下来就能够通过公网IP来访问网站了。</p>
+<p>至此，你<strong>已经完成</strong>了在AWS上部署Django服务的操作。</p>
+<p>接下来的是额外的知识点：</p>
+<h3 id="6-本地连接AWS上的数据库"><a href="#6-本地连接AWS上的数据库" class="headerlink" title="6. 本地连接AWS上的数据库"></a>6. 本地连接AWS上的数据库</h3><p>为了更方便地查看aws上的数据库使用情况，你可能期望从本地连接AWS上的数据库。这需要两步，分别是修改AWS安全组的入站规则，以及修改原有的数据库配置文件。这里就以postgresql为例来进行讲解。</p>
+<h4 id="6-1-修改AWS安全组的入站规则"><a href="#6-1-修改AWS安全组的入站规则" class="headerlink" title="6.1 修改AWS安全组的入站规则"></a>6.1 修改AWS安全组的入站规则</h4><p>规则类型选择PostgreSQL或者自定义，端口号5432，TCP类型。</p>
+<p>请求源IP的话，看你对安全和便捷的取舍，我这边只填了本机的IP。</p>
+<p><img data-src="/2024/07/23/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA/%E5%9C%A8AWS%E4%B8%8A%E9%83%A8%E7%BD%B2Django%E6%9C%8D%E5%8A%A1/2.png"></p>
+<h4 id="6-2-修改数据库配置文件"><a href="#6-2-修改数据库配置文件" class="headerlink" title="6.2 修改数据库配置文件"></a>6.2 修改数据库配置文件</h4><p>原始的Postgresql只允许localhost连接，因此需要修改两个配置文件，postgresql.conf和pg_hba.conf。</p>
+<h5 id="6-2-1-定位文件位置"><a href="#6-2-1-定位文件位置" class="headerlink" title="6.2.1 定位文件位置"></a>6.2.1 定位文件位置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo find /etc/postgresql -name postgresql.conf</span><br></pre></td></tr></table></figure>
+
+<h5 id="6-2-2-将postgresql-conf文件中的listen-addresses修改成如下"><a href="#6-2-2-将postgresql-conf文件中的listen-addresses修改成如下" class="headerlink" title="6.2.2 将postgresql.conf文件中的listen_addresses修改成如下"></a>6.2.2 将postgresql.conf文件中的listen_addresses修改成如下</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">listen_addresses = <span class="string">&#x27;*&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="6-2-3-在pg-hba-conf文件最后添加一行，写你期望发起请求的ip源即可"><a href="#6-2-3-在pg-hba-conf文件最后添加一行，写你期望发起请求的ip源即可" class="headerlink" title="6.2.3 在pg_hba.conf文件最后添加一行，写你期望发起请求的ip源即可"></a>6.2.3 在pg_hba.conf文件最后添加一行，写你期望发起请求的ip源即可</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">host    all    all    your-local-ip-address/32    md5</span><br></pre></td></tr></table></figure>
+
+<h5 id="6-2-4-重启数据库服务"><a href="#6-2-4-重启数据库服务" class="headerlink" title="6.2.4 重启数据库服务"></a>6.2.4 重启数据库服务</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart postgresql</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-3-发起链接请求"><a href="#6-3-发起链接请求" class="headerlink" title="6.3 发起链接请求"></a>6.3 发起链接请求</h4><p>我这里用的是pycharm自带的数据库连接工具。</p>
+<p>将AWS对应的公网IP、postgresql端口、数据库用户、对应密码、数据库名称填入后，点一下test connection检查连通性，如没问题就可以直接apply了。</p>
+<p><img data-src="/2024/07/23/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA/%E5%9C%A8AWS%E4%B8%8A%E9%83%A8%E7%BD%B2Django%E6%9C%8D%E5%8A%A1/3.png"></p>
+]]></content>
+      <tags>
+        <tag>Env/Config</tag>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>NEXT主题博客图片引用的通用解决方案</title>
@@ -88,8 +176,8 @@
 
 ]]></content>
       <tags>
-        <tag>Env/Config</tag>
         <tag>Python</tag>
+        <tag>Env/Config</tag>
       </tags>
   </entry>
   <entry>
@@ -516,8 +604,8 @@
 <h3 id="Turn-on-the-default-startup-base-environment"><a href="#Turn-on-the-default-startup-base-environment" class="headerlink" title="Turn on the default startup base environment"></a>Turn on the default startup base environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
         <tag>Python</tag>
+        <tag>Linux</tag>
         <tag>Quick Check</tag>
       </tags>
   </entry>
@@ -723,8 +811,8 @@
 ]]></content>
       <tags>
         <tag>Introduction</tag>
-        <tag>Python</tag>
         <tag>Bot</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -783,9 +871,9 @@
 <h3 id="Deactivate-the-virtual-environment"><a href="#Deactivate-the-virtual-environment" class="headerlink" title="Deactivate the virtual environment"></a>Deactivate the virtual environment</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+        <tag>Python</tag>
         <tag>Env/Config</tag>
         <tag>Linux</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1346,9 +1434,9 @@
 <p><a href="/2023/03/08/odoo%E7%B3%BB%E5%88%97/Upgrade-Official-Odoo12-Image-From-py3-5-To-py3-8/requirements.txt">requirements.txt download link</a></p>
 ]]></content>
       <tags>
+        <tag>Python</tag>
         <tag>Odoo</tag>
         <tag>Env/Config</tag>
-        <tag>Python</tag>
         <tag>DevOps</tag>
       </tags>
   </entry>
